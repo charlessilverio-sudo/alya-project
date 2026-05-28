@@ -1384,14 +1384,10 @@ body {
 @media print {
   @page { size: A4 landscape; margin: 10mm; }
   body { background: white !important; }
-  .topbar, .sidebar, .page:not(#page-gantt),
-  .gantt-bar, .toast-stack, .modal-bg, .confirm-bg { display: none !important; }
+  /* Gantt usa janela dedicada — esconde tudo no print da janela principal */
+  .topbar, .sidebar, .page, .toast-stack, .modal-bg, .confirm-bg { display: none !important; }
   .shell { padding-top: 0 !important; }
   .main { overflow: visible !important; }
-  #page-gantt { display: block !important; }
-  .gantt-layout { height: auto !important; overflow: visible !important; }
-  #gantt-svg-wrap, #gantt-head-wrap { overflow: visible !important; height: auto !important; }
-  #gantt-svg-wrap svg, #gantt-head-wrap svg { max-width: 100%; }
   .print-header { display: flex !important; }
 }
 .print-header {
@@ -4410,30 +4406,266 @@ function ganttToggleCountry(cid){
 }
 
 function printGantt(){
-  // Make sure gantt page is active and rendered
   showPage('gantt');
-  setTimeout(()=>{
-    // Add a temporary print header
-    const ganttPage = document.getElementById('page-gantt');
-    let ph = document.getElementById('gantt-print-header');
-    if(!ph){
-      ph = document.createElement('div');
-      ph.id = 'gantt-print-header';
-      ph.className = 'print-header';
-      ph.innerHTML = `
-        <div style="display:flex;align-items:center;gap:10px">
-          <div style="width:28px;height:28px;background:#15803D;border-radius:6px;display:flex;align-items:center;justify-content:center">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><polygon points="7,1 13,4.5 13,9.5 7,13 1,9.5 1,4.5" stroke="#fff" stroke-width="2"/></svg>
-          </div>
-          <span style="font-size:15px;font-weight:700;color:#15803D">Alya Project</span>
-          <span style="font-size:12px;color:#7C8087">· Gráfico de Gantt · Expansão Internacional</span>
-        </div>
-        <span style="font-size:11px;color:#A8ABB0">Impresso em ${new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'})}</span>
-      `;
-      ganttPage.prepend(ph);
+  setTimeout(()=>{ _printGanttGenerate(); }, 300);
+}
+
+function _printGanttGenerate(){
+  // ── Coleta os mesmos dados de renderGantt ──────────────────────────
+  const fc = document.getElementById('gantt-filter-country').value;
+  const fs = document.getElementById('gantt-filter-status').value;
+  let filtered = tasks.filter(t=>t.start&&t.end);
+  if(fc) filtered = filtered.filter(t=>t.country===fc);
+  if(fs) filtered = filtered.filter(t=>t.status===fs);
+
+  const regionOrder = {europa:0,americas:1,outros:2};
+  filtered.sort((a,b)=>{
+    const ca=COUNTRIES.find(c=>c.id===a.country)||{}, cb=COUNTRIES.find(c=>c.id===b.country)||{};
+    const ro=(regionOrder[ca.region]||0)-(regionOrder[cb.region]||0);
+    if(ro!==0) return ro;
+    if(a.country!==b.country) return a.country.localeCompare(b.country);
+    return a.start.localeCompare(b.start);
+  });
+
+  if(!filtered.length){ showToast('Nenhuma tarefa com datas para imprimir','error','ti-alert-triangle'); return; }
+
+  // ── Dimensões base ─────────────────────────────────────────────────
+  const allD   = filtered.flatMap(t=>[new Date(t.start),new Date(t.end)]);
+  let minD = new Date(Math.min(...allD)), maxD = new Date(Math.max(...allD));
+  minD = new Date(minD.getFullYear(), minD.getMonth(), 1);
+  maxD = new Date(maxD.getFullYear(), maxD.getMonth()+1, 1);
+  const totalDays = Math.round((maxD-minD)/864e5);
+
+  // A4 paisagem usável (mm): 297 - 2*8 = 281mm ≈ 1060px a 96dpi
+  // Escolhemos DW para que o total caiba: DW = (1060 - LABEL) / totalDays
+  const PRINT_W  = 1060;          // px de trabalho
+  const LABEL    = 180;
+  const ROW      = 22;
+  const MH = 20, DH = 16, HH = MH + DH;
+  const HEADER_H = 36;            // altura do cabeçalho do documento
+
+  const rawDW = (PRINT_W - LABEL) / totalDays;
+  const DW    = Math.max(2, Math.min(rawDW, 20)); // nunca maior que 20px/dia
+  const svgW  = LABEL + totalDays * DW;
+
+  // ── Meses ──────────────────────────────────────────────────────────
+  const months = [];
+  let cur = new Date(minD);
+  while(cur < maxD){
+    const nx   = new Date(cur.getFullYear(), cur.getMonth()+1, 1);
+    const days = Math.round((Math.min(nx,maxD)-cur)/864e5);
+    months.push({
+      label: cur.toLocaleDateString('pt-BR',{month:'short',year:'2-digit'}).replace('.',' '),
+      x:     LABEL + Math.round((cur-minD)/864e5)*DW,
+      w:     days*DW,
+    });
+    cur = nx;
+  }
+
+  // ── Agrupamento por país ───────────────────────────────────────────
+  const countryGroups = {};
+  filtered.forEach(t=>{ if(!countryGroups[t.country]) countryGroups[t.country]=[]; countryGroups[t.country].push(t); });
+  const orderedCountries = [];
+  filtered.forEach(t=>{ if(!orderedCountries.includes(t.country)) orderedCountries.push(t.country); });
+
+  // ── Calcula altura total ───────────────────────────────────────────
+  let totalRows = 0;
+  orderedCountries.forEach(cid=>{ totalRows += countryGroups[cid].length; });
+  const totalSvgH = HH + totalRows*ROW + orderedCountries.length*HEADER_H + 10;
+
+  // ── Linha de hoje ──────────────────────────────────────────────────
+  const todayX   = LABEL + Math.round((today-minD)/864e5)*DW;
+  const showToday = today>=minD && today<=maxD;
+
+  // ── Meses: background + labels ────────────────────────────────────
+  const svgMonths = months.map((m,mi)=>`
+    <rect x="${m.x}" y="0" width="${m.w}" height="${totalSvgH}" fill="${mi%2===0?'#FFFFFF':'#F8F9FA'}"/>
+    <rect x="${m.x}" y="0" width="${m.w}" height="${HH}" fill="${mi%2===0?'#F0F1F3':'#E8E9EC'}"/>
+    <line x1="${m.x}" y1="0" x2="${m.x}" y2="${totalSvgH}" stroke="#D0D2D6" stroke-width="0.8"/>
+    <text x="${m.x+m.w/2}" y="${MH/2+5}" font-size="9" font-weight="700" fill="#56595F" text-anchor="middle">${m.label.toUpperCase()}</text>
+  `).join('');
+
+  // ── Ticks de dia (se DW >= 5) ─────────────────────────────────────
+  let svgDays = '';
+  if(DW >= 5){
+    let d = new Date(minD);
+    while(d < maxD){
+      const idx = Math.round((d-minD)/864e5);
+      const x   = LABEL + idx*DW;
+      const isFirst = d.getDate()===1;
+      const isWknd  = d.getDay()===0||d.getDay()===6;
+      const lbl = DW>=9 ? String(d.getDate()).padStart(2,'0') : (isFirst ? String(d.getDate()) : '');
+      svgDays += `<line x1="${x}" y1="${MH}" x2="${x}" y2="${HH}" stroke="${isFirst?'#B0B3BA':'#D8D9DC'}" stroke-width="${isFirst?1:0.5}"/>`;
+      if(isWknd && DW>=5) svgDays += `<rect x="${x}" y="${HH}" width="${DW}" height="${totalSvgH-HH}" fill="rgba(0,0,0,.018)"/>`;
+      if(lbl) svgDays += `<text x="${x+DW/2}" y="${MH+DH-2}" font-size="7" fill="${isFirst?'#3A3D42':'#9CA3AF'}" text-anchor="middle">${lbl}</text>`;
+      d = new Date(d.getTime()+864e5);
     }
-    window.print();
-  }, 200);
+  }
+
+  // ── Linha divisória do header ──────────────────────────────────────
+  const svgHeaderLines = `
+    <rect x="0" y="0" width="${LABEL}" height="${HH}" fill="#F0F1F3"/>
+    <line x1="0" y1="${MH}" x2="${svgW}" y2="${MH}" stroke="#C8CAD0" stroke-width="1"/>
+    <line x1="${LABEL}" y1="0" x2="${LABEL}" y2="${HH}" stroke="#C8CAD0" stroke-width="1.5"/>
+    <text x="10" y="${MH/2+5}" font-size="8" font-weight="700" fill="#9CA3AF" letter-spacing=".8">TAREFA</text>
+    <text x="10" y="${MH+DH/2+4}" font-size="7" fill="#C0C2C8">CRONOGRAMA</text>
+  `;
+
+  // ── Rows ──────────────────────────────────────────────────────────
+  let taskRows = '';
+  let rowI = 0;
+  orderedCountries.forEach(cid=>{
+    const cInfo  = COUNTRIES.find(x=>x.id===cid)||{flag:'🏳',name:cid};
+    const cColor = COUNTRY_COLORS[cid]||'#888';
+    const cTasks = countryGroups[cid];
+    const cDone  = cTasks.filter(t=>t.status==='Concluído').length;
+    const cPct   = cTasks.length ? Math.round(cDone/cTasks.length*100) : 0;
+
+    const sepY = HH + rowI*ROW + (orderedCountries.indexOf(cid))*HEADER_H;
+    taskRows += `
+      <rect x="0" y="${sepY}" width="${svgW}" height="${HEADER_H}" fill="${cColor}1A"/>
+      <rect x="0" y="${sepY}" width="4" height="${HEADER_H}" fill="${cColor}"/>
+      <text x="14" y="${sepY+HEADER_H/2+5}" font-size="11" fill="${cColor}">${cInfo.flag}</text>
+      <text x="32" y="${sepY+HEADER_H/2+5}" font-size="9.5" font-weight="700" fill="${cColor}" letter-spacing=".3">${cInfo.name.toUpperCase()} · ${cPct}%</text>
+      <rect x="${LABEL}" y="${sepY}" width="${totalDays*DW}" height="${HEADER_H}" fill="${cColor}08"/>
+    `;
+
+    cTasks.forEach((t,ti)=>{
+      const realY = sepY + HEADER_H + ti*ROW;
+      const s  = Math.max(0, Math.round((new Date(t.start)-minD)/864e5));
+      const e  = Math.min(totalDays, Math.round((new Date(t.end)-minD)/864e5));
+      const bx = LABEL + s*DW, bw = Math.max(DW*2, (e-s)*DW);
+      const isBlocked = t.status==='Bloqueado';
+      const isDone    = t.status==='Concluído';
+      const barColor  = isBlocked?'#EF4444': isDone?'#15803D': cColor;
+      const nameLabel = t.name.length>32 ? t.name.slice(0,31)+'…' : t.name;
+      const dur = e - s;
+      const durLabel = dur>2 ? `${dur}d` : '';
+
+      taskRows += `
+        <rect x="0" y="${realY}" width="${svgW}" height="${ROW}" fill="${ti%2===0?'#FFFFFF':'#FAFAFA'}"/>
+        <rect x="0" y="${realY}" width="4" height="${ROW}" fill="${cColor}40"/>
+        <text x="14" y="${realY+ROW/2+4}" font-size="8.5" fill="${isDone?'#9CA3AF':'#374151'}">${nameLabel}</text>
+        <rect x="${bx}" y="${realY+4}" width="${bw}" height="${ROW-8}" rx="2" fill="${barColor}" opacity="${isDone?'0.55':'0.82'}"/>
+        ${bw>28&&durLabel?`<text x="${bx+bw/2}" y="${realY+ROW/2+3.5}" font-size="7" fill="rgba(255,255,255,.95)" text-anchor="middle" pointer-events="none">${durLabel}</text>`:''}
+        <line x1="0" y1="${realY+ROW}" x2="${svgW}" y2="${realY+ROW}" stroke="#EDEEF0" stroke-width=".4"/>
+      `;
+      rowI++;
+    });
+  });
+
+  // ── Label column: frozen ───────────────────────────────────────────
+  const labelFreeze = `
+    <rect x="0" y="${HH}" width="${LABEL}" height="${totalSvgH-HH}" fill="#FFFFFF" opacity="0.0"/>
+    <line x1="${LABEL}" y1="${HH}" x2="${LABEL}" y2="${totalSvgH}" stroke="#C8CAD0" stroke-width="1.2"/>
+  `;
+
+  // ── Linha de hoje ──────────────────────────────────────────────────
+  const todayLine = showToday ? `
+    <line x1="${todayX}" y1="${HH}" x2="${todayX}" y2="${totalSvgH}" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,3" opacity=".7"/>
+    <rect x="${todayX-13}" y="${HH-14}" width="26" height="14" rx="3" fill="#EF4444"/>
+    <text x="${todayX}" y="${HH-3}" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle">HOJE</text>
+  ` : '';
+
+  // ── SVG único consolidado ─────────────────────────────────────────
+  const svgContent = `<svg width="${svgW}" height="${totalSvgH}"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 ${svgW} ${totalSvgH}"
+    style="font-family:Arial,Helvetica,sans-serif;display:block;width:100%;height:auto">
+    ${svgMonths}
+    ${svgDays}
+    ${svgHeaderLines}
+    ${taskRows}
+    ${labelFreeze}
+    ${todayLine}
+  </svg>`;
+
+  // ── Legenda ────────────────────────────────────────────────────────
+  const legendItems = [
+    {color:'#15803D', label:'Concluído'},
+    {color:'#1D4ED8', label:'Em andamento'},
+    {color:'#9CA3AF', label:'A fazer'},
+    {color:'#EF4444', label:'Bloqueado'},
+  ];
+  const legendHtml = legendItems.map(l=>
+    `<span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px">
+       <span style="width:10px;height:10px;border-radius:2px;background:${l.color};display:inline-block"></span>
+       <span>${l.label}</span>
+     </span>`
+  ).join('');
+
+  const printDate = new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
+  const totalConcluidas = tasks.filter(t=>t.status==='Concluído').length;
+  const pctGlobal = tasks.length ? Math.round(totalConcluidas/tasks.length*100) : 0;
+
+  const html = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gantt — Alya Project</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#1E293B}
+  @page{size:A4 landscape;margin:8mm 8mm}
+  @media print{
+    body{padding:0}
+    .no-print{display:none!important}
+    .svg-wrap{width:100%!important}
+    svg{width:100%!important;height:auto!important}
+    /* Garante que o SVG não seja cortado */
+    .page-wrap{page-break-inside:avoid}
+  }
+  .doc-header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:6px 0 8px;border-bottom:2px solid #15803D;margin-bottom:8px
+  }
+  .doc-title{font-size:14px;font-weight:700;color:#15803D}
+  .doc-sub{font-size:10px;color:#7C8087;margin-top:1px}
+  .doc-meta{font-size:10px;color:#9CA3AF;text-align:right}
+  .legend{font-size:9px;color:#6B7280;padding:5px 0 0;display:flex;flex-wrap:wrap;gap:2px}
+  .print-btn{
+    position:fixed;top:12px;right:12px;z-index:999;
+    padding:8px 16px;background:#15803D;color:#fff;
+    border:none;border-radius:6px;font-size:13px;font-weight:600;
+    cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)
+  }
+  .close-btn{
+    position:fixed;top:12px;right:120px;z-index:999;
+    padding:8px 14px;background:#475569;color:#fff;
+    border:none;border-radius:6px;font-size:13px;cursor:pointer
+  }
+  .svg-wrap{overflow-x:auto;width:100%}
+</style>
+</head>
+<body>
+  <button class="print-btn no-print" onclick="window.print()">🖨️ Imprimir</button>
+  <button class="close-btn no-print" onclick="window.close()">✕ Fechar</button>
+
+  <div class="page-wrap">
+    <div class="doc-header">
+      <div>
+        <div class="doc-title">Alya Project — Gráfico de Gantt · Expansão Internacional</div>
+        <div class="doc-sub">${filtered.length} tarefas · ${orderedCountries.length} países · ${pctGlobal}% concluído</div>
+      </div>
+      <div class="doc-meta">
+        Impresso em ${printDate}<br>
+        ${fc ? COUNTRIES.find(c=>c.id===fc)?.name || fc : 'Todos os países'}
+        ${fs ? ' · '+fs : ''}
+      </div>
+    </div>
+
+    <div class="svg-wrap">
+      ${svgContent}
+    </div>
+
+    <div class="legend no-print">
+      ${legendHtml}
+    </div>
+  </div>
+</body>
+</html>`;
+
+  openPrintWindow(html, 'Alya_Gantt.html');
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
