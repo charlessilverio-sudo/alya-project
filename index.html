@@ -479,6 +479,88 @@ body {
 }
 
 /* Alert strip — Progressive Disclosure */
+/* ── ALERTA PROATIVO TOAST ─────────────────────────────── */
+#proactive-alert-bar {
+  position: fixed;
+  top: calc(var(--topbar-h) + 8px);
+  right: 12px;
+  width: 340px;
+  background: var(--s-0);
+  border: 1px solid var(--b-1);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--sh-3);
+  z-index: 8000;
+  overflow: hidden;
+  transform: translateX(360px);
+  transition: transform .35s var(--ease);
+}
+#proactive-alert-bar.visible { transform: translateX(0); }
+.pal-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid var(--b-0);
+}
+.pal-close {
+  margin-left: auto; background: none; border: none;
+  cursor: pointer; color: var(--ink-400); font-size: 15px;
+  padding: 2px 5px; border-radius: 4px; line-height: 1;
+}
+.pal-close:hover { background: var(--ink-50); }
+.pal-section { padding: 8px 12px; border-bottom: 1px solid var(--b-0); }
+.pal-section:last-child { border-bottom: none; }
+.pal-section-title {
+  font-size: 9.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .6px; margin-bottom: 5px;
+}
+.pal-item {
+  display: flex; align-items: flex-start; gap: 6px;
+  font-size: 11px; color: var(--ink-600); padding: 3px 0;
+  line-height: 1.4; cursor: pointer; border-radius: 4px;
+}
+.pal-item:hover { color: var(--ink-900); }
+.pal-item i { flex-shrink: 0; margin-top: 1px; font-size: 12px; }
+.pal-footer {
+  padding: 8px 12px;
+  display: flex; gap: 6px;
+  background: var(--s-1);
+}
+/* ── CAMINHO CRÍTICO ───────────────────────────────────── */
+.cp-country-block {
+  border: 1px solid var(--b-0);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.cp-country-head {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px;
+  background: var(--s-1);
+  cursor: pointer;
+  font-size: 12px; font-weight: 600; color: var(--ink-800);
+}
+.cp-country-head:hover { background: var(--ink-50); }
+.cp-body { padding: 8px 12px 10px; display: flex; flex-direction: column; gap: 5px; }
+.cp-task-row {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.cp-task-name {
+  font-size: 11.5px; font-weight: 500; color: var(--ink-800);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.cp-task-meta { font-size: 10.5px; color: var(--ink-400); }
+.cp-bar-track {
+  height: 4px; background: var(--ink-100); border-radius: 2px;
+  overflow: hidden; margin-top: 2px;
+}
+.cp-bar-fill { height: 100%; border-radius: 2px; transition: width .4s; }
+.cp-badge {
+  font-size: 9.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .3px; padding: 1px 5px; border-radius: 3px;
+  margin-left: auto; flex-shrink: 0;
+}
+.cp-badge-critical { background: var(--c-danger-bg); color: var(--c-danger); }
+.cp-badge-warn     { background: var(--c-warning-bg); color: var(--c-warning); }
+.cp-badge-ok       { background: var(--c-success-bg); color: var(--c-success); }
 .alert-strip {
   display: flex; align-items: center; gap: 8px;
   padding: 8px 12px; border-radius: var(--radius);
@@ -1616,6 +1698,28 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
 <body>
 
 <!-- ══════════ TOPBAR ══════════ -->
+<!-- ══════ ALERTA PROATIVO ══════ -->
+<div id="proactive-alert-bar">
+  <div class="pal-header">
+    <i class="ti ti-bell-ringing" style="font-size:15px;color:var(--c-warning)"></i>
+    <span style="font-size:12px;font-weight:700;color:var(--ink-900)">Alertas do Projeto</span>
+    <span id="pal-badge" style="font-size:10px;font-weight:700;background:var(--c-danger);color:#fff;padding:1px 6px;border-radius:10px">0</span>
+    <button class="pal-close" onclick="closeProactiveAlert()">✕</button>
+  </div>
+  <div id="pal-body"></div>
+  <div class="pal-footer">
+    <button class="btn btn-ghost" style="font-size:11px;flex:1" onclick="closeProactiveAlert();showPage('tasks');setTimeout(()=>{document.getElementById('filter-status').value='Bloqueado';renderTasks()},50)">
+      <i class="ti ti-alert-triangle"></i>Ver bloqueios
+    </button>
+    <button class="btn btn-ghost" style="font-size:11px;flex:1" onclick="closeProactiveAlert();showPage('tasks')">
+      <i class="ti ti-list-check"></i>Ver tarefas
+    </button>
+    <button class="btn btn-outline" style="font-size:11px" onclick="snoozeProactiveAlert()">
+      <i class="ti ti-clock"></i>Lembrar depois
+    </button>
+  </div>
+</div>
+
 <header class="topbar">
   <a class="logo" href="#" onclick="return false">
     <div class="logo-icon">
@@ -1648,6 +1752,11 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
   <div class="topbar-end">
     <button class="btn btn-ghost" onclick="openCmdPalette()" title="Paleta de comandos (⌘K)" style="font-size:11px;gap:3px;padding:4px 7px">
       <i class="ti ti-command" style="font-size:12px"></i><span style="font-size:10px;color:var(--ink-400)">K</span>
+    </button>
+    <div class="topbar-div"></div>
+    <button class="btn btn-ghost" id="alert-bell-btn" onclick="toggleProactiveAlert()" title="Alertas do projeto" style="padding:4px 7px;position:relative">
+      <i class="ti ti-bell" style="font-size:13px"></i>
+      <span id="alert-bell-dot" style="display:none;position:absolute;top:3px;right:3px;width:7px;height:7px;border-radius:50%;background:var(--c-danger);border:1.5px solid var(--s-0)"></span>
     </button>
     <div class="topbar-div"></div>
     <button class="btn btn-ghost" id="dark-toggle" onclick="toggleDarkMode()" title="Modo escuro" style="padding:4px 7px">
@@ -1780,6 +1889,14 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
             <div class="panel-title">Resumo operacional</div>
             <div id="op-summary" style="font-size:12px;color:var(--ink-600);line-height:1.7"></div>
           </div>
+          <!-- CAMINHO CRÍTICO -->
+          <div class="panel-section">
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px">
+              <div class="panel-title" style="margin-bottom:0">Caminho Crítico</div>
+              <span style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;background:var(--c-danger-bg);color:var(--c-danger);padding:1px 6px;border-radius:3px;margin-left:auto">por país</span>
+            </div>
+            <div id="critical-path-panel" style="font-size:11.5px;color:var(--ink-400)">—</div>
+          </div>
           <!-- IA DE RISCOS -->
           <div class="panel-section">
             <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
@@ -1787,6 +1904,7 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
               <button onclick="runAiRiskAnalysis()" id="ai-risk-btn" style="margin-left:auto;display:flex;align-items:center;gap:4px;padding:3px 8px;border-radius:5px;border:1px solid var(--b-1);background:var(--s-0);font-size:10.5px;font-weight:600;color:var(--brand);cursor:pointer;font-family:var(--font)">
                 <i class="ti ti-sparkles" style="font-size:12px"></i>Analisar
               </button>
+              <button onclick="openAiKeyModal()" title="Configurar chave API" style="display:flex;align-items:center;padding:3px 6px;border-radius:5px;border:1px solid var(--b-1);background:var(--s-0);font-size:12px;color:var(--ink-400);cursor:pointer;line-height:1"><i class="ti ti-key"></i></button>
             </div>
             <div id="ai-risk-panel" style="font-size:11.5px;color:var(--ink-500);line-height:1.6">
               <div style="display:flex;align-items:center;gap:6px;color:var(--ink-300);font-size:11.5px;padding:8px 0">
@@ -3313,6 +3431,9 @@ function renderDashboard(){
 
   // Global activity feed
   renderGlobalActivityFeed();
+
+  // Caminho crítico
+  renderCriticalPath();
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -4934,9 +5055,304 @@ function renderGlobalActivityFeed(){
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
+   CAMINHO CRÍTICO — tarefa mais longa ainda ativa por país
+══════════════════════════════════════════════════════════════════════════ */
+function renderCriticalPath(){
+  const panel = document.getElementById('critical-path-panel');
+  if(!panel) return;
+
+  const todayStr = new Date().toISOString().slice(0,10);
+  let html = '';
+
+  COUNTRIES.forEach(c => {
+    const ct = tasks.filter(t => t.country === c.id && t.status !== 'Concluído');
+    if(!ct.length) return;
+
+    // Tarefas raiz não concluídas, ordenadas por duração (maior primeiro)
+    const rootActive = ct.filter(t => !t.parentId && t.start && t.end)
+      .map(t => {
+        const start = new Date(t.start + 'T00:00:00');
+        const end   = new Date(t.end   + 'T00:00:00');
+        const dur   = Math.ceil((end - start) / 864e5);
+        const left  = getDaysLeft(t.end);
+        return { ...t, dur, left };
+      })
+      .sort((a,b) => b.dur - a.dur);
+
+    if(!rootActive.length) return;
+
+    const top3 = rootActive.slice(0, 3);
+    const maxDur = top3[0].dur;
+    const prog = getProgress(c.id);
+
+    // Determine country risk level
+    const hasOverdue  = rootActive.some(t => t.left !== null && t.left < 0);
+    const hasBlocked  = ct.some(t => t.status === 'Bloqueado');
+    const hasSoon     = rootActive.some(t => t.left !== null && t.left >= 0 && t.left <= 21);
+    const riskLevel   = (hasOverdue || hasBlocked) ? 'critical' : hasSoon ? 'warn' : 'ok';
+    const riskLabel   = { critical: 'Crítico', warn: 'Atenção', ok: 'Normal' };
+    const riskBadge   = `cp-badge-${riskLevel}`;
+
+    const r = REGIONS.find(r => r.id === c.region);
+    const regionColor = r ? r.color : 'var(--brand)';
+
+    html += `<div class="cp-country-block">
+      <div class="cp-country-head" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'':'none'">
+        <span style="font-size:15px">${c.flag}</span>
+        <span>${c.name}</span>
+        <span style="font-size:10.5px;font-weight:400;color:var(--ink-400)">${prog}%</span>
+        <span class="cp-badge ${riskBadge}">${riskLabel[riskLevel]}</span>
+      </div>
+      <div class="cp-body">`;
+
+    top3.forEach((t, i) => {
+      const pct = maxDur ? Math.round(t.dur / maxDur * 100) : 0;
+      const isOverdue  = t.left !== null && t.left < 0;
+      const isSoon     = t.left !== null && t.left >= 0 && t.left <= 21;
+      const isBlocked  = t.status === 'Bloqueado';
+      const barColor   = isBlocked || isOverdue ? 'var(--c-danger)' : isSoon ? 'var(--c-warning)' : regionColor;
+      const leftLabel  = t.left === null ? '' :
+                         t.left < 0  ? `<span style="color:var(--c-danger);font-weight:600">${Math.abs(t.left)}d atrasada</span>` :
+                         t.left === 0 ? `<span style="color:var(--c-danger);font-weight:600">Vence hoje</span>` :
+                         t.left <= 7  ? `<span style="color:var(--c-warning);font-weight:600">Vence em ${t.left}d</span>` :
+                                        `${t.left}d restantes`;
+      const statusIcon = isBlocked ? '🔴' : isOverdue ? '⚠️' : isSoon ? '🟡' : '';
+
+      html += `<div class="cp-task-row" onclick="openPeek(${t.id})" style="cursor:pointer;padding:3px 4px;border-radius:4px" onmouseenter="this.style.background='var(--ink-50)'" onmouseleave="this.style.background=''">
+        <div style="display:flex;align-items:center;gap:4px">
+          ${i===0?'<i class="ti ti-flame" style="font-size:11px;color:var(--c-danger);flex-shrink:0"></i>':'<span style="width:11px;flex-shrink:0"></span>'}
+          <div class="cp-task-name" style="flex:1" title="${t.name}">${t.name}</div>
+        </div>
+        <div class="cp-task-meta">${statusIcon} ${t.dur}d de duração · ${leftLabel}</div>
+        <div class="cp-bar-track"><div class="cp-bar-fill" style="width:${pct}%;background:${barColor}"></div></div>
+      </div>`;
+    });
+
+    if(rootActive.length > 3){
+      html += `<div style="font-size:10.5px;color:var(--ink-400);padding:2px 4px">+${rootActive.length - 3} outras tarefas ativas</div>`;
+    }
+
+    html += `</div></div>`;
+  });
+
+  panel.innerHTML = html || '<div style="color:var(--ink-300);font-size:11px;padding:4px 0">Nenhuma tarefa ativa.</div>';
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   ALERTAS PROATIVOS — exibe toast com resumo ao abrir o app
+══════════════════════════════════════════════════════════════════════════ */
+function buildProactiveAlerts(){
+  const todayStr = new Date().toISOString().slice(0,10);
+  const alerts = [];
+
+  // 1. Tarefas atrasadas
+  const overdue = tasks.filter(t => t.status !== 'Concluído' && t.end && t.end < todayStr);
+  if(overdue.length){
+    alerts.push({
+      type: 'danger',
+      icon: 'ti-alert-circle',
+      title: `${overdue.length} tarefa${overdue.length>1?'s':''} atrasada${overdue.length>1?'s':''}`,
+      items: overdue.slice(0,3).map(t => {
+        const c = COUNTRIES.find(x=>x.id===t.country);
+        return `${c?c.flag:''} ${t.name} (${Math.abs(getDaysLeft(t.end))}d)`;
+      }),
+      more: overdue.length > 3 ? overdue.length - 3 : 0,
+      action: () => { showPage('tasks'); setTimeout(()=>{ document.getElementById('filter-status').value='Em andamento'; renderTasks(); },50); }
+    });
+  }
+
+  // 2. Tarefas bloqueadas
+  const blocked = tasks.filter(t => t.status === 'Bloqueado');
+  if(blocked.length){
+    alerts.push({
+      type: 'danger',
+      icon: 'ti-lock',
+      title: `${blocked.length} tarefa${blocked.length>1?'s':''} bloqueada${blocked.length>1?'s':''}`,
+      items: blocked.slice(0,3).map(t => {
+        const c = COUNTRIES.find(x=>x.id===t.country);
+        return `${c?c.flag:''} ${t.name}`;
+      }),
+      more: blocked.length > 3 ? blocked.length - 3 : 0,
+      action: () => { showPage('tasks'); setTimeout(()=>{ document.getElementById('filter-status').value='Bloqueado'; renderTasks(); },50); }
+    });
+  }
+
+  // 3. Vencem em 7 dias
+  const soon7 = tasks.filter(t => {
+    if(t.status==='Concluído') return false;
+    const d = getDaysLeft(t.end);
+    return d !== null && d >= 0 && d <= 7;
+  });
+  if(soon7.length){
+    alerts.push({
+      type: 'warning',
+      icon: 'ti-clock',
+      title: `${soon7.length} tarefa${soon7.length>1?'s':''} vence${soon7.length>1?'m':''} em 7 dias`,
+      items: soon7.slice(0,3).map(t => {
+        const c = COUNTRIES.find(x=>x.id===t.country);
+        const d = getDaysLeft(t.end);
+        return `${c?c.flag:''} ${t.name} (${d===0?'hoje':d+'d'})`;
+      }),
+      more: soon7.length > 3 ? soon7.length - 3 : 0,
+      action: () => { showPage('tasks'); }
+    });
+  }
+
+  // 4. Vencem em 14 dias (apenas se não cobre os 7)
+  const soon14 = tasks.filter(t => {
+    if(t.status==='Concluído') return false;
+    const d = getDaysLeft(t.end);
+    return d !== null && d > 7 && d <= 14;
+  });
+  if(soon14.length){
+    alerts.push({
+      type: 'info',
+      icon: 'ti-calendar-event',
+      title: `${soon14.length} tarefa${soon14.length>1?'s':''} nos próximos 14 dias`,
+      items: soon14.slice(0,2).map(t => {
+        const c = COUNTRIES.find(x=>x.id===t.country);
+        return `${c?c.flag:''} ${t.name} (${getDaysLeft(t.end)}d)`;
+      }),
+      more: soon14.length > 2 ? soon14.length - 2 : 0,
+      action: () => { showPage('tasks'); }
+    });
+  }
+
+  return alerts;
+}
+
+function toggleProactiveAlert(){
+  const bar = document.getElementById('proactive-alert-bar');
+  if(bar.classList.contains('visible')){
+    closeProactiveAlert();
+  } else {
+    // Rebuild fresh
+    const alerts = buildProactiveAlerts();
+    if(!alerts.length){
+      showToast('Nenhum alerta ativo no momento','success','ti-check');
+      return;
+    }
+    // Force re-show (clear snooze)
+    localStorage.removeItem('alya_alert_snooze');
+    showProactiveAlert();
+  }
+}
+
+function showProactiveAlert(){
+  // Verificar snooze (1h)
+  const snoozed = localStorage.getItem('alya_alert_snooze');
+  if(snoozed && Date.now() < parseInt(snoozed)) return;
+
+  const alerts = buildProactiveAlerts();
+  if(!alerts.length) return;
+
+  const total = alerts.reduce((s,a) => {
+    const n = parseInt(a.title);
+    return s + (isNaN(n) ? 0 : n);
+  }, 0);
+
+  const typeColors = {
+    danger:  { color: 'var(--c-danger)',  bg: 'var(--c-danger-bg)',  border: '#FECACA' },
+    warning: { color: 'var(--c-warning)', bg: 'var(--c-warning-bg)', border: '#FDE68A' },
+    info:    { color: 'var(--c-info)',    bg: 'var(--c-info-bg)',    border: '#BFDBFE' },
+  };
+
+  let html = '';
+  alerts.forEach(a => {
+    const tc = typeColors[a.type] || typeColors.info;
+    html += `<div class="pal-section" onclick="${a.action.toString().includes('showPage')?'('+a.action.toString()+')()':''}" style="cursor:pointer">
+      <div class="pal-section-title" style="color:${tc.color};display:flex;align-items:center;gap:5px">
+        <i class="ti ${a.icon}"></i>${a.title}
+      </div>
+      ${a.items.map(item => `<div class="pal-item" style="color:var(--ink-600)">${item}</div>`).join('')}
+      ${a.more ? `<div style="font-size:10px;color:var(--ink-400);padding-top:1px">+${a.more} mais...</div>` : ''}
+    </div>`;
+  });
+
+  document.getElementById('pal-body').innerHTML = html;
+  document.getElementById('pal-badge').textContent = alerts.length;
+
+  // Acende o dot no botão de sino
+  const dot = document.getElementById('alert-bell-dot');
+  if(dot) dot.style.display = 'block';
+
+  const bar = document.getElementById('proactive-alert-bar');
+  bar.classList.add('visible');
+
+  // Auto-fechar depois de 30s se não houver bloqueios
+  const hasCritical = alerts.some(a => a.type === 'danger');
+  if(!hasCritical){
+    setTimeout(() => bar.classList.remove('visible'), 30000);
+  }
+}
+
+function closeProactiveAlert(){
+  document.getElementById('proactive-alert-bar')?.classList.remove('visible');
+  const dot = document.getElementById('alert-bell-dot');
+  if(dot) dot.style.display = 'none';
+}
+
+function snoozeProactiveAlert(){
+  localStorage.setItem('alya_alert_snooze', Date.now() + 3600000); // 1 hora
+  closeProactiveAlert();
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
    IA DE RISCOS — usa Claude API para analisar dados do projeto
 ══════════════════════════════════════════════════════════════════════════ */
+function openAiKeyModal(){
+  const existing = localStorage.getItem('alya_anthropic_key') || '';
+  const ov = document.createElement('div');
+  ov.id = 'ai-key-overlay';
+  ov.style.cssText = 'position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center';
+  ov.innerHTML = `
+    <div style="background:var(--s-0);border-radius:var(--radius-xl);box-shadow:var(--sh-modal);width:440px;max-width:95vw;overflow:hidden">
+      <div style="padding:16px 18px 14px;border-bottom:1px solid var(--b-0);display:flex;align-items:center;gap:12px">
+        <div style="width:34px;height:34px;border-radius:9px;background:#F5F3FF;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0">✨</div>
+        <div>
+          <div style="font-size:14px;font-weight:700;color:var(--ink-900)">Chave API Anthropic</div>
+          <div style="font-size:11px;color:var(--ink-400);margin-top:1px">Necessária para a Análise de Riscos IA</div>
+        </div>
+        <button onclick="document.getElementById('ai-key-overlay').remove()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:var(--ink-400);font-size:18px;padding:4px 8px;border-radius:6px;line-height:1">✕</button>
+      </div>
+      <div style="padding:18px;display:flex;flex-direction:column;gap:14px">
+        <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:8px;padding:10px 12px;font-size:11.5px;color:#6D28D9;line-height:1.6">
+          <strong>Como funciona:</strong> a chave é salva <strong>apenas no seu navegador</strong> (localStorage) e usada diretamente nas chamadas à API da Anthropic. Nunca é enviada a terceiros.
+        </div>
+        <div>
+          <label style="font-size:11px;font-weight:600;color:var(--ink-600);display:block;margin-bottom:4px">
+            Anthropic API Key
+            <a href="https://console.anthropic.com/settings/keys" target="_blank" style="color:var(--brand);font-weight:400;margin-left:6px">Criar chave →</a>
+          </label>
+          <input id="ai-key-input" type="password" placeholder="sk-ant-xxxxxxxxxxxxxxxxxxxx" value="${existing}" style="width:100%;padding:7px 10px;border:1px solid var(--b-1);border-radius:var(--radius);font-size:12px;background:var(--s-0);color:var(--ink-900);font-family:var(--font-mono)">
+          <div style="font-size:10.5px;color:var(--ink-400);margin-top:3px">⚠️ A chave fica salva apenas localmente. Nunca compartilhe sua API key.</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <div style="flex:1"></div>
+          <button onclick="document.getElementById('ai-key-overlay').remove()" class="btn btn-outline" style="font-size:12px">Cancelar</button>
+          <button onclick="_saveAiKey()" class="btn btn-primary" style="font-size:12px"><i class="ti ti-check"></i> Salvar e Analisar</button>
+        </div>
+      </div>
+    </div>`;
+  document.body.appendChild(ov);
+  setTimeout(()=>{ const inp = document.getElementById('ai-key-input'); if(inp) inp.focus(); }, 100);
+}
+
+function _saveAiKey(){
+  const val = (document.getElementById('ai-key-input')?.value || '').trim();
+  if(!val){ alert('Por favor, insira uma chave API válida.'); return; }
+  localStorage.setItem('alya_anthropic_key', val);
+  document.getElementById('ai-key-overlay')?.remove();
+  runAiRiskAnalysis();
+}
+
 async function runAiRiskAnalysis(){
+  const apiKey = localStorage.getItem('alya_anthropic_key') || '';
+  if(!apiKey){
+    openAiKeyModal();
+    return;
+  }
+
   const btn = document.getElementById('ai-risk-btn');
   const panel = document.getElementById('ai-risk-panel');
   if(!btn || !panel) return;
@@ -4996,7 +5412,7 @@ Máximo 4 riscos, 2 oportunidades. Seja específico e use os nomes dos países/f
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 1000,
@@ -5042,8 +5458,10 @@ Máximo 4 riscos, 2 oportunidades. Seja específico e use os nomes dos países/f
     panel.innerHTML = html;
 
   } catch(err){
-    panel.innerHTML = `<div style="font-size:11.5px;color:var(--c-danger);padding:6px 0">
+    const isAuth = err.message.includes('401') || err.message.toLowerCase().includes('auth');
+    panel.innerHTML = `<div style="font-size:11.5px;color:var(--c-danger);padding:6px 0;line-height:1.6">
       <i class="ti ti-alert-circle"></i> Erro ao gerar análise: ${err.message}
+      ${isAuth ? `<br><button onclick="localStorage.removeItem('alya_anthropic_key');openAiKeyModal()" style="margin-top:6px;font-size:11px;color:var(--brand);background:none;border:1px solid var(--b-1);padding:3px 8px;border-radius:5px;cursor:pointer">Reconfigurar chave API</button>` : ''}
     </div>`;
   }
 
@@ -7142,6 +7560,9 @@ function openPrintWindow(htmlContent, filename){
   renderDashboard();
   rebaseSync();
   ghStartPolling();
+
+  // Alertas proativos — exibe após 1.2s para não competir com o render inicial
+  setTimeout(showProactiveAlert, 1200);
 })();
 </script>
 
