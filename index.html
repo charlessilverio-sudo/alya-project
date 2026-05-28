@@ -459,22 +459,23 @@ body {
 }
 .kpi {
   background: var(--s-0); border: 1px solid var(--b-0);
-  border-radius: var(--radius-lg); padding: 12px 14px;
-  cursor: default; transition: box-shadow var(--dur);
+  border-radius: var(--radius-lg); padding: 13px 14px 11px;
+  cursor: default; transition: box-shadow var(--dur), transform var(--dur);
   position: relative; overflow: hidden;
 }
-.kpi:hover { box-shadow: var(--sh-2); }
+.kpi:hover { box-shadow: var(--sh-2); transform: translateY(-1px); }
 .kpi-label {
-  font-size: 10.5px; font-weight: 600; color: var(--ink-400);
-  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px;
+  font-size: 10px; font-weight: 700; color: var(--ink-400);
+  text-transform: uppercase; letter-spacing: .6px; margin-bottom: 7px;
 }
 .kpi-value {
-  font-size: 22px; font-weight: 700; line-height: 1;
-  letter-spacing: -.5px;
+  font-size: 24px; font-weight: 800; line-height: 1;
+  letter-spacing: -.8px;
 }
-.kpi-sub { font-size: 10.5px; color: var(--ink-400); margin-top: 4px; }
+.kpi-sub { font-size: 10.5px; color: var(--ink-400); margin-top: 5px; }
 .kpi-accent {
-  position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 
 /* Alert strip — Progressive Disclosure */
@@ -707,20 +708,34 @@ body {
 /* Priority indicator stripe */
 .pri-stripe { display: flex; align-items: center; gap: 6px; }
 .pri-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.pri-dot-alta { background: #EF4444; }
-.pri-dot-media { background: #F59E0B; }
-.pri-dot-baixa { background: #22C55E; }
+.pri-dot-alta  { background: #DC2626; box-shadow: 0 0 0 2px rgba(220,38,38,.18); }
+.pri-dot-media { background: #D97706; box-shadow: 0 0 0 2px rgba(217,119,6,.18); }
+.pri-dot-baixa { background: #16A34A; box-shadow: 0 0 0 2px rgba(22,163,74,.12); }
 
 /* Status badge */
 .sbadge {
   display: inline-flex; align-items: center; gap: 4px;
   padding: 2px 8px; border-radius: 4px;
-  font-size: 11px; font-weight: 500; white-space: nowrap;
+  font-size: 11px; font-weight: 600; white-space: nowrap;
+  letter-spacing: .1px;
 }
-.sbadge-fazer    { background: var(--ink-100); color: var(--ink-600); }
-.sbadge-andamento{ background: var(--c-info-bg); color: var(--c-info); }
-.sbadge-concluido{ background: var(--c-success-bg); color: var(--c-success); }
-.sbadge-bloqueado{ background: var(--c-danger-bg); color: var(--c-danger); }
+.sbadge-fazer    { background: var(--ink-100); color: var(--ink-500); border: 1px solid var(--ink-200); }
+.sbadge-andamento{ background: #DBEAFE; color: #1D4ED8; border: 1px solid #BFDBFE; }
+.sbadge-concluido{ background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
+.sbadge-bloqueado{
+  background: #FEE2E2; color: #B91C1C; border: 1px solid #FECACA;
+  animation: pulse-bloqueado 2.5s ease-in-out infinite;
+}
+@keyframes pulse-bloqueado {
+  0%,100% { box-shadow: 0 0 0 0 rgba(185,28,28,0); }
+  50%      { box-shadow: 0 0 0 3px rgba(185,28,28,.15); }
+}
+
+/* Priority row highlight */
+.tasks-table tbody tr.row-alta td   { border-left: 2px solid #DC2626; }
+.tasks-table tbody tr.row-media td:first-child { border-left: 2px solid #D97706; }
+.tasks-table tbody tr.row-bloqueado { background: #FFF5F5 !important; }
+.dark-mode .tasks-table tbody tr.row-bloqueado { background: rgba(185,28,28,.08) !important; }
 
 /* Inline edit */
 .editable {
@@ -1768,6 +1783,28 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
           <div class="panel-section">
             <div class="panel-title">Resumo operacional</div>
             <div id="op-summary" style="font-size:12px;color:var(--ink-600);line-height:1.7"></div>
+          </div>
+          <!-- IA DE RISCOS -->
+          <div class="panel-section">
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
+              <div class="panel-title" style="margin-bottom:0">Análise de Riscos IA</div>
+              <button onclick="runAiRiskAnalysis()" id="ai-risk-btn" style="margin-left:auto;display:flex;align-items:center;gap:4px;padding:3px 8px;border-radius:5px;border:1px solid var(--b-1);background:var(--s-0);font-size:10.5px;font-weight:600;color:var(--brand);cursor:pointer;font-family:var(--font)">
+                <i class="ti ti-sparkles" style="font-size:12px"></i>Analisar
+              </button>
+            </div>
+            <div id="ai-risk-panel" style="font-size:11.5px;color:var(--ink-500);line-height:1.6">
+              <div style="display:flex;align-items:center;gap:6px;color:var(--ink-300);font-size:11.5px;padding:8px 0">
+                <i class="ti ti-sparkles" style="font-size:14px"></i>
+                Clique em Analisar para gerar análise de riscos com IA
+              </div>
+            </div>
+          </div>
+          <!-- ACTIVITY FEED GLOBAL -->
+          <div class="panel-section">
+            <div class="panel-title">Atividade recente</div>
+            <div id="global-activity-feed" style="font-size:11.5px;color:var(--ink-500)">
+              <div style="color:var(--ink-300);font-size:11px;padding:4px 0">Nenhuma atividade registrada</div>
+            </div>
           </div>
         </div>
       </div>
@@ -3277,6 +3314,9 @@ function renderDashboard(){
     <div>⏱ <strong>${tasks.filter(t=>t.start&&getDaysLeft(t.end)<=14&&getDaysLeft(t.end)>0&&t.status!=='Concluído').length}</strong> tarefas vencem em 14 dias</div>
     ${overdue>0?`<div style="color:var(--c-danger)">🚨 <strong>${overdue}</strong> tarefa${overdue>1?'s':''} atrasada${overdue>1?'s':''}</div>`:'<div style="color:var(--c-success)">✅ Nenhum atraso crítico</div>'}
   `;
+
+  // Global activity feed
+  renderGlobalActivityFeed();
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -3396,7 +3436,7 @@ function renderTasks(){
     html += `<tr data-id="${t.id}" data-level="${level}" data-parent="${t.parentId||''}"
               draggable="true"
               onclick="rowClick(event,${t.id})"
-              style="cursor:pointer;" class="tree-row band-${rootBand}${isParent?' is-root':''}${isSub?' is-child':''}${isDeep?' is-deep':''}">
+              style="cursor:pointer;" class="tree-row band-${rootBand}${isParent?' is-root':''}${isSub?' is-child':''}${isDeep?' is-deep':''}${t.status==='Bloqueado'?' row-bloqueado':''}${t.priority==='Alta'&&t.status!=='Concluído'?' row-alta':''}">
       <td style="padding-left:${isParent?12:8}px">
         <div style="display:flex;align-items:center;gap:0;min-width:0">
           ${/* Drag handle — visível no hover */''}
@@ -4578,6 +4618,10 @@ function logActivity(taskId, field, oldVal, newVal){
   t.activityLog.unshift({ field, oldVal, newVal, ts: Date.now(), text });
   // Máximo 50 entradas por tarefa
   if(t.activityLog.length > 50) t.activityLog = t.activityLog.slice(0,50);
+  // Atualiza feed global se dashboard estiver visível
+  if(document.getElementById('page-dashboard')?.classList.contains('active')){
+    renderGlobalActivityFeed();
+  }
 }
 
 function renderActivityLog(){
@@ -4614,6 +4658,175 @@ function timeAgo(dt){
   if(diff<604800) return `há ${Math.floor(diff/86400)}d`;
   return dt.toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   GLOBAL ACTIVITY FEED
+   Coleta logs de todas as tarefas e exibe no dashboard
+══════════════════════════════════════════════════════════════════════════ */
+function renderGlobalActivityFeed(){
+  const el = document.getElementById('global-activity-feed');
+  if(!el) return;
+
+  // Coleta todos os logs de todas as tarefas
+  const entries = [];
+  tasks.forEach(t => {
+    (t.activityLog||[]).forEach(log => {
+      entries.push({ ...log, taskName: t.name, taskId: t.id, country: t.country });
+    });
+  });
+
+  // Ordena por data decrescente
+  entries.sort((a,b) => b.ts - a.ts);
+  const recent = entries.slice(0, 12);
+
+  if(!recent.length){
+    el.innerHTML = `<div style="color:var(--ink-300);font-size:11px;padding:4px 0">Nenhuma atividade registrada</div>`;
+    return;
+  }
+
+  const avatarColors = ['#15803D','#1D4ED8','#B45309','#6D28D9','#DB2777','#0891B2','#DC2626'];
+  el.innerHTML = recent.map((e, i) => {
+    const c = ci(e.country);
+    const ago = timeAgo(new Date(e.ts));
+    const col = avatarColors[i % avatarColors.length];
+    const initial = e.taskName?.[0]?.toUpperCase() || 'A';
+    return `<div class="feed-item" onclick="openPeek(${e.taskId})" style="cursor:pointer;padding:6px 0;border-bottom:1px solid var(--b-0);display:flex;gap:8px;align-items:flex-start" title="Ver tarefa">
+      <div style="width:22px;height:22px;border-radius:50%;background:${col};display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0;margin-top:1px">${initial}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:11px;color:var(--ink-600);line-height:1.4">${e.text}</div>
+        <div style="font-size:10px;color:var(--ink-400);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${c.flag} ${e.taskName} · ${ago}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   IA DE RISCOS — usa Claude API para analisar dados do projeto
+══════════════════════════════════════════════════════════════════════════ */
+async function runAiRiskAnalysis(){
+  const btn = document.getElementById('ai-risk-btn');
+  const panel = document.getElementById('ai-risk-panel');
+  if(!btn || !panel) return;
+
+  btn.disabled = true;
+  btn.innerHTML = `<i class="ti ti-loader-2" style="font-size:12px;animation:spin 1s linear infinite"></i>Analisando...`;
+  panel.innerHTML = `<div style="display:flex;align-items:center;gap:6px;color:var(--ink-400);padding:8px 0;font-size:11.5px"><i class="ti ti-loader-2" style="animation:spin 1s linear infinite"></i>Analisando dados do projeto...</div>`;
+
+  // Prepara snapshot resumido para enviar à IA (sem dados sensíveis)
+  const today = new Date().toISOString().slice(0,10);
+  const snapshot = {
+    totalTasks: tasks.length,
+    done: tasks.filter(t=>t.status==='Concluído').length,
+    blocked: tasks.filter(t=>t.status==='Bloqueado').length,
+    inProgress: tasks.filter(t=>t.status==='Em andamento').length,
+    overdue: tasks.filter(t=>t.status!=='Concluído'&&t.end&&t.end<today).length,
+    dueSoon: tasks.filter(t=>t.status!=='Concluído'&&t.end&&t.end>=today&&getDaysLeft(t.end)<=14).length,
+    countries: COUNTRIES.map(c=>{
+      const ct = tasks.filter(t=>t.country===c.id);
+      const prog = getProgress(c.id);
+      const bl = ct.filter(t=>t.status==='Bloqueado');
+      const ov = ct.filter(t=>t.status!=='Concluído'&&t.end&&t.end<today);
+      return {
+        name: c.name,
+        progress: prog,
+        total: ct.length,
+        blocked: bl.length,
+        overdue: ov.length,
+        blockedTasks: bl.slice(0,3).map(t=>t.name),
+        overdueTasks: ov.slice(0,3).map(t=>t.name),
+      };
+    }).filter(c=>c.total>0),
+    phases: [...new Set(tasks.map(t=>t.phase).filter(Boolean))].map(ph=>{
+      const pt = tasks.filter(t=>t.phase===ph);
+      return { phase: ph, total: pt.length, done: pt.filter(t=>t.status==='Concluído').length, blocked: pt.filter(t=>t.status==='Bloqueado').length };
+    }),
+  };
+
+  const prompt = `Você é um PMO sênior especializado em expansão internacional.
+Analise estes dados de um projeto de rollout multinacional e forneça uma análise de riscos objetiva.
+
+DADOS DO PROJETO (${today}):
+${JSON.stringify(snapshot, null, 2)}
+
+Responda APENAS com um JSON no seguinte formato (sem markdown, sem explicações fora do JSON):
+{
+  "resumo": "1-2 frases sobre o estado geral do projeto",
+  "riscos": [
+    { "nivel": "critico|alto|medio", "titulo": "...", "descricao": "...", "acao": "..." },
+    ...
+  ],
+  "oportunidades": ["...", "..."]
+}
+
+Máximo 4 riscos, 2 oportunidades. Seja específico e use os nomes dos países/fases dos dados.`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    if(!res.ok) throw new Error('API error '+res.status);
+    const data = await res.json();
+    const raw = data.content?.find(b=>b.type==='text')?.text || '';
+    const clean = raw.replace(/```json|```/g,'').trim();
+    const parsed = JSON.parse(clean);
+
+    const nivelConfig = {
+      critico: { color: '#B91C1C', bg: '#FEE2E2', border: '#FECACA', icon: 'ti-alert-octagon', label: 'Crítico' },
+      alto:    { color: '#B45309', bg: '#FEF3C7', border: '#FDE68A', icon: 'ti-alert-triangle', label: 'Alto' },
+      medio:   { color: '#1D4ED8', bg: '#DBEAFE', border: '#BFDBFE', icon: 'ti-info-circle', label: 'Médio' },
+    };
+
+    let html = '';
+    if(parsed.resumo){
+      html += `<div style="font-size:11.5px;color:var(--ink-700);line-height:1.5;padding:8px 10px;background:var(--s-1);border-radius:6px;margin-bottom:10px;border-left:2px solid var(--brand)">${parsed.resumo}</div>`;
+    }
+    (parsed.riscos||[]).forEach(r=>{
+      const n = nivelConfig[r.nivel] || nivelConfig.medio;
+      html += `<div style="margin-bottom:7px;padding:8px 10px;background:${n.bg};border:1px solid ${n.border};border-radius:6px">
+        <div style="display:flex;align-items:center;gap:5px;margin-bottom:3px">
+          <i class="ti ${n.icon}" style="font-size:12px;color:${n.color}"></i>
+          <span style="font-size:11px;font-weight:700;color:${n.color};text-transform:uppercase;letter-spacing:.3px">${n.label}</span>
+          <span style="font-size:11.5px;font-weight:600;color:var(--ink-800);margin-left:2px">${r.titulo}</span>
+        </div>
+        <div style="font-size:11px;color:var(--ink-600);margin-bottom:4px">${r.descricao}</div>
+        <div style="font-size:10.5px;color:${n.color};font-weight:600">→ ${r.acao}</div>
+      </div>`;
+    });
+    if(parsed.oportunidades?.length){
+      html += `<div style="margin-top:8px;font-size:10.5px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Oportunidades</div>`;
+      parsed.oportunidades.forEach(op=>{
+        html += `<div style="font-size:11px;color:var(--c-success);margin-bottom:3px;display:flex;gap:5px"><i class="ti ti-check" style="flex-shrink:0;margin-top:1px"></i>${op}</div>`;
+      });
+    }
+    html += `<div style="font-size:10px;color:var(--ink-300);margin-top:8px;text-align:right">Gerado em ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</div>`;
+    panel.innerHTML = html;
+
+  } catch(err){
+    panel.innerHTML = `<div style="font-size:11.5px;color:var(--c-danger);padding:6px 0">
+      <i class="ti ti-alert-circle"></i> Erro ao gerar análise: ${err.message}
+    </div>`;
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = `<i class="ti ti-sparkles" style="font-size:12px"></i>Analisar`;
+}
+
+// Garante que a animação de spin existe
+(function(){
+  if(!document.getElementById('spin-style')){
+    const s = document.createElement('style');
+    s.id = 'spin-style';
+    s.textContent = '@keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }';
+    document.head.appendChild(s);
+  }
+})();
 
 /* ══════════════════════════════════════════════════════════════════════════
    KANBAN
