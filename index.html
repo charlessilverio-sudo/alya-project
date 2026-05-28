@@ -7076,27 +7076,41 @@ function _confirmPOM(){
 
 /* ══ UTILITÁRIO DE IMPRESSÃO (funciona sem popup) ══════════════════════ */
 function openPrintWindow(htmlContent, filename){
+  // Tenta abrir numa nova aba real (melhor para @page/@media print)
   try{
-    var bodyMatch = htmlContent.match(new RegExp('<body[^>]*>([\\s\\S]*?)<\\/body>','i'));
-    var styleMatch = htmlContent.match(new RegExp('<style[^>]*>([\\s\\S]*?)<\\/style>','ig'))||[];
+    var w = window.open('', '_blank');
+    if(w){
+      w.document.open();
+      w.document.write(htmlContent);
+      w.document.close();
+      return;
+    }
+  }catch(e){}
+
+  // Fallback: modal interno (popup bloqueado pelo navegador)
+  try{
+    var bodyMatch = htmlContent.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+    var styleMatch = htmlContent.match(/<style[^>]*>[\s\S]*?<\/style>/ig)||[];
     var bodyContent = bodyMatch ? bodyMatch[1] : htmlContent;
     var styles = styleMatch.join('\n');
     var modal = document.getElementById('_print_modal');
     var modalBody = document.getElementById('_print_modal_body');
     var modalTitle = document.getElementById('_print_modal_title');
-    if(!modal||!modalBody) throw new Error('Modal nao encontrado');
+    if(!modal||!modalBody) throw new Error('modal nao encontrado');
     modalTitle.textContent = filename ? filename.replace('.html','').replace(/_/g,' ') : 'Relatorio';
-    modalBody.innerHTML = '<style>'+styles+'<'+'/style>' + bodyContent;
+    modalBody.innerHTML = '<style>'+styles+'</style>' + bodyContent;
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
+    showToast('Popup bloqueado — use o botao Imprimir no topo','success','ti-eye');
   }catch(e){
+    // Ultimo fallback: baixar o arquivo
     try{
       var blob = new Blob([htmlContent],{type:'text/html;charset=utf-8'});
       var url = URL.createObjectURL(blob);
       var a = document.createElement('a');
       a.href=url; a.download=filename||'relatorio.html'; a.click();
       setTimeout(function(){URL.revokeObjectURL(url);},1000);
-      showToast('Arquivo salvo — abra para imprimir','success','ti-download');
+      showToast('Arquivo baixado — abra e imprima','success','ti-download');
     }catch(e2){ showToast('Erro ao gerar relatorio','error','ti-alert-circle'); }
   }
 }
