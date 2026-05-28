@@ -1654,6 +1654,11 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
       <input type="file" accept=".json" onchange="importData(event)" style="display:none">
     </label>
     <div class="topbar-div"></div>
+    <button class="btn btn-ghost" id="gh-status" onclick="openGhConfig()" style="padding:4px 7px;min-width:28px;gap:4px">
+      <i class="ti ti-cloud-off" style="font-size:13px;color:#B91C1C"></i>
+      <span style="font-size:10px;color:var(--ink-400)">Nuvem</span>
+    </button>
+    <div class="topbar-div"></div>
     <div class="save-pill" onclick="saveData()" id="save-pill">
       <span class="dot dirty" id="save-dot"></span>
       <i class="ti ti-device-floppy" style="font-size:13px;color:var(--ink-400)"></i>
@@ -2661,22 +2666,259 @@ const COUNTRY_COLORS={
 };
 
 /* ══════════════════════════════════════════════════════════════════════════
-   STORAGE
+   GITHUB CLOUD STORAGE
+   Dados ficam em: github.com/{owner}/{repo}/blob/main/data.json
+   Qualquer pessoa com o link vê os dados atualizados em tempo real.
+   Somente quem tem o token (configurado abaixo) pode salvar.
 ══════════════════════════════════════════════════════════════════════════ */
-function loadData(){
-  ['alya_ent_v3','alya_ent_v4','alya_ent_v5','alya_ent_v6','alya_ent_v7','alya_ent_v8'].forEach(k=>{try{localStorage.removeItem(k);}catch(e){}});
-  try{const sv=localStorage.getItem('alya_ent_v9');if(sv){const p=JSON.parse(sv);if(Array.isArray(p)&&p.length&&p[0].id!==undefined){tasks=p;return;}}}catch(e){}
-  tasks=JSON.parse(JSON.stringify(DEFAULT_TASKS));
-}
-function saveData(){
+
+// ── Config: editada no modal de configurações ──────────────────────────
+let GH_CONFIG = {
+  owner: '',   // ex: charlessilverio-sudo
+  repo:  '',   // ex: alya-project
+  file:  'data.json',
+  token: '',   // Personal Access Token (guardado só localmente)
+};
+
+let _ghFileSha = null; // SHA do arquivo atual (necessário para commits)
+
+function ghLoadConfig(){
   try{
-    localStorage.setItem('alya_ent_v9',JSON.stringify(tasks));
-    localStorage.setItem('alya_ent_v9n',String(DEFAULT_TASKS.length));
-    unsaved=false;
-    document.getElementById('save-dot').className='dot clean';
-    setTimeout(()=>{if(!unsaved)document.getElementById('save-dot').className='dot';},3000);
-    showToast('Salvo','success','ti-check');
-  }catch(e){showToast('Erro ao salvar','error','ti-alert-circle')}
+    const s = localStorage.getItem('alya_gh_config');
+    if(s){ const p=JSON.parse(s); Object.assign(GH_CONFIG,p); }
+  }catch(e){}
+}
+
+function ghSaveConfig(){
+  try{ localStorage.setItem('alya_gh_config', JSON.stringify(GH_CONFIG)); }catch(e){}
+}
+
+// ── API helpers ────────────────────────────────────────────────────────
+function ghHeaders(withToken=false){
+  const h = { 'Accept':'application/vnd.github+json', 'X-GitHub-Api-Version':'2022-11-28' };
+  if(withToken && GH_CONFIG.token) h['Authorization'] = 'Bearer '+GH_CONFIG.token;
+  return h;
+}
+
+function ghFileUrl(){
+  return `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/${GH_CONFIG.file}`;
+}
+
+// ── Carrega dados do GitHub (público — sem token) ─────────────────────
+async function ghFetchData(){
+  if(!GH_CONFIG.owner || !GH_CONFIG.repo) return null;
+  try{
+    // cache-bust para garantir dado fresco
+    const res = await fetch(ghFileUrl()+'?t='+Date.now(), { headers: ghHeaders() });
+    if(res.status===404) return null; // arquivo ainda não existe
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const meta = await res.json();
+    _ghFileSha = meta.sha;
+    const content = atob(meta.content.replace(/\n/g,''));
+    const raw = JSON.parse(content);
+    if(Array.isArray(raw)) return raw;
+    if(raw.tasks && Array.isArray(raw.tasks)) return raw.tasks;
+    return null;
+  }catch(e){
+    console.warn('GitHub fetch error:', e);
+    return null;
+  }
+}
+
+// ── Salva dados no GitHub (requer token) ─────────────────────────────
+async function ghPushData(tasksToSave){
+  if(!GH_CONFIG.owner || !GH_CONFIG.repo){
+    throw new Error('Configure o repositório GitHub nas configurações (⚙)');
+  }
+  if(!GH_CONFIG.token){
+    throw new Error('Configure o Token de acesso nas configurações (⚙)');
+  }
+
+  const payload = {
+    version: 'alya_v7',
+    savedAt: new Date().toISOString(),
+    tasks: tasksToSave
+  };
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+
+  const body = {
+    message: `alya: update ${new Date().toISOString().slice(0,16)}`,
+    content: content,
+  };
+  if(_ghFileSha) body.sha = _ghFileSha; // necessário para atualizar arquivo existente
+
+  const res = await fetch(ghFileUrl(), {
+    method: 'PUT',
+    headers: { ...ghHeaders(true), 'Content-Type':'application/json' },
+    body: JSON.stringify(body)
+  });
+
+  if(!res.ok){
+    const err = await res.json().catch(()=>({}));
+    throw new Error(err.message || 'HTTP '+res.status);
+  }
+  const data = await res.json();
+  _ghFileSha = data.content?.sha || _ghFileSha;
+}
+
+// ── STORAGE (substitui localStorage como fonte primária) ──────────────
+async function loadData(){
+  ghLoadConfig();
+  // Limpa chaves antigas
+  ['alya_ent_v3','alya_ent_v4','alya_ent_v5','alya_ent_v6','alya_ent_v7','alya_ent_v8'].forEach(k=>{try{localStorage.removeItem(k);}catch(e){}});
+
+  // Mostra indicador de carregamento
+  ghSetStatus('loading');
+
+  // Tenta carregar do GitHub
+  const ghData = await ghFetchData();
+  if(ghData && ghData.length){
+    tasks = ghData;
+    localStorage.setItem('alya_ent_v9', JSON.stringify(tasks)); // cache local
+    ghSetStatus('synced');
+    return;
+  }
+
+  // Fallback: cache local
+  try{
+    const sv = localStorage.getItem('alya_ent_v9');
+    if(sv){ const p=JSON.parse(sv); if(Array.isArray(p)&&p.length&&p[0].id!==undefined){ tasks=p; ghSetStatus('local'); return; } }
+  }catch(e){}
+
+  // Sem dados: usa defaults
+  tasks = JSON.parse(JSON.stringify(DEFAULT_TASKS));
+  ghSetStatus(GH_CONFIG.owner ? 'local' : 'noconfig');
+}
+
+async function saveData(){
+  // Sempre salva local primeiro (rápido)
+  try{
+    localStorage.setItem('alya_ent_v9', JSON.stringify(tasks));
+    localStorage.setItem('alya_ent_v9n', String(DEFAULT_TASKS.length));
+  }catch(e){}
+
+  unsaved = false;
+  document.getElementById('save-dot').className = 'dot clean';
+
+  // Se não há config GitHub, salva só local
+  if(!GH_CONFIG.owner || !GH_CONFIG.repo || !GH_CONFIG.token){
+    showToast('Salvo localmente — configure o GitHub para compartilhar','success','ti-device-floppy');
+    ghSetStatus('local');
+    setTimeout(()=>{ if(!unsaved) document.getElementById('save-dot').className='dot'; }, 3000);
+    return;
+  }
+
+  // Sobe para o GitHub
+  ghSetStatus('saving');
+  try{
+    await ghPushData(tasks);
+    showToast('Salvo e sincronizado ☁️','success','ti-cloud-check');
+    ghSetStatus('synced');
+  }catch(err){
+    showToast('Salvo local — erro GitHub: '+err.message,'error','ti-cloud-x');
+    ghSetStatus('error', err.message);
+    console.error('GitHub save error:', err);
+  }
+  setTimeout(()=>{ if(!unsaved) document.getElementById('save-dot').className='dot'; }, 3000);
+}
+
+// ── Status indicator no topbar ────────────────────────────────────────
+function ghSetStatus(state, detail=''){
+  const el = document.getElementById('gh-status');
+  if(!el) return;
+  const MAP = {
+    loading:  { icon:'ti-cloud-download', color:'#1D4ED8', tip:'Carregando do GitHub...' },
+    saving:   { icon:'ti-cloud-upload',   color:'#B45309', tip:'Salvando no GitHub...' },
+    synced:   { icon:'ti-cloud-check',    color:'#15803D', tip:'Sincronizado com GitHub' },
+    local:    { icon:'ti-device-floppy',  color:'#7C8087', tip:'Salvo localmente (GitHub não configurado)' },
+    noconfig: { icon:'ti-cloud-off',      color:'#B91C1C', tip:'GitHub não configurado — clique em ⚙ para configurar' },
+    error:    { icon:'ti-cloud-x',        color:'#B91C1C', tip:'Erro GitHub: '+detail },
+  };
+  const s = MAP[state] || MAP['local'];
+  el.innerHTML = `<i class="ti ${s.icon}" style="font-size:13px;color:${s.color}"></i>`;
+  el.title = s.tip;
+}
+
+// ── Auto-reload (polling a cada 60s) ─────────────────────────────────
+let _ghPollTimer = null;
+function ghStartPolling(){
+  if(_ghPollTimer) clearInterval(_ghPollTimer);
+  if(!GH_CONFIG.owner || !GH_CONFIG.repo) return;
+  _ghPollTimer = setInterval(async ()=>{
+    if(unsaved) return; // não sobrescreve edições em andamento
+    const remote = await ghFetchData();
+    if(!remote) return;
+    // Compara versão para evitar re-render desnecessário
+    const localStr = JSON.stringify(tasks.map(t=>t.id+':'+t.status).sort());
+    const remoteStr= JSON.stringify(remote.map(t=>t.id+':'+t.status).sort());
+    if(localStr !== remoteStr){
+      tasks = remote;
+      localStorage.setItem('alya_ent_v9', JSON.stringify(tasks));
+      renderSidebar();
+      const ap = document.querySelector('.page.active')?.id?.replace('page-','') || 'dashboard';
+      showPage(ap);
+      showToast('Dados atualizados por outro usuário ↺','success','ti-refresh');
+      ghSetStatus('synced');
+    }
+  }, 60000);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   MODAL DE CONFIGURAÇÃO GITHUB
+══════════════════════════════════════════════════════════════════════════ */
+function openGhConfig(){
+  document.getElementById('gh-modal-owner').value = GH_CONFIG.owner;
+  document.getElementById('gh-modal-repo').value  = GH_CONFIG.repo;
+  document.getElementById('gh-modal-token').value = GH_CONFIG.token;
+  document.getElementById('gh-modal-file').value  = GH_CONFIG.file;
+  document.getElementById('gh-config-overlay').style.display = 'flex';
+}
+function closeGhConfig(){
+  document.getElementById('gh-config-overlay').style.display = 'none';
+}
+function saveGhConfig(){
+  GH_CONFIG.owner = document.getElementById('gh-modal-owner').value.trim();
+  GH_CONFIG.repo  = document.getElementById('gh-modal-repo').value.trim();
+  GH_CONFIG.token = document.getElementById('gh-modal-token').value.trim();
+  GH_CONFIG.file  = document.getElementById('gh-modal-file').value.trim() || 'data.json';
+  ghSaveConfig();
+  closeGhConfig();
+  showToast('Configuração salva — recarregando dados...','success','ti-cloud');
+  ghSetStatus('loading');
+  _ghFileSha = null;
+  ghFetchData().then(data=>{
+    if(data && data.length){
+      tasks = data;
+      localStorage.setItem('alya_ent_v9', JSON.stringify(tasks));
+      renderSidebar();
+      const ap = document.querySelector('.page.active')?.id?.replace('page-','') || 'dashboard';
+      showPage(ap);
+      ghSetStatus('synced');
+      ghStartPolling();
+    } else {
+      ghSetStatus(GH_CONFIG.owner ? 'local' : 'noconfig');
+    }
+  });
+}
+async function testGhConnection(){
+  const btn = document.getElementById('gh-test-btn');
+  btn.disabled = true; btn.textContent = 'Testando...';
+  const owner = document.getElementById('gh-modal-owner').value.trim();
+  const repo  = document.getElementById('gh-modal-repo').value.trim();
+  const token = document.getElementById('gh-modal-token').value.trim();
+  const file  = document.getElementById('gh-modal-file').value.trim() || 'data.json';
+  try{
+    const url = `https://api.github.com/repos/${owner}/${repo}/contents/${file}?t=${Date.now()}`;
+    const h = { 'Accept':'application/vnd.github+json' };
+    if(token) h['Authorization']='Bearer '+token;
+    const res = await fetch(url, { headers: h });
+    if(res.status===200){ btn.textContent='✅ Arquivo encontrado!'; }
+    else if(res.status===404){ btn.textContent='⚠️ Arquivo não existe ainda (será criado ao salvar)'; }
+    else if(res.status===401){ btn.textContent='❌ Token inválido'; }
+    else if(res.status===403){ btn.textContent='❌ Sem permissão'; }
+    else { btn.textContent='❌ Erro HTTP '+res.status; }
+  }catch(e){ btn.textContent='❌ Erro de rede'; }
+  setTimeout(()=>{ btn.disabled=false; btn.textContent='Testar Conexão'; }, 3000);
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -6415,21 +6657,29 @@ function openPrintWindow(htmlContent, filename){
 }
 
 
-loadData();loadCountries();populateSelects();
+// Inicialização assíncrona (aguarda GitHub antes de renderizar)
+(async function init(){
+  loadCountries();
+  populateSelects();
+  applyDarkMode();
+  applyDensity();
 
-// Recalcula datas de todos os pais ao carregar (sincroniza dados existentes)
-(function recalcAll(){
-  // Processa do nível mais fundo para o topo (folhas primeiro)
-  function getDepth(t, map, d=0){ return t.parentId && map[t.parentId] ? getDepth(map[t.parentId], map, d+1) : d; }
-  const map = {}; tasks.forEach(t => map[t.id] = t);
-  const parents = [...new Set(tasks.filter(t => t.parentId).map(t => t.parentId))];
-  // sort by depth desc so deepest parents are processed first
-  parents.sort((a,b) => getDepth(map[b]||{}, map) - getDepth(map[a]||{}, map));
-  parents.forEach(pid => recalcParentDates(pid));
+  await loadData(); // aguarda GitHub
+
+  // Recalcula datas de todos os pais ao carregar
+  (function recalcAll(){
+    function getDepth(t, map, d=0){ return t.parentId && map[t.parentId] ? getDepth(map[t.parentId], map, d+1) : d; }
+    const map = {}; tasks.forEach(t => map[t.id] = t);
+    const parents = [...new Set(tasks.filter(t => t.parentId).map(t => t.parentId))];
+    parents.sort((a,b) => getDepth(map[b]||{}, map) - getDepth(map[a]||{}, map));
+    parents.forEach(pid => recalcParentDates(pid));
+  })();
+
+  renderSidebar();
+  renderDashboard();
+  rebaseSync();
+  ghStartPolling();
 })();
-
-renderSidebar();renderDashboard();applyDarkMode();applyDensity();
-rebaseSync();
 </script>
 
 <!-- Rebase toast -->
@@ -6534,6 +6784,73 @@ rebaseSync();
     <div style="padding:10px 14px;border-top:1px solid var(--b-0);display:flex;gap:8px;background:var(--s-1);flex-shrink:0">
       <button class="btn btn-primary" style="flex:1" onclick="_confirmPOM()"><i class="ti ti-printer"></i> Imprimir</button>
       <button class="btn btn-outline" onclick="_closePOM()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ GITHUB CONFIG MODAL ══════ -->
+<div id="gh-config-overlay" onclick="if(event.target.id==='gh-config-overlay')closeGhConfig()" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);align-items:center;justify-content:center">
+  <div style="background:var(--s-0);border-radius:var(--radius-xl);box-shadow:var(--sh-modal);width:480px;max-width:95vw;overflow:hidden">
+    <!-- Header -->
+    <div style="padding:16px 18px 14px;border-bottom:1px solid var(--b-0);display:flex;align-items:center;gap:12px">
+      <div style="width:34px;height:34px;border-radius:9px;background:#EFF6FF;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0">☁️</div>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--ink-900)">Sincronização GitHub</div>
+        <div style="font-size:11px;color:var(--ink-400);margin-top:1px">Dados compartilhados em tempo real via repositório GitHub</div>
+      </div>
+      <button onclick="closeGhConfig()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:var(--ink-400);font-size:18px;padding:4px 8px;border-radius:6px;line-height:1">✕</button>
+    </div>
+    <!-- Body -->
+    <div style="padding:18px;display:flex;flex-direction:column;gap:14px">
+      <!-- Info box -->
+      <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 12px;font-size:11.5px;color:#1D4ED8;line-height:1.6">
+        <strong>Como funciona:</strong> os dados são salvos em um arquivo <code>data.json</code> no seu repositório GitHub. Qualquer pessoa com o link do app vê os dados atualizados. Só quem tem o token pode salvar.
+      </div>
+      <!-- Owner + Repo -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div>
+          <label style="font-size:11px;font-weight:600;color:var(--ink-600);display:block;margin-bottom:4px">Usuário / Organização</label>
+          <input id="gh-modal-owner" type="text" placeholder="ex: charlessilverio-sudo" style="width:100%;padding:7px 10px;border:1px solid var(--b-1);border-radius:var(--radius);font-size:12px;background:var(--s-0);color:var(--ink-900);font-family:var(--font-mono)">
+        </div>
+        <div>
+          <label style="font-size:11px;font-weight:600;color:var(--ink-600);display:block;margin-bottom:4px">Repositório</label>
+          <input id="gh-modal-repo" type="text" placeholder="ex: alya-project" style="width:100%;padding:7px 10px;border:1px solid var(--b-1);border-radius:var(--radius);font-size:12px;background:var(--s-0);color:var(--ink-900);font-family:var(--font-mono)">
+        </div>
+      </div>
+      <!-- File -->
+      <div>
+        <label style="font-size:11px;font-weight:600;color:var(--ink-600);display:block;margin-bottom:4px">Arquivo de dados (path no repo)</label>
+        <input id="gh-modal-file" type="text" placeholder="data.json" style="width:100%;padding:7px 10px;border:1px solid var(--b-1);border-radius:var(--radius);font-size:12px;background:var(--s-0);color:var(--ink-900);font-family:var(--font-mono)">
+        <div style="font-size:10.5px;color:var(--ink-400);margin-top:3px">Deixe <code>data.json</code> na raiz do repositório</div>
+      </div>
+      <!-- Token -->
+      <div>
+        <label style="font-size:11px;font-weight:600;color:var(--ink-600);display:block;margin-bottom:4px">
+          Personal Access Token (PAT)
+          <a href="https://github.com/settings/tokens/new?scopes=repo&description=alya-project" target="_blank" style="color:var(--brand);font-weight:400;margin-left:6px">Criar token →</a>
+        </label>
+        <input id="gh-modal-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="width:100%;padding:7px 10px;border:1px solid var(--b-1);border-radius:var(--radius);font-size:12px;background:var(--s-0);color:var(--ink-900);font-family:var(--font-mono)">
+        <div style="font-size:10.5px;color:var(--ink-400);margin-top:3px">⚠️ O token fica salvo <strong>apenas no seu navegador</strong> (localStorage). Nunca é enviado a terceiros — só ao GitHub.</div>
+      </div>
+      <!-- Token creation guide -->
+      <details style="border:1px solid var(--b-0);border-radius:8px;overflow:hidden">
+        <summary style="padding:8px 12px;font-size:11.5px;font-weight:600;color:var(--ink-700);cursor:pointer;background:var(--s-1)">📋 Como criar o token (passo a passo)</summary>
+        <div style="padding:10px 12px;font-size:11.5px;color:var(--ink-600);line-height:1.8">
+          1. Acesse <a href="https://github.com/settings/tokens/new?scopes=repo&description=alya-project" target="_blank" style="color:var(--brand)">github.com/settings/tokens/new</a><br>
+          2. Dê um nome como <code>alya-project</code><br>
+          3. Em <strong>Expiration</strong>, escolha <strong>No expiration</strong><br>
+          4. Em <strong>Select scopes</strong>, marque apenas <strong>repo</strong><br>
+          5. Clique em <strong>Generate token</strong><br>
+          6. Copie o token (começa com <code>ghp_</code>) e cole acima
+        </div>
+      </details>
+      <!-- Actions -->
+      <div style="display:flex;gap:8px;align-items:center">
+        <button id="gh-test-btn" onclick="testGhConnection()" class="btn btn-ghost" style="font-size:12px">Testar Conexão</button>
+        <div style="flex:1"></div>
+        <button onclick="closeGhConfig()" class="btn btn-outline" style="font-size:12px">Cancelar</button>
+        <button onclick="saveGhConfig()" class="btn btn-primary" style="font-size:12px"><i class="ti ti-cloud-check"></i> Salvar Config</button>
+      </div>
     </div>
   </div>
 </div>
