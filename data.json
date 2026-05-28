@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-28T22:41:52.611Z",
+  "savedAt": "2026-05-28T22:44:53.842Z",
   "tasks": [
     {
       "id": 4,
@@ -179,12 +179,21 @@
       "phase": "Jurídico",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Jurídico",
+      "owner": "",
       "start": "2026-06-01",
       "end": "2026-07-22",
       "notes": "RUT",
       "endMin": "2026-07-12",
-      "endMax": "2026-12-29"
+      "endMax": "2026-12-29",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Jurídico",
+          "newVal": "",
+          "ts": 1780008293836,
+          "text": "Responsável: <strong>ninguém</strong>"
+        }
+      ]
     },
     {
       "id": 8006,
