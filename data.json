@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-28T21:42:11.099Z",
+  "savedAt": "2026-05-28T22:17:35.140Z",
   "tasks": [
     {
       "id": 4,
@@ -18440,7 +18440,7 @@
       "id": 8508,
       "parentId": 8507,
       "country": "brasil",
-      "name": "Definição objetivos expansão",
+      "name": "Definir objetivos estratégicos da expansão internacional",
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
@@ -18452,6 +18452,27 @@
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Definir objetivos da expansão",
+          "newVal": "Definir objetivos estratégicos da expansão internacional",
+          "ts": 1779989261567,
+          "text": "Tarefa renomeada"
+        },
+        {
+          "field": "name",
+          "oldVal": "Definir objetivos estratégicos da expansão internacional",
+          "newVal": "Definir objetivos da expansão",
+          "ts": 1779981657673,
+          "text": "Tarefa renomeada"
+        },
+        {
+          "field": "name",
+          "oldVal": "Definição objetivos expansão",
+          "newVal": "Definir objetivos estratégicos da expansão internacional",
+          "ts": 1779981608102,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "",
@@ -18484,6 +18505,27 @@
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Definir critérios de decisão",
+          "newVal": "Definição modelo operacional internacional",
+          "ts": 1779981852836,
+          "text": "Tarefa renomeada"
+        },
+        {
+          "field": "name",
+          "oldVal": "Definir critérios de avaliação e pesos preliminares",
+          "newVal": "Definir critérios de decisão",
+          "ts": 1779981671054,
+          "text": "Tarefa renomeada"
+        },
+        {
+          "field": "name",
+          "oldVal": "Definição modelo operacional internacional",
+          "newVal": "Definir critérios de avaliação e pesos preliminares",
+          "ts": 1779981625574,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "",
