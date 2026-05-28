@@ -4640,6 +4640,7 @@ function _printGanttGenerate(){
 <body>
   <button class="print-btn no-print" onclick="window.print()">🖨️ Imprimir</button>
   <button class="close-btn no-print" onclick="window.close()">✕ Fechar</button>
+  <script>window.addEventListener('afterprint', function(){ window.close(); });<\/script>
 
   <div class="page-wrap">
     <div class="doc-header">
@@ -7101,6 +7102,9 @@ function openPrintWindow(htmlContent, filename){
     modalBody.innerHTML = '<style>'+styles+'</style>' + bodyContent;
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
+    // Fecha o modal automaticamente após imprimir
+    var _afterPrint = function(){ modal.style.display='none'; document.body.style.overflow=''; window.removeEventListener('afterprint',_afterPrint); };
+    window.addEventListener('afterprint', _afterPrint);
     showToast('Popup bloqueado — use o botao Imprimir no topo','success','ti-eye');
   }catch(e){
     // Ultimo fallback: baixar o arquivo
