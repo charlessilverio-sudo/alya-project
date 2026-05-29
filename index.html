@@ -3022,10 +3022,10 @@ const COUNTRY_COLORS={
 
 // ── Config: editada no modal de configurações ──────────────────────────
 let GH_CONFIG = {
-  owner: '',   // ex: charlessilverio-sudo
-  repo:  '',   // ex: alya-project
+  owner: 'charlessilverio-sudo',
+  repo:  'alya-project',
   file:  'data.json',
-  token: '',   // Personal Access Token (guardado só localmente)
+  token: '',   // Cada usuário configura seu token pessoal (⚙ → GitHub Sync)
 };
 
 let _ghFileSha = null; // SHA do arquivo atual (necessário para commits)
@@ -3223,7 +3223,7 @@ function ghStartPolling(){
       showToast('Dados atualizados por outro usuário ↺','success','ti-refresh');
       ghSetStatus('synced');
     }
-  }, 60000);
+  }, 30000);
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -8231,7 +8231,11 @@ Sem markdown, sem nada fora do JSON.`}]
     <div style="padding:18px;display:flex;flex-direction:column;gap:14px">
       <!-- Info box -->
       <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 12px;font-size:11.5px;color:#1D4ED8;line-height:1.6">
-        <strong>Como funciona:</strong> os dados são salvos em um arquivo <code>data.json</code> no seu repositório GitHub. Qualquer pessoa com o link do app vê os dados atualizados. Só quem tem o token pode salvar.
+        <strong>Como funciona:</strong> os dados são salvos em <code>data.json</code> no GitHub.<br>
+        • <strong>Leitura</strong>: qualquer pessoa com o link vê os dados atualizados<br>
+        • <strong>Escrita</strong>: só quem tem o token pode salvar<br>
+        • <strong>Auto-sync</strong>: atualiza automaticamente a cada 60s<br><br>
+        🔑 <a href="https://github.com/settings/tokens/new?scopes=repo&description=Alya+Sync" target="_blank" style="color:#1D4ED8;font-weight:600">Clique aqui para criar seu token</a> (marque apenas <strong>repo</strong>)
       </div>
       <!-- Owner + Repo -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
