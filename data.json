@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T12:04:00.325Z",
+  "savedAt": "2026-05-29T12:10:06.509Z",
   "tasks": [
     {
       "id": 4,
@@ -179,12 +179,21 @@
       "phase": "Jurídico",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Jurídico",
+      "owner": "",
       "start": "2026-06-01",
       "end": "2026-07-22",
       "notes": "RUT",
       "endMin": "2026-07-12",
-      "endMax": "2026-12-29"
+      "endMax": "2026-12-29",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Jurídico",
+          "newVal": "",
+          "ts": 1780052690747,
+          "text": "Responsável: <strong>ninguém</strong>"
+        }
+      ]
     },
     {
       "id": 8006,
@@ -18307,7 +18316,7 @@
       "country": "uruguai",
       "name": "Go-live compliance/regulatório",
       "phase": "",
-      "status": "A fazer",
+      "status": "Concluído",
       "priority": "Alta",
       "owner": "Diretoria",
       "start": "2027-02-22",
@@ -18317,6 +18326,40 @@
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "progress",
+          "oldVal": 65,
+          "newVal": 100,
+          "ts": 1780053151001,
+          "text": "Progresso: <strong>100%</strong>"
+        },
+        {
+          "field": "progress",
+          "oldVal": 45,
+          "newVal": 65,
+          "ts": 1780053150856,
+          "text": "Progresso: <strong>65%</strong>"
+        },
+        {
+          "field": "progress",
+          "oldVal": 5,
+          "newVal": 45,
+          "ts": 1780053150762,
+          "text": "Progresso: <strong>45%</strong>"
+        },
+        {
+          "field": "progress",
+          "newVal": 5,
+          "ts": 1780053150677,
+          "text": "Progresso: <strong>5%</strong>"
+        },
+        {
+          "field": "status",
+          "oldVal": "A fazer",
+          "newVal": "Concluído",
+          "ts": 1780053140943,
+          "text": "Status alterado de <strong>A fazer</strong> para <strong>Concluído</strong>"
+        },
         {
           "field": "owner",
           "oldVal": "",
@@ -18387,7 +18430,8 @@
           "ts": 1779908584473,
           "text": "Tarefa renomeada"
         }
-      ]
+      ],
+      "progress": 100
     },
     {
       "id": 8506,
@@ -18397,10 +18441,10 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "",
+      "start": "2026-05-29",
       "end": "",
-      "endMin": "",
-      "endMax": "",
+      "endMin": "2026-05-29",
+      "endMax": "2026-05-29",
       "notes": "",
       "subtasks": []
     },
@@ -18413,10 +18457,10 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "",
+      "start": "2026-05-29",
       "end": "",
-      "endMin": "",
-      "endMax": "",
+      "endMin": "2026-05-29",
+      "endMax": "2026-05-29",
       "notes": "Critérios sugeridos\nFacilidade regulatória\nBenefício fiscal\nFacilidade bancária\nRisco político\nCusto operacional\nFacilidade logística\nPotencial comercial\nFacilidade cambial\nTempo de implantação\nBarreiras AML/KYC\nIncentivos Zona Franca\nIntegração Mercosul/Europa",
       "subtasks": [],
       "activityLog": [
@@ -19797,6 +19841,157 @@
           "oldVal": "Nova sub-tarefa",
           "newVal": "FASE 7 — IMPLANTAÇÃO PAÍS PILOTO",
           "ts": 1779976674442,
+          "text": "Tarefa renomeada"
+        }
+      ]
+    },
+    {
+      "id": 8550,
+      "parentId": 8507,
+      "country": "brasil",
+      "name": "Papeis e Responsabilidades",
+      "phase": "",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Diretoria",
+      "start": "2026-05-29",
+      "end": "",
+      "endMin": "2026-05-29",
+      "endMax": "2026-05-29",
+      "notes": "",
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "",
+          "newVal": "Diretoria",
+          "ts": 1780056605545,
+          "text": "Responsável: <strong>Diretoria</strong>"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "0202-05-29",
+          "newVal": "2026-05-29",
+          "ts": 1780056563924,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "0020-05-29",
+          "newVal": "0202-05-29",
+          "ts": 1780056563450,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "0002-05-29",
+          "newVal": "0020-05-29",
+          "ts": 1780056563254,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "",
+          "newVal": "0002-05-29",
+          "ts": 1780056563088,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2025-05-29",
+          "newVal": "",
+          "ts": 1780056561777,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "0202-05-29",
+          "newVal": "2025-05-29",
+          "ts": 1780056561006,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "0020-05-29",
+          "newVal": "0202-05-29",
+          "ts": 1780056560432,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "0002-05-29",
+          "newVal": "0020-05-29",
+          "ts": 1780056560251,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "",
+          "newVal": "0002-05-29",
+          "ts": 1780056560075,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "0202-05-29",
+          "newVal": "2026-05-29",
+          "ts": 1780056556388,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "0020-05-29",
+          "newVal": "0202-05-29",
+          "ts": 1780056555613,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "0002-05-29",
+          "newVal": "0020-05-29",
+          "ts": 1780056555335,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "",
+          "newVal": "0002-05-29",
+          "ts": 1780056555089,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "0202-05-29",
+          "newVal": "2026-05-29",
+          "ts": 1780056550224,
+          "text": "Início atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "0020-05-29",
+          "newVal": "0202-05-29",
+          "ts": 1780056549796,
+          "text": "Início atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "0002-05-29",
+          "newVal": "0020-05-29",
+          "ts": 1780056549554,
+          "text": "Início atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "",
+          "newVal": "0002-05-29",
+          "ts": 1780056549211,
+          "text": "Início atualizado"
+        },
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Papeis e Responsabilidades",
+          "ts": 1780056538462,
           "text": "Tarefa renomeada"
         }
       ]
