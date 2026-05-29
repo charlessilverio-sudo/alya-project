@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T18:49:51.176Z",
+  "savedAt": "2026-05-29T18:51:29.373Z",
   "tasks": [
     {
       "id": 4,
@@ -4457,7 +4457,7 @@
     },
     {
       "id": 8552,
-      "name": "TRANSIRE SOTREL",
+      "name": "TRANSIRE SOLUTIONS SOTREL",
       "country": "uruguai",
       "phase": "",
       "status": "A fazer",
@@ -4468,7 +4468,16 @@
       "endMin": "",
       "endMax": "",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "TRANSIRE SOTREL",
+          "newVal": "TRANSIRE SOLUTIONS SOTREL",
+          "ts": 1780080689277,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
