@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T18:53:38.159Z",
+  "savedAt": "2026-05-29T19:48:38.687Z",
   "tasks": [
     {
       "id": 4,
@@ -4492,6 +4492,22 @@
           "text": "Tarefa renomeada"
         }
       ]
+    },
+    {
+      "id": 8553,
+      "parentId": 8551,
+      "country": "uruguai",
+      "name": "Nova sub-tarefa",
+      "phase": "",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "",
+      "end": "",
+      "endMin": "",
+      "endMax": "",
+      "notes": "",
+      "subtasks": []
     }
   ]
 }
