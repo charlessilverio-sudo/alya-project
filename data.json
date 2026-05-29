@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T18:51:29.373Z",
+  "savedAt": "2026-05-29T18:53:38.159Z",
   "tasks": [
     {
       "id": 4,
@@ -4467,9 +4467,23 @@
       "end": "",
       "endMin": "",
       "endMax": "",
-      "notes": "",
+      "notes": "Holding Corporativa | Zona Franca | HUB Regional\nTrading Back-to-Back · Plataforma de Investimentos",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "notes",
+          "oldVal": "Holding Corporativa | Zona Franca | HUB Regional",
+          "newVal": "Holding Corporativa | Zona Franca | HUB Regional\nTrading Back-to-Back · Plataforma de Investimentos",
+          "ts": 1780080812373,
+          "text": "Notas atualizado"
+        },
+        {
+          "field": "notes",
+          "oldVal": "",
+          "newVal": "Holding Corporativa | Zona Franca | HUB Regional",
+          "ts": 1780080805870,
+          "text": "Notas atualizado"
+        },
         {
           "field": "name",
           "oldVal": "TRANSIRE SOTREL",
