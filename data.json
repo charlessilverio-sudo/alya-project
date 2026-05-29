@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T18:44:00.083Z",
+  "savedAt": "2026-05-29T18:44:30.622Z",
   "tasks": [
     {
       "id": 4,
@@ -340,32 +340,6 @@
       "owner": "Financeiro",
       "start": "2026-06-01",
       "end": "2026-09-14",
-      "notes": ""
-    },
-    {
-      "id": 40,
-      "parentId": null,
-      "country": "paraguai",
-      "name": "Constituição Jurídica (SA ou SRL)",
-      "phase": "Jurídico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jurídico",
-      "start": "2026-06-01",
-      "end": "2026-08-17",
-      "notes": "RUC"
-    },
-    {
-      "id": 4001,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Preparação documental (sócios, procurações, compliance/KYC, apostilas)",
-      "phase": "Jurídico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jurídico",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
       "notes": ""
     },
     {
@@ -1372,76 +1346,6 @@
       "owner": "",
       "start": "2026-08-10",
       "end": "2026-08-24",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8084,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Definição da estrutura societária (SA ou SRL)",
-      "phase": "Jurídico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jurídico",
-      "start": "2026-06-08",
-      "end": "2026-06-15",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8085,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Constituição da SA ou SRL",
-      "phase": "Jurídico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jurídico",
-      "start": "2026-06-15",
-      "end": "2026-07-13",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8086,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Registro societário e formalização",
-      "phase": "Jurídico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jurídico",
-      "start": "2026-07-13",
-      "end": "2026-07-27",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8087,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Solicitação do RUC (Registro Único de Contribuyentes)",
-      "phase": "Jurídico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jurídico",
-      "start": "2026-07-27",
-      "end": "2026-08-10",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8088,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Habilitação tributária operacional",
-      "phase": "Jurídico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jurídico",
-      "start": "2026-08-10",
-      "end": "2026-08-17",
       "notes": "",
       "subtasks": []
     },
