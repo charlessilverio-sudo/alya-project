@@ -3082,6 +3082,21 @@ async function ghPushData(tasksToSave){
     throw new Error('Configure o Token de acesso nas configurações (⚙)');
   }
 
+  // Se não temos o SHA, busca do GitHub antes de tentar o PUT
+  // (acontece após importação, reload sem fetch, ou primeira vez com arquivo já existente)
+  if(!_ghFileSha){
+    try{
+      const check = await fetch(ghFileUrl()+'?t='+Date.now(), { headers: ghHeaders(true) });
+      if(check.ok){
+        const meta = await check.json();
+        _ghFileSha = meta.sha || null;
+      }
+      // 404 = arquivo não existe ainda, sha permanece null → criação (sem sha no body)
+    }catch(e){
+      console.warn('ghPushData: não foi possível obter sha:', e);
+    }
+  }
+
   const payload = {
     version: 'alya_v7',
     savedAt: new Date().toISOString(),
@@ -3324,6 +3339,7 @@ function importData(event){
       }
 
       tasks = valid;
+      _ghFileSha = null; // força re-fetch do SHA antes do próximo push
       markUnsaved();
       saveData();
 
