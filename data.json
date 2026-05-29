@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T18:49:24.756Z",
+  "savedAt": "2026-05-29T18:49:51.176Z",
   "tasks": [
     {
       "id": 4,
@@ -4443,6 +4443,21 @@
     {
       "id": 8551,
       "name": "TRANSIRE INC. GLOBAL",
+      "country": "uruguai",
+      "phase": "",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "",
+      "end": "",
+      "endMin": "",
+      "endMax": "",
+      "notes": "",
+      "subtasks": []
+    },
+    {
+      "id": 8552,
+      "name": "TRANSIRE SOTREL",
       "country": "uruguai",
       "phase": "",
       "status": "A fazer",
