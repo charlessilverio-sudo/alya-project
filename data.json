@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T18:47:32.561Z",
+  "savedAt": "2026-05-29T18:47:53.896Z",
   "tasks": [
     {
       "id": 4,
@@ -18718,7 +18718,7 @@
     },
     {
       "id": 8550,
-      "name": "Delaware",
+      "name": "Delaware - TRANSIRE LL INC",
       "country": "estados-unidos",
       "phase": "",
       "status": "A fazer",
@@ -18729,7 +18729,16 @@
       "endMin": "",
       "endMax": "",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Delaware",
+          "newVal": "Delaware - TRANSIRE LL INC",
+          "ts": 1780080471190,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
