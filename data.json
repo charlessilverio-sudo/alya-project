@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T19:48:38.687Z",
+  "savedAt": "2026-05-29T19:49:50.506Z",
   "tasks": [
     {
       "id": 4,
@@ -4497,7 +4497,7 @@
       "id": 8553,
       "parentId": 8551,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "1  CONSTITUIÇÃO JURÍDICA, FISCAL E COMPLIANCE",
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
@@ -4507,7 +4507,16 @@
       "endMin": "",
       "endMax": "",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "1  CONSTITUIÇÃO JURÍDICA, FISCAL E COMPLIANCE",
+          "ts": 1780084122368,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
