@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T18:49:00.630Z",
+  "savedAt": "2026-05-29T18:49:24.756Z",
   "tasks": [
     {
       "id": 4,
@@ -4439,6 +4439,21 @@
           "text": "Tarefa renomeada"
         }
       ]
+    },
+    {
+      "id": 8551,
+      "name": "TRANSIRE INC. GLOBAL",
+      "country": "uruguai",
+      "phase": "",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "",
+      "end": "",
+      "endMin": "",
+      "endMax": "",
+      "notes": "",
+      "subtasks": []
     }
   ]
 }
