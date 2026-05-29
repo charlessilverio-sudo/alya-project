@@ -1693,6 +1693,74 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
 .pom-item:hover,.pom-item.sel{background:var(--s-1)}
 .pom-item input[type=radio]{accent-color:var(--brand);width:15px;height:15px;flex-shrink:0;cursor:pointer}
 
+/* ══════════════════════════════════════════════════════════════════════════
+   DIÁRIO DE REUNIÕES
+══════════════════════════════════════════════════════════════════════════ */
+.diario-layout {
+  display: flex; flex-direction: column; height: 100%; overflow: hidden;
+}
+.diario-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 16px; border-bottom: 1px solid var(--b-0);
+  background: var(--s-0); flex-shrink: 0; flex-wrap: wrap; min-height: 52px;
+}
+.diario-bar-title {
+  font-size: 13px; font-weight: 700; color: var(--ink-800); white-space: nowrap;
+}
+.diario-body {
+  display: grid; grid-template-columns: 360px 1fr;
+  flex: 1; overflow: hidden;
+}
+.diario-list-wrap {
+  border-right: 1px solid var(--b-0); overflow-y: auto;
+  background: var(--s-1);
+}
+.diario-detail {
+  overflow: hidden; background: var(--s-0); display: flex; flex-direction: column;
+}
+.diario-entry {
+  padding: 12px 14px; border-bottom: 1px solid var(--b-0);
+  cursor: pointer; transition: background .12s;
+  display: flex; flex-direction: column; gap: 5px;
+  background: var(--s-1);
+}
+.diario-entry:hover { background: var(--ink-50); }
+.diario-entry.active { background: var(--brand-50); border-left: 2px solid var(--brand); }
+.diario-entry-top { display: flex; align-items: center; gap: 6px; }
+.diario-entry-date {
+  font-size: 10.5px; font-family: var(--font-mono); color: var(--ink-400);
+  white-space: nowrap;
+}
+.diario-entry-tipo {
+  font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 4px;
+  white-space: nowrap; margin-left: auto;
+}
+.tipo-interna   { background: var(--c-info-bg); color: var(--c-info); }
+.tipo-cliente   { background: var(--c-purple-bg); color: var(--c-purple); }
+.tipo-daily     { background: var(--c-success-bg); color: var(--c-success); }
+.tipo-plan      { background: var(--c-warning-bg); color: var(--c-warning); }
+.tipo-exec      { background: var(--c-danger-bg); color: var(--c-danger); }
+.tipo-outro     { background: var(--ink-100); color: var(--ink-500); }
+.diario-entry-title {
+  font-size: 12.5px; font-weight: 600; color: var(--ink-800); line-height: 1.4;
+}
+.diario-entry-preview {
+  font-size: 11.5px; color: var(--ink-500); line-height: 1.45;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.diario-entry-tags {
+  display: flex; gap: 4px; flex-wrap: wrap; margin-top: 2px;
+}
+.diario-tag {
+  font-size: 10px; padding: 1px 6px; border-radius: 10px;
+  background: var(--ink-100); color: var(--ink-500); font-weight: 500;
+}
+.diario-detail-head {
+  padding: 16px 20px 12px; border-bottom: 1px solid var(--b-0); flex-shrink: 0;
+}
+.diario-detail-actions {
+  display: flex; gap: 6px; margin-top: 10px;
+}
 </style>
 </head>
 <body>
@@ -1746,6 +1814,9 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
     </button>
     <button class="nav-item" onclick="showPage('duracao')" id="tab-duracao">
       <i class="ti ti-clock-bolt"></i>Duração
+    </button>
+    <button class="nav-item" onclick="showPage('diario')" id="tab-diario">
+      <i class="ti ti-notebook"></i>Diário
     </button>
   </nav>
 
@@ -2132,7 +2203,133 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
       </div>
     </div>
 
+    <!-- ══════ DIÁRIO DE REUNIÕES ══════ -->
+    <div class="page" id="page-diario" style="display:none;flex-direction:column;height:100%;overflow:hidden">
+      <div class="diario-layout">
+
+        <!-- TOOLBAR -->
+        <div class="diario-bar">
+          <span class="diario-bar-title"><i class="ti ti-notebook" style="font-size:15px;vertical-align:-2px;margin-right:6px;color:var(--brand)"></i>Diário de Reuniões</span>
+          <div class="tasks-bar-sep"></div>
+          <label class="filter-pill">
+            <i class="ti ti-tag"></i>
+            <select class="filter-select" id="diario-filter-tipo" onchange="renderDiario()">
+              <option value="">Tipo</option>
+              <option>Reunião interna</option>
+              <option>Reunião com cliente</option>
+              <option>Daily stand-up</option>
+              <option>Planejamento</option>
+              <option>Decisão executiva</option>
+              <option>Outro</option>
+            </select>
+          </label>
+          <label class="filter-pill">
+            <i class="ti ti-flag"></i>
+            <select class="filter-select" id="diario-filter-country" onchange="renderDiario()">
+              <option value="">País</option>
+            </select>
+          </label>
+          <div class="search-box" style="max-width:220px">
+            <i class="ti ti-search"></i>
+            <input type="text" id="diario-search" placeholder="Buscar no diário..." oninput="renderDiario()">
+          </div>
+          <span class="count-badge" id="diario-count" style="margin-left:4px"></span>
+          <div style="margin-left:auto;display:flex;gap:6px;align-items:center">
+            <button class="btn btn-ghost btn-xs" onclick="diarioAiSummarize()" id="diario-ai-btn" title="Resumo IA das últimas reuniões">
+              <i class="ti ti-sparkles" style="font-size:12px"></i>Resumo IA
+            </button>
+            <button class="btn btn-primary btn-xs" onclick="openDiarioModal()">
+              <i class="ti ti-plus"></i>Nova entrada
+            </button>
+          </div>
+        </div>
+
+        <!-- CORPO DIÁRIO -->
+        <div class="diario-body">
+          <!-- LISTA DE ENTRADAS -->
+          <div class="diario-list-wrap">
+            <div id="diario-list"></div>
+            <div id="diario-empty" style="padding:40px 0;text-align:center;color:var(--ink-300)">
+              <i class="ti ti-notebook" style="font-size:36px;display:block;margin-bottom:8px;opacity:.4"></i>
+              <div style="font-size:13px;font-weight:500">Nenhuma entrada encontrada</div>
+              <div style="font-size:11.5px;margin-top:4px">Registre reuniões, decisões e conversas importantes</div>
+              <button class="btn btn-outline" style="margin-top:14px;font-size:12px" onclick="openDiarioModal()"><i class="ti ti-plus"></i>Criar primeira entrada</button>
+            </div>
+          </div>
+          <!-- PAINEL DE DETALHE / IA -->
+          <div class="diario-detail" id="diario-detail">
+            <div id="diario-detail-placeholder" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--ink-300);gap:8px">
+              <i class="ti ti-file-description" style="font-size:32px;opacity:.4"></i>
+              <span style="font-size:12px">Selecione uma entrada para ver detalhes</span>
+            </div>
+            <div id="diario-detail-content" style="display:none;overflow-y:auto;height:100%"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </main>
+</div>
+
+<!-- ══════ MODAL DIÁRIO ══════ -->
+<div class="modal-bg" id="diario-modal-bg" onclick="if(event.target===this)closeDiarioModal()">
+  <div class="modal" id="diario-modal-box" style="width:560px;max-width:96vw">
+    <div class="modal-head">
+      <div class="modal-icon-wrap"><i class="ti ti-notebook" id="diario-modal-icon"></i></div>
+      <div class="modal-title" id="diario-modal-title">Nova Entrada no Diário</div>
+      <button class="modal-close" onclick="closeDiarioModal()"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-grid">
+        <div class="field fg-full">
+          <label class="field-label">Título *</label>
+          <input class="field-input" id="dm-titulo" type="text" placeholder="Ex: Reunião de alinhamento — Brasil">
+        </div>
+        <div class="field">
+          <label class="field-label">Data *</label>
+          <input class="field-input" id="dm-data" type="date">
+        </div>
+        <div class="field">
+          <label class="field-label">Tipo</label>
+          <select class="field-select" id="dm-tipo">
+            <option>Reunião interna</option>
+            <option>Reunião com cliente</option>
+            <option>Daily stand-up</option>
+            <option>Planejamento</option>
+            <option>Decisão executiva</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label">País relacionado</label>
+          <select class="field-select" id="dm-country">
+            <option value="">Nenhum / Geral</option>
+          </select>
+        </div>
+        <div class="field fg-full">
+          <label class="field-label">Participantes</label>
+          <input class="field-input" id="dm-participantes" type="text" placeholder="Ex: Charles, Ana, Pedro...">
+        </div>
+        <div class="field fg-full">
+          <label class="field-label">Conteúdo / Resumo *</label>
+          <textarea class="field-textarea" id="dm-conteudo" style="min-height:120px" placeholder="O que foi discutido, decisões tomadas, contexto importante..."></textarea>
+        </div>
+        <div class="field fg-full">
+          <label class="field-label">Próximos passos / Ações</label>
+          <textarea class="field-textarea" id="dm-acoes" style="min-height:60px" placeholder="Ex: Charles vai revisar contrato até 05/06, Ana agenda reunião com jurídico..."></textarea>
+        </div>
+        <div class="field fg-full">
+          <label class="field-label">Tags</label>
+          <input class="field-input" id="dm-tags" type="text" placeholder="Ex: jurídico, urgente, cliente (separadas por vírgula)">
+        </div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-ghost" onclick="closeDiarioModal()">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveDiarioEntry()"><i class="ti ti-device-floppy"></i>Salvar</button>
+    </div>
+  </div>
 </div>
 
 <!-- ══════ PEEK PANEL (editar tarefa) ══════ -->
@@ -3160,16 +3357,19 @@ function showToast(msg,type='success',icon='ti-check'){
    PAGE NAV
 ══════════════════════════════════════════════════════════════════════════ */
 function showPage(p){
-  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(x=>{ x.classList.remove('active'); x.style.display='none'; });
   document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
-  document.getElementById('page-'+p).classList.add('active');
-  document.getElementById('tab-'+p).classList.add('active');
+  const pg = document.getElementById('page-'+p);
+  if(pg){ pg.classList.add('active'); pg.style.display='flex'; }
+  const tb = document.getElementById('tab-'+p);
+  if(tb) tb.classList.add('active');
   if(p==='dashboard')renderDashboard();
   if(p==='tasks'){renderTasks(); rebaseSync();}
   if(p==='gantt')renderGantt();
   if(p==='timeline')renderTimeline();
   if(p==='kanban')renderKanban();
   if(p==='duracao')renderDuracao();
+  if(p==='diario'){renderDiario(); _diarioPopulateCountry();}
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -5947,6 +6147,7 @@ const CMD_ACTIONS = [
   { group:'Navegação', icon:'ti-chart-gantt',       label:'Gantt',             kbd:'',      action:()=>showPage('gantt')          },
   { group:'Navegação', icon:'ti-timeline',          label:'Cronograma',        kbd:'',      action:()=>showPage('timeline')       },
   { group:'Navegação', icon:'ti-layout-kanban',     label:'Kanban',            kbd:'',      action:()=>showPage('kanban')         },
+  { group:'Navegação', icon:'ti-notebook',          label:'Diário',            kbd:'',      action:()=>showPage('diario')         },
   { group:'Ações',     icon:'ti-plus',              label:'Nova Tarefa',       kbd:'',      action:()=>openAddModal()             },
   { group:'Ações',     icon:'ti-device-floppy',     label:'Salvar',            kbd:'⌘S',    action:()=>saveData()                 },
   { group:'Ações',     icon:'ti-table-export',      label:'Exportar CSV/Excel',kbd:'',      action:()=>exportXLSX()               },
@@ -7564,6 +7765,332 @@ function openPrintWindow(htmlContent, filename){
   // Alertas proativos — exibe após 1.2s para não competir com o render inicial
   setTimeout(showProactiveAlert, 1200);
 })();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   DIÁRIO DE REUNIÕES
+══════════════════════════════════════════════════════════════════════════ */
+let diarioEntries = JSON.parse(localStorage.getItem('alya_diario') || '[]');
+let diarioSelectedId = null;
+
+function _saveDiario(){
+  localStorage.setItem('alya_diario', JSON.stringify(diarioEntries));
+}
+
+function _diarioTipoClass(tipo){
+  const m = { 'Reunião interna':'tipo-interna', 'Reunião com cliente':'tipo-cliente',
+    'Daily stand-up':'tipo-daily', 'Planejamento':'tipo-plan',
+    'Decisão executiva':'tipo-exec', 'Outro':'tipo-outro' };
+  return m[tipo] || 'tipo-outro';
+}
+
+function _diarioPopulateCountry(){
+  const sel1 = document.getElementById('diario-filter-country');
+  const sel2 = document.getElementById('dm-country');
+  if(!sel1 || !sel2) return;
+  const base = '<option value="">Nenhum / Geral</option>';
+  const opts = COUNTRIES.map(c=>`<option value="${c.id}">${c.flag} ${c.name}</option>`).join('');
+  sel2.innerHTML = base + opts;
+  sel1.innerHTML = '<option value="">País</option>' + COUNTRIES.map(c=>`<option value="${c.id}">${c.flag} ${c.name}</option>`).join('');
+}
+
+function renderDiario(){
+  const list = document.getElementById('diario-list');
+  const empty = document.getElementById('diario-empty');
+  const countEl = document.getElementById('diario-count');
+  if(!list) return;
+
+  const ftTipo = (document.getElementById('diario-filter-tipo')?.value || '').toLowerCase();
+  const ftCt = document.getElementById('diario-filter-country')?.value || '';
+  const ftQ = (document.getElementById('diario-search')?.value || '').toLowerCase();
+
+  let filtered = diarioEntries.filter(e => {
+    if(ftTipo && e.tipo.toLowerCase() !== ftTipo) return false;
+    if(ftCt && e.country !== ftCt) return false;
+    if(ftQ && !(e.titulo.toLowerCase().includes(ftQ) || e.conteudo.toLowerCase().includes(ftQ) || (e.tags||'').toLowerCase().includes(ftQ))) return false;
+    return true;
+  });
+  // Sort newest first
+  filtered.sort((a,b) => b.data.localeCompare(a.data));
+
+  if(countEl) countEl.textContent = filtered.length + (filtered.length===1?' entrada':' entradas');
+
+  if(!filtered.length){
+    list.innerHTML = '';
+    if(empty) empty.style.display = '';
+    return;
+  }
+  if(empty) empty.style.display = 'none';
+
+  list.innerHTML = filtered.map(e => {
+    const dateLabel = e.data ? new Date(e.data+'T12:00:00').toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric'}) : '';
+    const country = e.country ? COUNTRIES.find(c=>c.id===e.country) : null;
+    const tags = (e.tags||'').split(',').map(t=>t.trim()).filter(Boolean);
+    return `<div class="diario-entry ${diarioSelectedId===e.id?'active':''}" onclick="openDiarioDetail('${e.id}')">
+      <div class="diario-entry-top">
+        <span class="diario-entry-date">${dateLabel}</span>
+        ${country?`<span style="font-size:11px">${country.flag} ${country.name}</span>`:''}
+        <span class="diario-entry-tipo ${_diarioTipoClass(e.tipo)}">${e.tipo}</span>
+      </div>
+      <div class="diario-entry-title">${e.titulo}</div>
+      ${e.conteudo ? `<div class="diario-entry-preview">${e.conteudo}</div>` : ''}
+      ${tags.length ? `<div class="diario-entry-tags">${tags.map(t=>`<span class="diario-tag">${t}</span>`).join('')}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function openDiarioDetail(id){
+  diarioSelectedId = id;
+  const e = diarioEntries.find(x=>x.id===id);
+  if(!e) return;
+
+  // Re-render list to update active state
+  renderDiario();
+
+  const ph = document.getElementById('diario-detail-placeholder');
+  const ct = document.getElementById('diario-detail-content');
+  if(!ph||!ct) return;
+  ph.style.display = 'none';
+  ct.style.display = '';
+
+  const country = e.country ? COUNTRIES.find(c=>c.id===e.country) : null;
+  const dateLabel = e.data ? new Date(e.data+'T12:00:00').toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}) : '';
+  const tags = (e.tags||'').split(',').map(t=>t.trim()).filter(Boolean);
+
+  ct.innerHTML = `
+    <div class="diario-detail-head">
+      <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px">
+        <div style="flex:1">
+          <div style="font-size:15px;font-weight:700;color:var(--ink-900);line-height:1.35;margin-bottom:4px">${e.titulo}</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <span style="font-size:11px;color:var(--ink-400)">${dateLabel}</span>
+            ${country?`<span style="font-size:11px">${country.flag} ${country.name}</span>`:''}
+            <span class="diario-entry-tipo ${_diarioTipoClass(e.tipo)}">${e.tipo}</span>
+          </div>
+        </div>
+      </div>
+      ${e.participantes ? `<div style="font-size:11.5px;color:var(--ink-600);display:flex;align-items:center;gap:5px"><i class="ti ti-users" style="font-size:13px;color:var(--ink-400)"></i>${e.participantes}</div>` : ''}
+      ${tags.length ? `<div class="diario-entry-tags" style="margin-top:6px">${tags.map(t=>`<span class="diario-tag">${t}</span>`).join('')}</div>` : ''}
+      <div class="diario-detail-actions">
+        <button class="btn btn-ghost btn-xs" onclick="editDiarioEntry('${e.id}')"><i class="ti ti-edit"></i>Editar</button>
+        <button class="btn btn-ghost btn-xs" onclick="diarioAiThisEntry('${e.id}')" title="Análise IA desta entrada"><i class="ti ti-sparkles"></i>Análise IA</button>
+        <button class="btn btn-ghost btn-xs" style="margin-left:auto;color:var(--c-danger)" onclick="deleteDiarioEntry('${e.id}')"><i class="ti ti-trash"></i>Excluir</button>
+      </div>
+    </div>
+    <div style="padding:16px 20px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:16px">
+      ${e.conteudo ? `<div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-400);margin-bottom:6px">Conteúdo / Resumo</div>
+        <div style="font-size:12.5px;color:var(--ink-700);line-height:1.65;white-space:pre-line">${e.conteudo}</div>
+      </div>` : ''}
+      ${e.acoes ? `<div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--c-warning);margin-bottom:6px">→ Próximos Passos / Ações</div>
+        <div style="font-size:12.5px;color:var(--ink-700);line-height:1.65;white-space:pre-line;background:var(--c-warning-bg);padding:10px 12px;border-radius:6px;border-left:2px solid var(--c-warning)">${e.acoes}</div>
+      </div>` : ''}
+      <div id="diario-ai-result-${e.id}" style="display:none"></div>
+    </div>`;
+}
+
+function openDiarioModal(editId){
+  _diarioPopulateCountry();
+  const today = new Date().toISOString().slice(0,10);
+  document.getElementById('dm-data').value = today;
+  document.getElementById('dm-titulo').value = '';
+  document.getElementById('dm-tipo').value = 'Reunião interna';
+  document.getElementById('dm-country').value = '';
+  document.getElementById('dm-participantes').value = '';
+  document.getElementById('dm-conteudo').value = '';
+  document.getElementById('dm-acoes').value = '';
+  document.getElementById('dm-tags').value = '';
+
+  if(editId){
+    const e = diarioEntries.find(x=>x.id===editId);
+    if(e){
+      document.getElementById('dm-titulo').value = e.titulo;
+      document.getElementById('dm-data').value = e.data;
+      document.getElementById('dm-tipo').value = e.tipo;
+      document.getElementById('dm-country').value = e.country || '';
+      document.getElementById('dm-participantes').value = e.participantes || '';
+      document.getElementById('dm-conteudo').value = e.conteudo || '';
+      document.getElementById('dm-acoes').value = e.acoes || '';
+      document.getElementById('dm-tags').value = e.tags || '';
+      document.getElementById('diario-modal-title').textContent = 'Editar Entrada';
+    }
+    document.getElementById('diario-modal-bg')._editId = editId;
+  } else {
+    document.getElementById('diario-modal-title').textContent = 'Nova Entrada no Diário';
+    document.getElementById('diario-modal-bg')._editId = null;
+  }
+  document.getElementById('diario-modal-bg').classList.add('open');
+  setTimeout(()=>document.getElementById('dm-titulo').focus(), 80);
+}
+
+function closeDiarioModal(){
+  document.getElementById('diario-modal-bg').classList.remove('open');
+}
+
+function saveDiarioEntry(){
+  const titulo = document.getElementById('dm-titulo').value.trim();
+  const conteudo = document.getElementById('dm-conteudo').value.trim();
+  if(!titulo){ showToast('O título é obrigatório','danger','ti-alert-circle'); return; }
+  if(!conteudo){ showToast('O conteúdo é obrigatório','danger','ti-alert-circle'); return; }
+
+  const editId = document.getElementById('diario-modal-bg')._editId;
+  const entry = {
+    id: editId || ('d_'+Date.now()+'_'+Math.random().toString(36).slice(2,7)),
+    titulo,
+    data: document.getElementById('dm-data').value || new Date().toISOString().slice(0,10),
+    tipo: document.getElementById('dm-tipo').value,
+    country: document.getElementById('dm-country').value,
+    participantes: document.getElementById('dm-participantes').value.trim(),
+    conteudo,
+    acoes: document.getElementById('dm-acoes').value.trim(),
+    tags: document.getElementById('dm-tags').value.trim(),
+    criadoEm: editId ? (diarioEntries.find(x=>x.id===editId)?.criadoEm||new Date().toISOString()) : new Date().toISOString(),
+  };
+
+  if(editId){
+    const idx = diarioEntries.findIndex(x=>x.id===editId);
+    if(idx>=0) diarioEntries[idx] = entry;
+  } else {
+    diarioEntries.unshift(entry);
+  }
+  _saveDiario();
+  closeDiarioModal();
+  renderDiario();
+  openDiarioDetail(entry.id);
+  showToast(editId?'Entrada atualizada':'Entrada salva','success','ti-check');
+}
+
+function editDiarioEntry(id){
+  openDiarioModal(id);
+}
+
+function deleteDiarioEntry(id){
+  if(!confirm('Excluir esta entrada do diário? Esta ação não pode ser desfeita.')) return;
+  diarioEntries = diarioEntries.filter(e=>e.id!==id);
+  _saveDiario();
+  diarioSelectedId = null;
+  const ph = document.getElementById('diario-detail-placeholder');
+  const ct = document.getElementById('diario-detail-content');
+  if(ph) ph.style.display = '';
+  if(ct) ct.style.display = 'none';
+  renderDiario();
+  showToast('Entrada excluída','success','ti-check');
+}
+
+async function diarioAiThisEntry(id){
+  const e = diarioEntries.find(x=>x.id===id);
+  if(!e) return;
+  const apiKey = localStorage.getItem('alya_anthropic_key') || '';
+  if(!apiKey){ openAiKeyModal(); return; }
+
+  const resultEl = document.getElementById('diario-ai-result-'+id);
+  if(!resultEl) return;
+  resultEl.style.display = '';
+  resultEl.innerHTML = `<div style="display:flex;align-items:center;gap:6px;color:var(--ink-400);font-size:11.5px;padding:8px 0"><i class="ti ti-loader-2" style="animation:spin 1s linear infinite"></i>Analisando entrada...</div>`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body: JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:800,
+        messages:[{role:'user',content:`Você é um PMO sênior. Analise esta entrada de diário de reunião de um projeto de expansão internacional e forneça:
+1. Resumo em 1 frase
+2. Riscos ou pontos de atenção identificados (máx. 3)
+3. Sugestões de follow-up (máx. 3)
+
+Entrada:
+Título: ${e.titulo}
+Data: ${e.data}
+Tipo: ${e.tipo}
+Participantes: ${e.participantes||'não informado'}
+Conteúdo: ${e.conteudo}
+Ações: ${e.acoes||'não informado'}
+
+Responda em JSON: {"resumo":"...","riscos":["..."],"followup":["..."]}
+Sem markdown, sem explicações fora do JSON.`}]
+      })
+    });
+    if(!res.ok) throw new Error('API error '+res.status);
+    const data = await res.json();
+    const raw = data.content?.find(b=>b.type==='text')?.text||'';
+    const parsed = JSON.parse(raw.replace(/```json|```/g,'').trim());
+    resultEl.innerHTML = `
+      <div style="background:var(--c-purple-bg);border:1px solid #DDD6FE;border-radius:8px;padding:10px 12px">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
+          <i class="ti ti-sparkles" style="font-size:13px;color:var(--c-purple)"></i>
+          <span style="font-size:11px;font-weight:700;color:var(--c-purple);text-transform:uppercase;letter-spacing:.3px">Análise IA</span>
+        </div>
+        <div style="font-size:12px;color:var(--ink-700);line-height:1.5;margin-bottom:8px;background:var(--s-0);padding:7px 9px;border-radius:5px">${parsed.resumo||''}</div>
+        ${parsed.riscos?.length?`<div style="font-size:10px;font-weight:700;color:var(--c-warning);margin-bottom:4px;text-transform:uppercase">Pontos de atenção</div>${parsed.riscos.map(r=>`<div style="font-size:11.5px;color:var(--ink-600);margin-bottom:3px;display:flex;gap:5px"><i class="ti ti-alert-triangle" style="flex-shrink:0;color:var(--c-warning);margin-top:1px;font-size:12px"></i>${r}</div>`).join('')}`:''}
+        ${parsed.followup?.length?`<div style="font-size:10px;font-weight:700;color:var(--c-info);margin-bottom:4px;text-transform:uppercase;margin-top:7px">Follow-up sugerido</div>${parsed.followup.map(f=>`<div style="font-size:11.5px;color:var(--ink-600);margin-bottom:3px;display:flex;gap:5px"><i class="ti ti-arrow-right" style="flex-shrink:0;color:var(--c-info);margin-top:1px;font-size:12px"></i>${f}</div>`).join('')}`:''}
+      </div>`;
+  } catch(err){
+    const isAuth = err.message.includes('401');
+    resultEl.innerHTML = `<div style="font-size:11.5px;color:var(--c-danger)">${err.message}${isAuth?` <button onclick="localStorage.removeItem('alya_anthropic_key');openAiKeyModal()" style="font-size:11px;color:var(--brand);background:none;border:1px solid var(--b-1);padding:2px 7px;border-radius:4px;cursor:pointer;margin-left:4px">Reconfigurar chave</button>`:''}</div>`;
+  }
+}
+
+async function diarioAiSummarize(){
+  const apiKey = localStorage.getItem('alya_anthropic_key') || '';
+  if(!apiKey){ openAiKeyModal(); return; }
+
+  const btn = document.getElementById('diario-ai-btn');
+  if(btn){ btn.disabled=true; btn.innerHTML=`<i class="ti ti-loader-2" style="font-size:12px;animation:spin 1s linear infinite"></i>Analisando...`; }
+
+  const recent = diarioEntries.slice(0,10);
+  if(!recent.length){ showToast('Nenhuma entrada no diário ainda','danger','ti-alert-circle'); if(btn){btn.disabled=false;btn.innerHTML=`<i class="ti ti-sparkles" style="font-size:12px"></i>Resumo IA`;} return; }
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body: JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:900,
+        messages:[{role:'user',content:`Você é um PMO sênior. Analise as últimas entradas do diário de reuniões deste projeto de expansão internacional e forneça um resumo estratégico.
+
+ENTRADAS (${recent.length} mais recentes):
+${recent.map((e,i)=>`${i+1}. [${e.data}] ${e.tipo} — ${e.titulo}\n   ${e.conteudo.slice(0,200)}${e.acoes?'\n   Ações: '+e.acoes.slice(0,150):''}`).join('\n\n')}
+
+Responda em JSON: {"resumo":"2-3 frases sobre o estado das comunicações","temas":["tema1","tema2"],"alertas":["alerta1"],"recomendacoes":["rec1","rec2"]}
+Sem markdown, sem nada fora do JSON.`}]
+      })
+    });
+    if(!res.ok) throw new Error('API error '+res.status);
+    const data = await res.json();
+    const raw = data.content?.find(b=>b.type==='text')?.text||'';
+    const parsed = JSON.parse(raw.replace(/```json|```/g,'').trim());
+
+    // Show summary in a toast-style panel at top of detail pane
+    const ph = document.getElementById('diario-detail-placeholder');
+    const ct = document.getElementById('diario-detail-content');
+    if(ph) ph.style.display = 'none';
+    if(ct){
+      ct.style.display = '';
+      ct.innerHTML = `<div style="padding:20px;overflow-y:auto">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
+          <i class="ti ti-sparkles" style="font-size:16px;color:var(--c-purple)"></i>
+          <span style="font-size:14px;font-weight:700;color:var(--ink-900)">Resumo IA — Últimas ${recent.length} entradas</span>
+        </div>
+        <div style="font-size:12.5px;color:var(--ink-700);line-height:1.65;margin-bottom:14px;background:var(--c-purple-bg);padding:10px 12px;border-radius:7px;border-left:2px solid var(--c-purple)">${parsed.resumo||''}</div>
+        ${parsed.temas?.length?`<div style="margin-bottom:12px"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-400);margin-bottom:6px">Temas recorrentes</div><div style="display:flex;gap:6px;flex-wrap:wrap">${parsed.temas.map(t=>`<span class="diario-tag" style="background:var(--c-info-bg);color:var(--c-info)">${t}</span>`).join('')}</div></div>`:''}
+        ${parsed.alertas?.length?`<div style="margin-bottom:12px"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--c-warning);margin-bottom:6px">Alertas</div>${parsed.alertas.map(a=>`<div style="font-size:12px;color:var(--ink-600);margin-bottom:5px;display:flex;gap:6px"><i class="ti ti-alert-triangle" style="flex-shrink:0;color:var(--c-warning);font-size:13px;margin-top:1px"></i>${a}</div>`).join('')}</div>`:''}
+        ${parsed.recomendacoes?.length?`<div><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--c-success);margin-bottom:6px">Recomendações</div>${parsed.recomendacoes.map(r=>`<div style="font-size:12px;color:var(--ink-600);margin-bottom:5px;display:flex;gap:6px"><i class="ti ti-check" style="flex-shrink:0;color:var(--c-success);font-size:13px;margin-top:1px"></i>${r}</div>`).join('')}</div>`:''}
+        <div style="font-size:10px;color:var(--ink-300);margin-top:14px;text-align:right">Gerado às ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</div>
+      </div>`;
+    }
+  } catch(err){
+    showToast('Erro: '+err.message,'danger','ti-alert-circle');
+  }
+  if(btn){ btn.disabled=false; btn.innerHTML=`<i class="ti ti-sparkles" style="font-size:12px"></i>Resumo IA`; }
+}
+
+/* ══ FIX: IA de Riscos — garante que header CORS correto está presente ══ */
+// Já configurado corretamente com 'anthropic-dangerous-direct-browser-access': 'true'
+// O erro mais comum é chave API inválida ou expirada — modal de reconfiguração já trata isso.
+
 </script>
 
 <!-- Rebase toast -->
