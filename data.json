@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-29T18:44:58.157Z",
+  "savedAt": "2026-05-29T18:47:32.561Z",
   "tasks": [
     {
       "id": 4,
@@ -18715,6 +18715,21 @@
           "text": "Tarefa renomeada"
         }
       ]
+    },
+    {
+      "id": 8550,
+      "name": "Delaware",
+      "country": "estados-unidos",
+      "phase": "",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "",
+      "end": "",
+      "endMin": "",
+      "endMax": "",
+      "notes": "",
+      "subtasks": []
     }
   ]
 }
