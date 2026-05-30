@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-30T20:20:17.897Z",
+  "savedAt": "2026-05-30T20:20:20.827Z",
   "tasks": [
     {
       "id": 4,
@@ -169,19 +169,6 @@
       "owner": "Jur\u00eddico",
       "start": "2026-06-08",
       "end": "2026-07-06",
-      "notes": ""
-    },
-    {
-      "id": 34,
-      "parentId": null,
-      "country": "argentina",
-      "name": "Compliance cambial e tribut\u00e1rio (AFIP)",
-      "phase": "Compliance",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-06-01",
-      "end": "2026-09-14",
       "notes": ""
     },
     {
@@ -418,104 +405,6 @@
       "start": "2026-06-01",
       "end": "2026-08-17",
       "notes": "Hub estrat\u00e9gico UE p\u00f3s-Brexit"
-    },
-    {
-      "id": 8047,
-      "parentId": 34,
-      "country": "argentina",
-      "name": "Diagn\u00f3stico tribut\u00e1rio e cambial inicial",
-      "phase": "Compliance",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-06-01",
-      "end": "2026-06-15",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8048,
-      "parentId": 34,
-      "country": "argentina",
-      "name": "Estrutura\u00e7\u00e3o das obriga\u00e7\u00f5es fiscais (AFIP, impostos, regimes aplic\u00e1veis, cadastro fiscal)",
-      "phase": "Compliance",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-06-15",
-      "end": "2026-07-13",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8049,
-      "parentId": 34,
-      "country": "argentina",
-      "name": "Mapeamento regulat\u00f3rio de remessas internacionais",
-      "phase": "Compliance",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-06-15",
-      "end": "2026-06-29",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8050,
-      "parentId": 34,
-      "country": "argentina",
-      "name": "Estrat\u00e9gia de remessa de recursos (fluxo operacional, c\u00e2mbio, repatria\u00e7\u00e3o, pagamentos internacionais)",
-      "phase": "Compliance",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-06-29",
-      "end": "2026-07-27",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8051,
-      "parentId": 34,
-      "country": "argentina",
-      "name": "Valida\u00e7\u00e3o jur\u00eddica e tribut\u00e1ria da estrat\u00e9gia",
-      "phase": "Compliance",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-07-27",
-      "end": "2026-08-10",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8052,
-      "parentId": 34,
-      "country": "argentina",
-      "name": "Implementa\u00e7\u00e3o operacional (controles, fluxo documental, compliance banc\u00e1rio)",
-      "phase": "Compliance",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-08-10",
-      "end": "2026-08-31",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8053,
-      "parentId": 34,
-      "country": "argentina",
-      "name": "Teste operacional de remessas e rotina fiscal",
-      "phase": "Compliance",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-08-31",
-      "end": "2026-09-14",
-      "notes": "",
-      "subtasks": []
     },
     {
       "id": 8054,
