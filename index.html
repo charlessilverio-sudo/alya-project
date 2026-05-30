@@ -3398,10 +3398,22 @@ async function testGhConnection(){
    EXPORTAR / IMPORTAR
 ══════════════════════════════════════════════════════════════════════════ */
 function exportData(){
+  // Garante que o export sempre contém TODAS as tarefas:
+  // faz merge entre DEFAULT_TASKS e o estado atual (tasks),
+  // onde tasks prevalece para tarefas existentes e DEFAULT_TASKS
+  // preenche qualquer tarefa que ainda não esteja em tasks.
+  const liveById = {};
+  tasks.forEach(t => { liveById[t.id] = t; });
+  const allTasks = DEFAULT_TASKS.map(d => liveById[d.id] || d);
+  // Inclui tarefas extras que existam em tasks mas não em DEFAULT_TASKS (criadas pelo usuário)
+  const defaultIds = new Set(DEFAULT_TASKS.map(d => d.id));
+  tasks.forEach(t => { if(!defaultIds.has(t.id)) allTasks.push(t); });
+
   const payload = {
-    version: 'alya_v7',
+    version: 'alya_v8',
     exportedAt: new Date().toISOString(),
-    tasks: tasks,
+    tasks: allTasks,
+    diario: diarioEntries,
   };
   const json = JSON.stringify(payload, null, 2);
   const blob = new Blob([json], {type:'application/json'});
@@ -3412,7 +3424,7 @@ function exportData(){
   a.download = `alya-project-${date}.json`;
   a.click();
   URL.revokeObjectURL(url);
-  showToast(`${tasks.length} tarefas exportadas`, 'success', 'ti-download');
+  showToast(`${allTasks.length} tarefas + ${diarioEntries.length} entradas do diário exportadas`, 'success', 'ti-download');
 }
 
 function importData(event){
@@ -3439,25 +3451,46 @@ function importData(event){
       const valid = imported.filter(t => t && (t.id !== undefined) && t.name);
       if(!valid.length) throw new Error('Nenhuma tarefa válida encontrada');
 
-      // Garante que IDs não colidem com dados existentes — renumera tudo
-      let maxId = Math.max(0, ...valid.map(t => Number(t.id)||0));
-      valid.forEach(t => { if(typeof t.id !== 'number') t.id = ++maxId; });
+      // Diário — importa se existir no arquivo
+      const importedDiario = (!Array.isArray(raw) && Array.isArray(raw.diario)) ? raw.diario : null;
+      const diarioMsg = importedDiario ? ` + ${importedDiario.length} entradas do Diário` : '';
 
-      // Confirma antes de substituir (pode ser merge futuramente)
-      if(!confirm(`Importar ${valid.length} tarefa(s)?\n\nIsso substituirá todos os dados atuais (${tasks.length} tarefas). Faça um export de backup antes se necessário.`)){
+      // Merge inteligente:
+      // - DEFAULT_TASKS é a base (nunca perde tarefas originais)
+      // - tarefas do import sobrescrevem por id (preserva edições e status do backup)
+      // - tarefas do import com ids novos (criadas pelo usuário) são adicionadas
+      const importById = {};
+      valid.forEach(t => { importById[t.id] = t; });
+
+      // Começa com DEFAULT_TASKS + sobrescreve com o que veio no import
+      const mergedById = {};
+      DEFAULT_TASKS.forEach(d => { mergedById[d.id] = importById[d.id] || d; });
+      // Adiciona tarefas que existem no import mas não no DEFAULT (criadas pelo usuário)
+      valid.forEach(t => { if(!mergedById[t.id]) mergedById[t.id] = t; });
+
+      const merged = Object.values(mergedById);
+
+      // Confirma antes de aplicar
+      if(!confirm(`Importar ${valid.length} tarefa(s) do arquivo${diarioMsg}?\n\nMerge inteligente: dados originais preservados, edições do backup aplicadas (${merged.length} tarefas resultantes).`)){
         return;
       }
 
-      tasks = _fixTaskEncoding(valid);
+      tasks = _fixTaskEncoding(merged);
       _ghFileSha = null; // força re-fetch do SHA antes do próximo push
       markUnsaved();
       saveData();
+
+      // Restaura o Diário se veio no JSON
+      if(importedDiario){
+        diarioEntries = importedDiario;
+        _saveDiario();
+      }
 
       // Re-render tudo
       renderSidebar();
       const ap = (document.querySelector('.page.active')||{}).id?.replace('page-','') || 'dashboard';
       showPage(ap);
-      showToast(`${valid.length} tarefas importadas`, 'success', 'ti-upload');
+      showToast(`${valid.length} tarefas${diarioMsg} importadas (${merged.length} total após merge)`, 'success', 'ti-upload');
     } catch(err){
       showToast('Erro ao importar: ' + err.message, 'error', 'ti-alert-circle');
       console.error('Import error:', err);
