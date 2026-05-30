@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-30T16:56:29.608Z",
+  "savedAt": "2026-05-30T16:56:46.226Z",
   "tasks": [
     {
       "id": 4,
@@ -263,32 +263,6 @@
       ],
       "endMin": "2026-06-25",
       "endMax": "2026-09-29"
-    },
-    {
-      "id": 40,
-      "parentId": null,
-      "country": "paraguai",
-      "name": "Constitui\u00e7\u00e3o Jur\u00eddica (SA ou SRL)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-01",
-      "end": "2026-08-17",
-      "notes": "RUC"
-    },
-    {
-      "id": 4001,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Prepara\u00e7\u00e3o documental (s\u00f3cios, procura\u00e7\u00f5es, compliance/KYC, apostilas)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
-      "notes": ""
     },
     {
       "id": 41,
@@ -916,76 +890,6 @@
       "owner": "",
       "start": "2026-08-10",
       "end": "2026-08-24",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8084,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Defini\u00e7\u00e3o da estrutura societ\u00e1ria (SA ou SRL)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-08",
-      "end": "2026-06-15",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8085,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Constitui\u00e7\u00e3o da SA ou SRL",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-15",
-      "end": "2026-07-13",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8086,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Registro societ\u00e1rio e formaliza\u00e7\u00e3o",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-13",
-      "end": "2026-07-27",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8087,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Solicita\u00e7\u00e3o do RUC (Registro \u00danico de Contribuyentes)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-27",
-      "end": "2026-08-10",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8088,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Habilita\u00e7\u00e3o tribut\u00e1ria operacional",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-08-10",
-      "end": "2026-08-17",
       "notes": "",
       "subtasks": []
     },
