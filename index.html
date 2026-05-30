@@ -3400,11 +3400,27 @@ async function testGhConnection(){
 function exportData(){
   // Garante que o export sempre contém TODAS as tarefas:
   // faz merge entre DEFAULT_TASKS e o estado atual (tasks),
-  // onde tasks prevalece para tarefas existentes e DEFAULT_TASKS
-  // preenche qualquer tarefa que ainda não esteja em tasks.
+  // onde tasks prevalece para edições do usuário, mas os campos
+  // de datas (endMin, endMax, pred, predHtmlId, eapId, dur) são
+  // sempre completados com os valores do DEFAULT_TASKS se ausentes.
   const liveById = {};
   tasks.forEach(t => { liveById[t.id] = t; });
-  const allTasks = DEFAULT_TASKS.map(d => liveById[d.id] || d);
+  const defById = {};
+  DEFAULT_TASKS.forEach(d => { defById[d.id] = d; });
+
+  const allTasks = DEFAULT_TASKS.map(d => {
+    const live = liveById[d.id];
+    if(!live) return d;
+    // Copia o objeto live e preenche campos de datas/EAP que possam estar faltando
+    const merged = Object.assign({}, live);
+    if(!merged.endMin  && d.endMin)      merged.endMin      = d.endMin;
+    if(!merged.endMax  && d.endMax)      merged.endMax      = d.endMax;
+    if(!merged.pred    && d.pred)        merged.pred        = d.pred;
+    if(!merged.predHtmlId && d.predHtmlId) merged.predHtmlId = d.predHtmlId;
+    if(!merged.eapId   && d.eapId)      merged.eapId       = d.eapId;
+    if(!merged.dur     && d.dur)        merged.dur         = d.dur;
+    return merged;
+  });
   // Inclui tarefas extras que existam em tasks mas não em DEFAULT_TASKS (criadas pelo usuário)
   const defaultIds = new Set(DEFAULT_TASKS.map(d => d.id));
   tasks.forEach(t => { if(!defaultIds.has(t.id)) allTasks.push(t); });
