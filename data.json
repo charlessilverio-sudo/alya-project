@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-30T20:05:55.973Z",
+  "savedAt": "2026-05-30T20:09:47.965Z",
   "tasks": [
     {
       "id": 4,
@@ -13,6 +13,32 @@
       "owner": "Opera\u00e7\u00f5es",
       "start": "2026-06-01",
       "end": "2026-11-16",
+      "notes": ""
+    },
+    {
+      "id": 401,
+      "parentId": 4,
+      "country": "holanda",
+      "name": "Defini\u00e7\u00e3o dos requisitos operacionais (volumes, SLA, inbound/outbound, armazenagem)",
+      "phase": "Opera\u00e7\u00f5es",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Opera\u00e7\u00f5es",
+      "start": "2026-06-01",
+      "end": "2026-06-08",
+      "notes": ""
+    },
+    {
+      "id": 402,
+      "parentId": 4,
+      "country": "holanda",
+      "name": "Defini\u00e7\u00e3o de metragem e localiza\u00e7\u00e3o (Maasvlakte / Rotterdam)",
+      "phase": "TI",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "TI",
+      "start": "2026-06-08",
+      "end": "2026-06-29",
       "notes": ""
     },
     {
@@ -42,6 +68,32 @@
       "notes": "Lda. ou Unipessoal"
     },
     {
+      "id": 1001,
+      "parentId": 10,
+      "country": "portugal",
+      "name": "Prepara\u00e7\u00e3o documental (s\u00f3cios, representante, procura\u00e7\u00f5es, compliance/KYC)",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Jur\u00eddico",
+      "start": "2026-06-01",
+      "end": "2026-06-08",
+      "notes": ""
+    },
+    {
+      "id": 1002,
+      "parentId": 10,
+      "country": "portugal",
+      "name": "Escolha dos CAE(s) adequados",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Jur\u00eddico",
+      "start": "2026-06-08",
+      "end": "2026-06-15",
+      "notes": ""
+    },
+    {
       "id": 12,
       "parentId": null,
       "country": "portugal",
@@ -52,6 +104,32 @@
       "owner": "Expans\u00e3o",
       "start": "2026-06-01",
       "end": "2026-09-07",
+      "notes": ""
+    },
+    {
+      "id": 1201,
+      "parentId": 12,
+      "country": "portugal",
+      "name": "Defini\u00e7\u00e3o de requisitos (cidade, budget, metragem, opera\u00e7\u00e3o, acessibilidade)",
+      "phase": "Expans\u00e3o",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Expans\u00e3o",
+      "start": "2026-06-01",
+      "end": "2026-06-08",
+      "notes": ""
+    },
+    {
+      "id": 1202,
+      "parentId": 12,
+      "country": "portugal",
+      "name": "Sele\u00e7\u00e3o de local",
+      "phase": "Expans\u00e3o",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "Expans\u00e3o",
+      "start": "2026-06-08",
+      "end": "2026-07-06",
       "notes": ""
     },
     {
@@ -66,6 +144,32 @@
       "start": "2026-06-01",
       "end": "2026-09-07",
       "notes": "Licen\u00e7a REAI"
+    },
+    {
+      "id": 1301,
+      "parentId": 13,
+      "country": "portugal",
+      "name": "Defini\u00e7\u00e3o dos requisitos operacionais (tipo de reparo, capacidade, exig\u00eancias t\u00e9cnicas)",
+      "phase": "Opera\u00e7\u00f5es",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Opera\u00e7\u00f5es",
+      "start": "2026-06-01",
+      "end": "2026-06-08",
+      "notes": ""
+    },
+    {
+      "id": 1302,
+      "parentId": 13,
+      "country": "portugal",
+      "name": "Sele\u00e7\u00e3o e valida\u00e7\u00e3o do galp\u00e3o industrial",
+      "phase": "Compliance",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "Jur\u00eddico",
+      "start": "2026-06-08",
+      "end": "2026-07-06",
+      "notes": ""
     },
     {
       "id": 20,
@@ -83,6 +187,84 @@
       "endMax": "2026-12-29"
     },
     {
+      "id": 8006,
+      "parentId": 20,
+      "country": "uruguai",
+      "name": "Fase 1 - PREPARA\u00c7\u00c3O DOCUMENTAL + KYC",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "2026-06-01",
+      "end": "2026-06-08",
+      "notes": "",
+      "subtasks": [],
+      "endMin": "2026-06-10",
+      "endMax": "2026-07-15",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Jur\u00eddico",
+          "newVal": "",
+          "ts": 1779911751444,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        },
+        {
+          "field": "name",
+          "oldVal": "PREPARA\u00c7\u00c3O DOCUMENTAL + KYC",
+          "newVal": "Fase 1 - PREPARA\u00c7\u00c3O DOCUMENTAL + KYC",
+          "ts": 1779904351256,
+          "text": "Tarefa renomeada"
+        },
+        {
+          "field": "name",
+          "oldVal": "Preparar docs + KYC",
+          "newVal": "PREPARA\u00c7\u00c3O DOCUMENTAL + KYC",
+          "ts": 1779892964589,
+          "text": "Tarefa renomeada"
+        }
+      ]
+    },
+    {
+      "id": 8002,
+      "parentId": 20,
+      "country": "uruguai",
+      "name": "Fase 2- ABERTURA DA SRL OU SA",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "2026-06-11",
+      "end": "2026-06-29",
+      "notes": "",
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Jur\u00eddico",
+          "newVal": "",
+          "ts": 1779911746144,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        },
+        {
+          "field": "name",
+          "oldVal": "ABERTURA DA SRL OU SA",
+          "newVal": "Fase 2- ABERTURA DA SRL OU SA",
+          "ts": 1779904360410,
+          "text": "Tarefa renomeada"
+        },
+        {
+          "field": "name",
+          "oldVal": "Abertura de SRL ou SA",
+          "newVal": "ABERTURA DA SRL OU SA",
+          "ts": 1779892984877,
+          "text": "Tarefa renomeada"
+        }
+      ],
+      "endMin": "2026-06-25",
+      "endMax": "2026-09-29"
+    },
+    {
       "id": 30,
       "parentId": null,
       "country": "argentina",
@@ -94,6 +276,32 @@
       "start": "2026-06-01",
       "end": "2026-08-05",
       "notes": "CUIT"
+    },
+    {
+      "id": 3001,
+      "parentId": 30,
+      "country": "argentina",
+      "name": "Prepara\u00e7\u00e3o documental (KYC, s\u00f3cios, procura\u00e7\u00f5es, apostilas, compliance)",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Jur\u00eddico",
+      "start": "2026-06-01",
+      "end": "2026-06-08",
+      "notes": ""
+    },
+    {
+      "id": 3002,
+      "parentId": 30,
+      "country": "argentina",
+      "name": "Abertura da SRL ou SA",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Jur\u00eddico",
+      "start": "2026-06-08",
+      "end": "2026-06-29",
+      "notes": ""
     },
     {
       "id": 32,
@@ -148,6 +356,19 @@
       "notes": "RUC"
     },
     {
+      "id": 4001,
+      "parentId": 40,
+      "country": "paraguai",
+      "name": "Prepara\u00e7\u00e3o documental (s\u00f3cios, procura\u00e7\u00f5es, compliance/KYC, apostilas)",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Jur\u00eddico",
+      "start": "2026-06-01",
+      "end": "2026-06-08",
+      "notes": ""
+    },
+    {
       "id": 41,
       "parentId": null,
       "country": "paraguai",
@@ -185,6 +406,20 @@
       "start": "2026-06-01",
       "end": "2026-08-24",
       "notes": "RUT e SII"
+    },
+    {
+      "id": 8301,
+      "name": "ESCRIT\u00d3RIO \u2014 Chile (Santiago / Valpara\u00edso)",
+      "country": "chile",
+      "phase": "",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "2026-06-01",
+      "end": "2026-09-28",
+      "notes": "",
+      "subtasks": [],
+      "parentId": null
     },
     {
       "id": 52,
@@ -291,6 +526,19 @@
       "notes": "Diretor residente obrigat\u00f3rio"
     },
     {
+      "id": 8001,
+      "parentId": 80,
+      "country": "irlanda",
+      "name": "Prepara\u00e7\u00e3o documental (s\u00f3cios, compliance/KYC, apostilas, estrutura internacional)",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Jur\u00eddico",
+      "start": "2026-06-01",
+      "end": "2026-06-01",
+      "notes": ""
+    },
+    {
       "id": 82,
       "parentId": null,
       "country": "irlanda",
@@ -328,240 +576,6 @@
       "start": "2026-06-01",
       "end": "2026-08-17",
       "notes": "Hub estrat\u00e9gico UE p\u00f3s-Brexit"
-    },
-    {
-      "id": 401,
-      "parentId": 4,
-      "country": "holanda",
-      "name": "Defini\u00e7\u00e3o dos requisitos operacionais (volumes, SLA, inbound/outbound, armazenagem)",
-      "phase": "Opera\u00e7\u00f5es",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Opera\u00e7\u00f5es",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
-      "notes": ""
-    },
-    {
-      "id": 402,
-      "parentId": 4,
-      "country": "holanda",
-      "name": "Defini\u00e7\u00e3o de metragem e localiza\u00e7\u00e3o (Maasvlakte / Rotterdam)",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "TI",
-      "start": "2026-06-08",
-      "end": "2026-06-29",
-      "notes": ""
-    },
-    {
-      "id": 1001,
-      "parentId": 10,
-      "country": "portugal",
-      "name": "Prepara\u00e7\u00e3o documental (s\u00f3cios, representante, procura\u00e7\u00f5es, compliance/KYC)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
-      "notes": ""
-    },
-    {
-      "id": 1002,
-      "parentId": 10,
-      "country": "portugal",
-      "name": "Escolha dos CAE(s) adequados",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-08",
-      "end": "2026-06-15",
-      "notes": ""
-    },
-    {
-      "id": 1201,
-      "parentId": 12,
-      "country": "portugal",
-      "name": "Defini\u00e7\u00e3o de requisitos (cidade, budget, metragem, opera\u00e7\u00e3o, acessibilidade)",
-      "phase": "Expans\u00e3o",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Expans\u00e3o",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
-      "notes": ""
-    },
-    {
-      "id": 1202,
-      "parentId": 12,
-      "country": "portugal",
-      "name": "Sele\u00e7\u00e3o de local",
-      "phase": "Expans\u00e3o",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Expans\u00e3o",
-      "start": "2026-06-08",
-      "end": "2026-07-06",
-      "notes": ""
-    },
-    {
-      "id": 1301,
-      "parentId": 13,
-      "country": "portugal",
-      "name": "Defini\u00e7\u00e3o dos requisitos operacionais (tipo de reparo, capacidade, exig\u00eancias t\u00e9cnicas)",
-      "phase": "Opera\u00e7\u00f5es",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Opera\u00e7\u00f5es",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
-      "notes": ""
-    },
-    {
-      "id": 1302,
-      "parentId": 13,
-      "country": "portugal",
-      "name": "Sele\u00e7\u00e3o e valida\u00e7\u00e3o do galp\u00e3o industrial",
-      "phase": "Compliance",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-08",
-      "end": "2026-07-06",
-      "notes": ""
-    },
-    {
-      "id": 3001,
-      "parentId": 30,
-      "country": "argentina",
-      "name": "Prepara\u00e7\u00e3o documental (KYC, s\u00f3cios, procura\u00e7\u00f5es, apostilas, compliance)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
-      "notes": ""
-    },
-    {
-      "id": 3002,
-      "parentId": 30,
-      "country": "argentina",
-      "name": "Abertura da SRL ou SA",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-08",
-      "end": "2026-06-29",
-      "notes": ""
-    },
-    {
-      "id": 4001,
-      "parentId": 40,
-      "country": "paraguai",
-      "name": "Prepara\u00e7\u00e3o documental (s\u00f3cios, procura\u00e7\u00f5es, compliance/KYC, apostilas)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
-      "notes": ""
-    },
-    {
-      "id": 8001,
-      "parentId": 80,
-      "country": "irlanda",
-      "name": "Prepara\u00e7\u00e3o documental (s\u00f3cios, compliance/KYC, apostilas, estrutura internacional)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-01",
-      "end": "2026-06-01",
-      "notes": ""
-    },
-    {
-      "id": 8002,
-      "parentId": 20,
-      "country": "uruguai",
-      "name": "Fase 2- ABERTURA DA SRL OU SA",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "",
-      "start": "2026-06-11",
-      "end": "2026-06-29",
-      "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "Jur\u00eddico",
-          "newVal": "",
-          "ts": 1779911746144,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        },
-        {
-          "field": "name",
-          "oldVal": "ABERTURA DA SRL OU SA",
-          "newVal": "Fase 2- ABERTURA DA SRL OU SA",
-          "ts": 1779904360410,
-          "text": "Tarefa renomeada"
-        },
-        {
-          "field": "name",
-          "oldVal": "Abertura de SRL ou SA",
-          "newVal": "ABERTURA DA SRL OU SA",
-          "ts": 1779892984877,
-          "text": "Tarefa renomeada"
-        }
-      ],
-      "endMin": "2026-06-25",
-      "endMax": "2026-09-29"
-    },
-    {
-      "id": 8006,
-      "parentId": 20,
-      "country": "uruguai",
-      "name": "Fase 1 - PREPARA\u00c7\u00c3O DOCUMENTAL + KYC",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
-      "notes": "",
-      "subtasks": [],
-      "endMin": "2026-06-10",
-      "endMax": "2026-07-15",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "Jur\u00eddico",
-          "newVal": "",
-          "ts": 1779911751444,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        },
-        {
-          "field": "name",
-          "oldVal": "PREPARA\u00c7\u00c3O DOCUMENTAL + KYC",
-          "newVal": "Fase 1 - PREPARA\u00c7\u00c3O DOCUMENTAL + KYC",
-          "ts": 1779904351256,
-          "text": "Tarefa renomeada"
-        },
-        {
-          "field": "name",
-          "oldVal": "Preparar docs + KYC",
-          "newVal": "PREPARA\u00c7\u00c3O DOCUMENTAL + KYC",
-          "ts": 1779892964589,
-          "text": "Tarefa renomeada"
-        }
-      ]
     },
     {
       "id": 8027,
@@ -3266,20 +3280,6 @@
       "subtasks": []
     },
     {
-      "id": 8233,
-      "parentId": 72,
-      "country": "panama",
-      "name": "Sele\u00e7\u00e3o e valida\u00e7\u00e3o do galp\u00e3o",
-      "phase": "Expans\u00e3o",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Expans\u00e3o",
-      "start": "2026-06-08",
-      "end": "2026-07-06",
-      "notes": "",
-      "subtasks": []
-    },
-    {
       "id": 8234,
       "parentId": 72,
       "country": "panama",
@@ -3290,6 +3290,20 @@
       "owner": "Opera\u00e7\u00f5es",
       "start": "2026-07-06",
       "end": "2026-08-03",
+      "notes": "",
+      "subtasks": []
+    },
+    {
+      "id": 8233,
+      "parentId": 72,
+      "country": "panama",
+      "name": "Sele\u00e7\u00e3o e valida\u00e7\u00e3o do galp\u00e3o",
+      "phase": "Expans\u00e3o",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "Expans\u00e3o",
+      "start": "2026-06-08",
+      "end": "2026-07-06",
       "notes": "",
       "subtasks": []
     },
@@ -4034,20 +4048,6 @@
       "end": "2026-08-31",
       "notes": "",
       "subtasks": []
-    },
-    {
-      "id": 8301,
-      "name": "ESCRIT\u00d3RIO \u2014 Chile (Santiago / Valpara\u00edso)",
-      "country": "chile",
-      "phase": "",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "",
-      "start": "2026-06-01",
-      "end": "2026-09-28",
-      "notes": "",
-      "subtasks": [],
-      "parentId": null
     },
     {
       "id": 8302,
