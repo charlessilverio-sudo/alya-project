@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-30T16:59:15.710Z",
+  "savedAt": "2026-05-30T16:59:20.173Z",
   "tasks": [
     {
       "id": 4,
@@ -263,45 +263,6 @@
       ],
       "endMin": "2026-06-25",
       "endMax": "2026-09-29"
-    },
-    {
-      "id": 30,
-      "parentId": null,
-      "country": "argentina",
-      "name": "Constitui\u00e7\u00e3o Jur\u00eddica (SRL ou SA)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-01",
-      "end": "2026-08-05",
-      "notes": "CUIT"
-    },
-    {
-      "id": 3001,
-      "parentId": 30,
-      "country": "argentina",
-      "name": "Prepara\u00e7\u00e3o documental (KYC, s\u00f3cios, procura\u00e7\u00f5es, apostilas, compliance)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-01",
-      "end": "2026-06-08",
-      "notes": ""
-    },
-    {
-      "id": 3002,
-      "parentId": 30,
-      "country": "argentina",
-      "name": "Abertura da SRL ou SA",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-08",
-      "end": "2026-06-29",
-      "notes": ""
     },
     {
       "id": 32,
@@ -576,76 +537,6 @@
       "start": "2026-06-01",
       "end": "2026-08-17",
       "notes": "Hub estrat\u00e9gico UE p\u00f3s-Brexit"
-    },
-    {
-      "id": 8027,
-      "parentId": 30,
-      "country": "argentina",
-      "name": "Pr\u00e9-onboarding banc\u00e1rio (compliance, origem de recursos, perfil operacional)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-08",
-      "end": "2026-07-06",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8028,
-      "parentId": 30,
-      "country": "argentina",
-      "name": "Registro tribut\u00e1rio da empresa (RUT / \u201cCUIT\u201d operacional equivalente)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-29",
-      "end": "2026-07-13",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8029,
-      "parentId": 30,
-      "country": "argentina",
-      "name": "Abertura formal da conta banc\u00e1ria (BROU / Ita\u00fa UY)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-13",
-      "end": "2026-07-20",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8030,
-      "parentId": 30,
-      "country": "argentina",
-      "name": "Configura\u00e7\u00e3o cambial, permiss\u00f5es internacionais e restri\u00e7\u00f5es operacionais",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-20",
-      "end": "2026-08-03",
-      "notes": "",
-      "subtasks": []
-    },
-    {
-      "id": 8031,
-      "parentId": 30,
-      "country": "argentina",
-      "name": "E-banking ativo / conta operacional",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Jur\u00eddico",
-      "start": "2026-08-03",
-      "end": "2026-08-05",
-      "notes": "",
-      "subtasks": []
     },
     {
       "id": 8032,
