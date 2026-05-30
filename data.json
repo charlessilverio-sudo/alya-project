@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-05-30T20:26:07.836Z",
+  "savedAt": "2026-05-30T20:26:20.821Z",
   "tasks": [
     {
       "id": 9000,
@@ -22,7 +22,7 @@
           "field": "status",
           "oldVal": "Em andamento",
           "newVal": "A fazer",
-          "ts": 1780172766463,
+          "ts": 1780172779311,
           "text": "Status alterado de <strong>Em andamento</strong> para <strong>A fazer</strong>"
         },
         {
