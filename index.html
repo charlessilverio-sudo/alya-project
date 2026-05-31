@@ -7670,6 +7670,7 @@ function printRollout(){
     const bw=Math.min(100,r.imp*4.5);
     tr+='<tr style="background:'+(i%2===0?'#fff':'#F8FAFC')+'">'
       +'<td style="padding:8px 10px;font-weight:700;color:#94A3B8;font-size:10px">'+(i+1)+'</td>'
+      +'<td style="padding:8px 10px"><div style="display:flex;align-items:center;gap:5px"><span style="font-size:14px">'+ci.f+'</span><span style="font-size:11px;font-weight:600;color:#1E293B">'+ci.n+'</span></div></td>'
       +'<td style="padding:8px 10px;font-size:11px;color:#475569;white-space:nowrap">'+fd(r.start)+'</td>'
       +'<td style="padding:8px 10px;font-size:11px;color:#15803D;white-space:nowrap;font-weight:600">'+fd(r.endMin||r.end)+'</td>'
       +'<td style="padding:8px 10px;font-size:11px;color:#B45309;white-space:nowrap;font-weight:600">'+fd(r.endMed||r.end)+'</td>'
@@ -7691,7 +7692,7 @@ function printRollout(){
     '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px">'+kpis+'<'+'/div>',
     '<div style="border:1px solid #E2E8F0;border-radius:10px;overflow:hidden;margin-bottom:12px"><table style="width:100%;border-collapse:collapse;font-size:11px">',
     '<thead><tr style="background:#F8FAFC">',
-    ...[['#','28px'],['País','130px'],['Início','85px'],['Fim Min','85px'],['Fim Médio','85px'],['Dur. Min','60px'],['Dur. Méd','60px'],['Maior Ofensor','']].map(([t,w])=>'<th style="padding:7px 10px;font-size:8.5px;font-weight:700;color:#94A3B8;text-transform:uppercase;text-align:left;border-bottom:1px solid #E2E8F0'+(w?';width:'+w:'')+'">'+t+'<'+'/th>'),
+    ...[['#','28px'],['País','130px'],['Início','85px'],['Fim Min','85px'],['Fim Médio','85px'],['Dur. Min','60px'],['Dur. Méd','60px'],['Maior Ofensor',''],['Impacto','70px']].map(([t,w])=>'<th style="padding:7px 10px;font-size:8.5px;font-weight:700;color:#94A3B8;text-transform:uppercase;text-align:left;border-bottom:1px solid #E2E8F0'+(w?';width:'+w:'')+'">'+t+'<'+'/th>'),
     '<'+'/tr><'+'/thead><tbody>'+tr+'<'+'/tbody><'+'/table><'+'/div>',
     '<div style="display:grid;grid-template-columns:1fr 1fr 2fr;gap:10px">',
     '<div style="border:1px solid #E2E8F0;border-radius:10px;padding:10px 12px"><div style="font-size:8.5px;font-weight:700;color:#475569;text-transform:uppercase;margin-bottom:7px">Sobre os Ofensores<'+'/div><p style="font-size:9px;color:#64748B;line-height:1.5;margin-bottom:6px">Tarefa com maior duração individual por país.<'+'/p>'+['Complexidade regulatória','Dependências externas','Integrações críticas','Histórico de atrasos'].map(c=>'<div style="display:flex;align-items:center;gap:4px;margin-bottom:3px"><span style="color:#15803D;font-weight:700">✓<'+'/span><span style="font-size:9px">'+c+'<'+'/span><'+'/div>').join('')+'<'+'/div>',
