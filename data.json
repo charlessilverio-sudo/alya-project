@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-01T10:25:53.330Z",
+  "savedAt": "2026-06-01T10:25:59.492Z",
   "tasks": [
     {
       "id": 9000,
@@ -1578,7 +1578,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "Facilities",
+      "owner": "",
       "start": "2026-08-03",
       "end": "2026-09-01",
       "notes": "Transire EAP 1.3.5",
@@ -1588,6 +1588,13 @@
       "predHtmlId": 9031,
       "eapId": "1.3.5",
       "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Facilities",
+          "newVal": "",
+          "ts": 1780309559487,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        },
         {
           "field": "owner",
           "oldVal": "INF",
