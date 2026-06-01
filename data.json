@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-01T12:23:43.622Z",
+  "savedAt": "2026-06-01T12:23:51.747Z",
   "tasks": [
     {
       "id": 9000,
@@ -7145,7 +7145,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Facilities",
       "start": "2026-07-31",
       "end": "2026-08-15",
       "notes": "Transire EAP 3.2.2.6",
@@ -7153,7 +7153,16 @@
       "endMax": "2026-10-26",
       "pred": "3.2.2.3",
       "predHtmlId": 9271,
-      "eapId": "3.2.2.6"
+      "eapId": "3.2.2.6",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Facilities",
+          "ts": 1780316631741,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9275,
