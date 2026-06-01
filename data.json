@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-01T10:35:33.412Z",
+  "savedAt": "2026-06-01T10:37:12.258Z",
   "tasks": [
     {
       "id": 9000,
@@ -161,6 +161,13 @@
       "predHtmlId": 9002,
       "eapId": "1.1.2",
       "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "",
+          "newVal": "",
+          "ts": 1780310232252,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
