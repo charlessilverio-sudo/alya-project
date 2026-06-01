@@ -202,6 +202,48 @@
   animation: row-complete-flash .9s ease forwards;
 }
 
+
+/* ══ REBASE POR PAÍS ══════════════════════════════════════════════════════ */
+#rebase-country-modal {
+  display: none; position: fixed; inset: 0; z-index: 600;
+  background: rgba(15,23,42,.45); backdrop-filter: blur(4px);
+  align-items: center; justify-content: center;
+}
+#rebase-country-modal.open { display: flex; }
+#rcm-box {
+  background: var(--s-0); border-radius: var(--radius-lg);
+  box-shadow: var(--sh-modal); width: 540px; max-width: 96vw;
+  max-height: 88vh; display: flex; flex-direction: column; overflow: hidden;
+}
+.rcm-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 16px 20px; border-bottom: 1px solid var(--b-0);
+}
+.rcm-title { font-size: 14px; font-weight: 700; color: var(--ink-800); flex: 1; }
+.rcm-close { background: none; border: none; cursor: pointer;
+  color: var(--ink-400); font-size: 18px; padding: 2px 6px; border-radius: 5px; }
+.rcm-close:hover { background: var(--ink-100); }
+.rcm-body { padding: 16px 20px; overflow-y: auto; flex: 1; }
+.rcm-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: var(--radius);
+  border: 1px solid var(--b-0); margin-bottom: 7px; transition: border-color .15s;
+}
+.rcm-row:focus-within { border-color: var(--primary); }
+.rcm-row.rcm-changed { background: var(--primary-50); border-color: var(--primary); }
+.rcm-flag  { font-size: 18px; flex-shrink: 0; width: 24px; text-align: center; }
+.rcm-name  { font-size: 12.5px; font-weight: 600; color: var(--ink-700); }
+.rcm-orig  { font-size: 10.5px; color: var(--ink-400); }
+.rcm-input {
+  border: none; outline: none; background: transparent; margin-left: auto;
+  font-size: 12px; color: var(--ink-700); font-family: var(--font); width: 115px;
+}
+.rcm-input::-webkit-calendar-picker-indicator { opacity: .5; cursor: pointer; }
+.rcm-foot {
+  display: flex; align-items: center; gap: 8px; justify-content: flex-end;
+  padding: 12px 20px; border-top: 1px solid var(--b-0); background: var(--s-1);
+}
+
 html { font-size: 13px; }
 
 /* ── REBASE DE DATAS ─────────────────────────────────────────── */
@@ -2224,6 +2266,7 @@ tr.peek-active td:first-child { border-left: 3px solid var(--brand) !important; 
             <input class="rebase-input" type="date" id="rebase-date" onchange="rebasePreview()" title="Nova data de início do projeto">
             <button class="rebase-btn" id="rebase-apply-btn" onclick="rebaseApply()" disabled title="Aplicar rebase">Aplicar</button>
           </div>
+          <button class="btn btn-outline btn-xs" onclick="openRebaseCountry()" title="Definir data de início por país" style="margin-left:4px;gap:4px"><i class="ti ti-flag-3" style="font-size:13px"></i>Por país</button>
           <div class="tasks-bar-sep"></div>
 
           <div class="tasks-bar-end">
@@ -2958,6 +3001,155 @@ function taskProgress(t){
    Desloca todas as tarefas mantendo os intervalos entre elas.
    Âncora = menor data de início entre todas as tarefas.
 ══════════════════════════════════════════════════════════════════════════ */
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   REBASE POR PAIS — inicio individual por pais
+══════════════════════════════════════════════════════════════════════════ */
+var _rcmSnapshot = null;
+
+function rcmAnchor(countryId){
+  var dates = tasks
+    .filter(function(t){ return t.country === countryId && t.start; })
+    .map(function(t){ return t.start; }).sort();
+  return dates[0] || null;
+}
+
+function openRebaseCountry(){
+  var body = document.getElementById('rcm-body');
+  if(!body) return;
+
+  var activeCountries = COUNTRIES.filter(function(c){
+    return tasks.some(function(t){ return t.country === c.id && t.start; });
+  });
+
+  var html = '';
+  activeCountries.forEach(function(c){
+    var anchor = rcmAnchor(c.id);
+    var fmtd   = anchor ? fmtDate(anchor) : '--';
+    var val    = anchor || '';
+    html += '<div class="rcm-row" id="rcm-row-' + c.id + '">'
+          +   '<span class="rcm-flag">' + c.flag + '</span>'
+          +   '<div><div class="rcm-name">' + c.name + '</div>'
+          +   '<div class="rcm-orig" id="rcm-orig-' + c.id + '">Atual: ' + fmtd + '</div></div>'
+          +   '<input class="rcm-input" type="date" id="rcm-inp-' + c.id + '"'
+          +     ' value="' + val + '" data-anchor="' + val + '"'
+          +     ' onchange="rcmMarkChanged(this)">'
+          + '</div>';
+  });
+  body.innerHTML = html;
+
+  document.getElementById('rcm-apply-btn').disabled = false;
+  document.getElementById('rcm-undo-btn').disabled  = !_rcmSnapshot;
+  document.getElementById('rebase-country-modal').classList.add('open');
+}
+
+function closeRebaseCountry(){
+  document.getElementById('rebase-country-modal').classList.remove('open');
+}
+
+function rcmMarkChanged(inp){
+  if(!inp) return;
+  var cid    = inp.id.replace('rcm-inp-', '');
+  var row    = document.getElementById('rcm-row-' + cid);
+  if(!row) return;
+  if(inp.value && inp.value !== inp.dataset.anchor){
+    row.classList.add('rcm-changed');
+  } else {
+    row.classList.remove('rcm-changed');
+  }
+}
+
+function rcmApplyAll(){
+  var activeCountries = COUNTRIES.filter(function(c){
+    return tasks.some(function(t){ return t.country === c.id && t.start; });
+  });
+
+  var changes = activeCountries.filter(function(c){
+    var inp = document.getElementById('rcm-inp-' + c.id);
+    if(!inp || !inp.value) return false;
+    return inp.value !== rcmAnchor(c.id);
+  });
+
+  if(!changes.length){
+    showToast('Nenhuma data foi alterada', 'info', 'ti-info-circle');
+    return;
+  }
+
+  _rcmSnapshot = tasks.map(function(t){
+    return { id: t.id, start: t.start, end: t.end, endMin: t.endMin, endMax: t.endMax };
+  });
+
+  function shiftDate(d, deltaMs){
+    if(!d) return d;
+    var ms = new Date(d + 'T12:00:00').getTime() + deltaMs;
+    return new Date(ms).toISOString().slice(0, 10);
+  }
+
+  var totalMoved = 0;
+  changes.forEach(function(c){
+    var inp    = document.getElementById('rcm-inp-' + c.id);
+    var anchor = rcmAnchor(c.id);
+    if(!inp || !inp.value || inp.value === anchor) return;
+
+    var anchorMs  = new Date(anchor + 'T12:00:00').getTime();
+    var newMs     = new Date(inp.value + 'T12:00:00').getTime();
+    var deltaMs   = newMs - anchorMs;
+    if(Math.round(deltaMs / 86400000) === 0) return;
+
+    tasks.forEach(function(t){
+      if(t.country !== c.id) return;
+      if(t.start)  t.start  = shiftDate(t.start,  deltaMs);
+      if(t.end)    t.end    = shiftDate(t.end,     deltaMs);
+      if(t.endMin) t.endMin = shiftDate(t.endMin,  deltaMs);
+      if(t.endMax) t.endMax = shiftDate(t.endMax,  deltaMs);
+    });
+    totalMoved++;
+  });
+
+  markUnsaved(); saveData();
+  renderTasks(); renderSidebar();
+
+  changes.forEach(function(c){
+    var newAnchor = rcmAnchor(c.id);
+    var origEl    = document.getElementById('rcm-orig-' + c.id);
+    var inp       = document.getElementById('rcm-inp-' + c.id);
+    var row       = document.getElementById('rcm-row-' + c.id);
+    if(origEl) origEl.textContent = 'Atual: ' + (newAnchor ? fmtDate(newAnchor) : '--');
+    if(inp){ inp.value = newAnchor || ''; inp.dataset.anchor = newAnchor || ''; }
+    if(row)  row.classList.remove('rcm-changed');
+  });
+
+  document.getElementById('rcm-undo-btn').disabled = false;
+  showToast(totalMoved + ' pais(es) reescalonado(s)', 'success', 'ti-calendar-bolt');
+}
+
+function rcmUndo(){
+  if(!_rcmSnapshot) return;
+  _rcmSnapshot.forEach(function(snap){
+    var t = tasks.find(function(x){ return x.id === snap.id; });
+    if(!t) return;
+    t.start = snap.start; t.end = snap.end;
+    t.endMin = snap.endMin; t.endMax = snap.endMax;
+  });
+  _rcmSnapshot = null;
+
+  markUnsaved(); saveData();
+  renderTasks(); renderSidebar();
+
+  COUNTRIES.forEach(function(c){
+    var newAnchor = rcmAnchor(c.id);
+    var origEl    = document.getElementById('rcm-orig-' + c.id);
+    var inp       = document.getElementById('rcm-inp-' + c.id);
+    var row       = document.getElementById('rcm-row-' + c.id);
+    if(origEl) origEl.textContent = 'Atual: ' + (newAnchor ? fmtDate(newAnchor) : '--');
+    if(inp){ inp.value = newAnchor || ''; inp.dataset.anchor = newAnchor || ''; }
+    if(row)  row.classList.remove('rcm-changed');
+  });
+
+  document.getElementById('rcm-undo-btn').disabled = true;
+  showToast('Datas restauradas', 'success', 'ti-arrow-back-up');
+}
 
 let _rebaseSnapshot = null; // para desfazer
 let _rebaseToastTimer = null;
@@ -8594,6 +8786,28 @@ Sem markdown, sem nada fora do JSON.`}]
         <button onclick="closeGhConfig()" class="btn btn-outline" style="font-size:12px">Cancelar</button>
         <button onclick="saveGhConfig()" class="btn btn-primary" style="font-size:12px"><i class="ti ti-cloud-check"></i> Salvar Config</button>
       </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ REBASE POR PAÍS MODAL ════════════════════════════════════════════ -->
+<div id="rebase-country-modal">
+  <div id="rcm-box">
+    <div class="rcm-head">
+      <i class="ti ti-calendar-bolt" style="font-size:18px;color:var(--primary)"></i>
+      <span class="rcm-title">Inicio por Pais</span>
+      <button class="rcm-close" onclick="closeRebaseCountry()"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="rcm-body" id="rcm-body"></div>
+    <div class="rcm-foot">
+      <button class="btn btn-outline btn-xs" onclick="rcmUndo()" id="rcm-undo-btn" disabled>
+        <i class="ti ti-arrow-back-up"></i>Desfazer tudo
+      </button>
+      <button class="btn btn-outline btn-xs" onclick="closeRebaseCountry()">Fechar</button>
+      <button class="btn btn-primary btn-xs" onclick="rcmApplyAll()" id="rcm-apply-btn">
+        <i class="ti ti-check"></i>Aplicar
+      </button>
     </div>
   </div>
 </div>
