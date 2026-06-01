@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-01T12:22:25.239Z",
+  "savedAt": "2026-06-01T12:22:29.143Z",
   "tasks": [
     {
       "id": 9000,
@@ -6743,6 +6743,13 @@
       "predHtmlId": 9258,
       "eapId": "3.1.6.2",
       "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780316549138,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        },
         {
           "field": "owner",
           "oldVal": "TI",
