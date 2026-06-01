@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-01T12:26:05.160Z",
+  "savedAt": "2026-06-01T12:26:07.662Z",
   "tasks": [
     {
       "id": 9000,
@@ -8008,7 +8008,16 @@
       "endMax": "2026-12-11",
       "pred": "3.5.2",
       "predHtmlId": 9302,
-      "eapId": "3.5.3.1"
+      "eapId": "3.5.3.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780316767657,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9307,
