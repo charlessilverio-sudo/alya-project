@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-01T12:34:26.030Z",
+  "savedAt": "2026-06-01T12:34:27.949Z",
   "tasks": [
     {
       "id": 9000,
@@ -10828,7 +10828,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "Financeiro",
       "start": "2026-08-07",
       "end": "2026-08-12",
       "notes": "Transire EAP 4.6.2.1",
@@ -10836,7 +10836,16 @@
       "endMax": "2026-10-30",
       "pred": "4.6.1",
       "predHtmlId": 9406,
-      "eapId": "4.6.2.1"
+      "eapId": "4.6.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "Financeiro",
+          "ts": 1780317267946,
+          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
+        }
+      ]
     },
     {
       "id": 9412,
