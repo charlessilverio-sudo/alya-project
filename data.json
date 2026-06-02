@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T13:50:23.063Z",
+  "savedAt": "2026-06-02T13:50:27.069Z",
   "tasks": [
     {
       "id": 9000,
@@ -13354,7 +13354,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "DIR",
+      "owner": "Diretoria",
       "start": "2026-07-22",
       "end": "2026-07-30",
       "endMin": "2026-07-28",
@@ -13364,7 +13364,16 @@
       "eapId": "5.6.1.1",
       "notes": "Transire EAP 5.6.1.1",
       "subtasks": [],
-      "predHtmlId": 9440
+      "predHtmlId": 9440,
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "DIR",
+          "newVal": "Diretoria",
+          "ts": 1780408227063,
+          "text": "Respons\u00e1vel: <strong>Diretoria</strong>"
+        }
+      ]
     },
     {
       "id": 9539,
