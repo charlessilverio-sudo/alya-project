@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T13:52:53.111Z",
+  "savedAt": "2026-06-02T13:53:03.991Z",
   "tasks": [
     {
       "id": 9000,
@@ -14289,7 +14289,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "GOV",
+      "owner": "",
       "start": "2026-06-23",
       "end": "2026-07-14",
       "endMin": "2026-07-08",
@@ -14299,7 +14299,16 @@
       "eapId": "6.1.3",
       "notes": "Transire EAP 6.1.3",
       "subtasks": [],
-      "predHtmlId": 9567
+      "predHtmlId": 9567,
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "GOV",
+          "newVal": "",
+          "ts": 1780408376319,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9573,
@@ -14309,7 +14318,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "GOV",
+      "owner": "Fiscal",
       "start": "2026-06-23",
       "end": "2026-07-06",
       "endMin": "2026-06-29",
@@ -14319,7 +14328,16 @@
       "eapId": "6.1.3.1",
       "notes": "Transire EAP 6.1.3.1",
       "subtasks": [],
-      "predHtmlId": 9567
+      "predHtmlId": 9567,
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "GOV",
+          "newVal": "Fiscal",
+          "ts": 1780408383987,
+          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
+        }
+      ]
     },
     {
       "id": 9574,
