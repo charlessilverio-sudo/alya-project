@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T21:09:21.854Z",
+  "savedAt": "2026-06-02T21:09:27.657Z",
   "tasks": [
     {
       "id": 9000,
@@ -32897,11 +32897,20 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "",
+      "owner": "Fiscal",
       "start": "2026-07-06",
       "end": "2026-07-20",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "",
+          "newVal": "Fiscal",
+          "ts": 1780434567647,
+          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
+        }
+      ]
     },
     {
       "id": 8250,
