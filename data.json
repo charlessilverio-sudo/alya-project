@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T13:54:52.876Z",
+  "savedAt": "2026-06-02T13:55:00.078Z",
   "tasks": [
     {
       "id": 9000,
@@ -14976,7 +14976,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "",
+      "owner": "Jur\u00eddico",
       "start": "2026-07-17",
       "end": "2026-07-23",
       "endMin": "2026-07-21",
@@ -14988,6 +14988,13 @@
       "subtasks": [],
       "predHtmlId": 9595,
       "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780408500074,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
