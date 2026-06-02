@@ -3544,9 +3544,14 @@ async function loadData(){
     const sv = localStorage.getItem('alya_ent_v10');
     if(sv){ const p=JSON.parse(sv); if(Array.isArray(p)&&p.length>0&&p[0].id!==undefined){
       tasks=p;
-      // Migração: injeta endMin/endMax/pred do DEFAULT_TASKS em tarefas que não tenham (preserva edições do usuário)
+      // Migração completa:
+      // 1. Completa campos de datas/EAP ausentes usando DEFAULT_TASKS
+      // 2. Garante que TODAS as tarefas do DEFAULT_TASKS existam em tasks[]
+      //    (evita que tarefas id<9000 desapareçam em localStorage de versão anterior)
       const defById = {}; DEFAULT_TASKS.forEach(d=>{ defById[d.id]=d; });
+      const liveById = {}; tasks.forEach(t=>{ liveById[t.id]=t; });
       let migrated=0;
+      // Passo 1: completar campos ausentes nas tarefas já existentes
       tasks.forEach(t=>{
         const d = defById[t.id];
         if(!d) return;
@@ -3555,6 +3560,11 @@ async function loadData(){
         if((!t.pred||t.pred==='') && d.pred){ t.pred=d.pred; }
         if((!t.predHtmlId) && d.predHtmlId){ t.predHtmlId=d.predHtmlId; }
         if((!t.eapId) && d.eapId){ t.eapId=d.eapId; }
+      });
+      // Passo 2: adicionar tarefas do DEFAULT_TASKS que não existem no localStorage
+      // (garante que edições nos originais id<9000 sejam preservadas e novas tarefas apareçam)
+      DEFAULT_TASKS.forEach(d=>{
+        if(!liveById[d.id]){ tasks.push(Object.assign({},d)); migrated++; }
       });
       if(migrated>0){ try{ localStorage.setItem('alya_ent_v10', safeStringify(tasks)); }catch(e){} }
       ghSetStatus('local'); return;
@@ -3720,10 +3730,14 @@ function exportData(){
   const defById = {};
   DEFAULT_TASKS.forEach(d => { defById[d.id] = d; });
 
-  const allTasks = tasks.map(t => {
-    const d = defById[t.id];
-    if(!d) return t;
-    const out = Object.assign({}, t);
+  // Garante export completo: mescla tasks[] com DEFAULT_TASKS
+  // tasks[] prevalece (edições do usuário), DEFAULT preenche o que falta
+  const liveByIdExp = {}; tasks.forEach(t=>{ liveByIdExp[t.id]=t; });
+  const allTasks = DEFAULT_TASKS.map(d => {
+    const t = liveByIdExp[d.id];
+    if(!t) return Object.assign({},d); // tarefa não editada: usa DEFAULT
+    const out = Object.assign({}, t);  // tarefa editada: usa versão do usuário
+    // Completa campos de datas/EAP se ausentes (compat. versões antigas)
     if(!out.endMin     && d.endMin)     out.endMin     = d.endMin;
     if(!out.endMax     && d.endMax)     out.endMax     = d.endMax;
     if(!out.pred       && d.pred)       out.pred       = d.pred;
@@ -3732,6 +3746,8 @@ function exportData(){
     if(!out.dur        && d.dur)        out.dur        = d.dur;
     return out;
   });
+  // Inclui tarefas criadas pelo usuário que não existem no DEFAULT
+  tasks.forEach(t=>{ if(!defById[t.id]) allTasks.push(t); });
 
   const payload = {
     version: 'alya_v8',
