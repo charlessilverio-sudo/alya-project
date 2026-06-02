@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-01T19:57:39.677Z",
+  "savedAt": "2026-06-02T12:18:02.624Z",
   "tasks": [
     {
       "id": 9000,
@@ -10,13 +10,22 @@
       "phase": "Gest\u00e3o",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "DIR",
+      "owner": "",
       "start": "2026-06-01",
       "end": "2026-11-30",
       "notes": "Transire EAP 1",
       "endMin": "2026-11-30",
       "endMax": "2027-03-23",
-      "eapId": "1"
+      "eapId": "1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "DIR",
+          "newVal": "",
+          "ts": 1780309099805,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9001,
@@ -26,13 +35,22 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-06-01",
       "end": "2026-07-31",
       "notes": "Transire EAP 1.1",
       "endMin": "2026-08-03",
       "endMax": "2026-09-14",
-      "eapId": "1.1"
+      "eapId": "1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309103037,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9002,
@@ -42,13 +60,22 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-06-01",
       "end": "2026-06-07",
       "notes": "Transire EAP 1.1.1",
       "endMin": "2026-06-09",
       "endMax": "2026-06-11",
-      "eapId": "1.1.1"
+      "eapId": "1.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309121292,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9003,
@@ -124,7 +151,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-06-08",
       "end": "2026-06-21",
       "notes": "Transire EAP 1.1.2",
@@ -132,7 +159,23 @@
       "endMax": "2026-07-03",
       "pred": "1.1.1",
       "predHtmlId": 9002,
-      "eapId": "1.1.2"
+      "eapId": "1.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "",
+          "newVal": "",
+          "ts": 1780310232252,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        },
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309126669,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9008,
@@ -214,7 +257,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-06-22",
       "end": "2026-07-05",
       "notes": "Transire EAP 1.1.3",
@@ -222,7 +265,16 @@
       "endMax": "2026-07-27",
       "pred": "1.1.2",
       "predHtmlId": 9007,
-      "eapId": "1.1.3"
+      "eapId": "1.1.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309133837,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9013,
@@ -286,7 +338,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-07-06",
       "end": "2026-07-13",
       "notes": "Transire EAP 1.1.4",
@@ -294,7 +346,16 @@
       "endMax": "2026-08-05",
       "pred": "1.1.3",
       "predHtmlId": 9012,
-      "eapId": "1.1.4"
+      "eapId": "1.1.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309140637,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9017,
@@ -358,7 +419,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-07-14",
       "end": "2026-07-20",
       "notes": "Transire EAP 1.1.5",
@@ -366,7 +427,16 @@
       "endMax": "2026-08-14",
       "pred": "1.1.4",
       "predHtmlId": 9016,
-      "eapId": "1.1.5"
+      "eapId": "1.1.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780309146956,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9021,
@@ -412,7 +482,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-07-21",
       "end": "2026-07-31",
       "notes": "Transire EAP 1.1.6",
@@ -420,7 +490,16 @@
       "endMax": "2026-09-07",
       "pred": "1.1.5",
       "predHtmlId": 9020,
-      "eapId": "1.1.6"
+      "eapId": "1.1.6",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780309153389,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9024,
@@ -484,7 +563,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-07-21",
       "end": "2026-07-31",
       "notes": "Transire EAP 1.1.7",
@@ -492,7 +571,16 @@
       "endMax": "2026-09-14",
       "pred": "1.1.5",
       "predHtmlId": 9020,
-      "eapId": "1.1.7"
+      "eapId": "1.1.7",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309159657,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9028,
@@ -556,7 +644,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "INF",
+      "owner": "",
       "start": "2026-07-03",
       "end": "2026-08-31",
       "notes": "Transire EAP 1.2",
@@ -564,7 +652,16 @@
       "endMax": "2026-11-10",
       "pred": "1.1.3",
       "predHtmlId": 9012,
-      "eapId": "1.2"
+      "eapId": "1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "",
+          "ts": 1780309338480,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9032,
@@ -574,7 +671,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "",
       "start": "2026-07-03",
       "end": "2026-07-31",
       "notes": "Transire EAP 1.2.1",
@@ -582,7 +679,16 @@
       "endMax": "2026-09-21",
       "pred": "1.1.3",
       "predHtmlId": 9012,
-      "eapId": "1.2.1"
+      "eapId": "1.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "",
+          "ts": 1780309342252,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9033,
@@ -592,7 +698,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-07-03",
       "end": "2026-07-05",
       "notes": "Transire EAP 1.2.1.1",
@@ -600,7 +706,16 @@
       "endMax": "2026-08-03",
       "pred": "1.1.3",
       "predHtmlId": 9012,
-      "eapId": "1.2.1.1"
+      "eapId": "1.2.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309351272,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9034,
@@ -610,7 +725,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Diretoria",
       "start": "2026-07-09",
       "end": "2026-07-10",
       "notes": "Transire EAP 1.2.1.2",
@@ -618,7 +733,16 @@
       "endMax": "2026-08-12",
       "pred": "1.2.1.1",
       "predHtmlId": 9033,
-      "eapId": "1.2.1.2"
+      "eapId": "1.2.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Diretoria",
+          "ts": 1780309359316,
+          "text": "Respons\u00e1vel: <strong>Diretoria</strong>"
+        }
+      ]
     },
     {
       "id": 9035,
@@ -664,7 +788,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-07-23",
       "end": "2026-07-24",
       "notes": "Transire EAP 1.2.1.5",
@@ -672,7 +796,23 @@
       "endMax": "2026-09-08",
       "pred": "1.2.1.4",
       "predHtmlId": 9036,
-      "eapId": "1.2.1.5"
+      "eapId": "1.2.1.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Opera\u00e7\u00f5es",
+          "newVal": "Facilities",
+          "ts": 1780309488407,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        },
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309366984,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9038,
@@ -682,7 +822,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-07-29",
       "end": "2026-07-31",
       "notes": "Transire EAP 1.2.1.6",
@@ -690,7 +830,23 @@
       "endMax": "2026-09-21",
       "pred": "1.2.1.5",
       "predHtmlId": 9037,
-      "eapId": "1.2.1.6"
+      "eapId": "1.2.1.6",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Opera\u00e7\u00f5es",
+          "newVal": "Facilities",
+          "ts": 1780309493671,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        },
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309376213,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9039,
@@ -700,7 +856,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "",
       "start": "2026-07-03",
       "end": "2026-08-31",
       "notes": "Transire EAP 1.2.2",
@@ -708,7 +864,16 @@
       "endMax": "2026-11-10",
       "pred": "1.1.3",
       "predHtmlId": 9012,
-      "eapId": "1.2.2"
+      "eapId": "1.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "",
+          "ts": 1780309382500,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9040,
@@ -718,7 +883,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Fiscal",
       "start": "2026-07-03",
       "end": "2026-07-08",
       "notes": "Transire EAP 1.2.2.1",
@@ -726,7 +891,16 @@
       "endMax": "2026-08-03",
       "pred": "1.1.3",
       "predHtmlId": 9012,
-      "eapId": "1.2.2.1"
+      "eapId": "1.2.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Fiscal",
+          "ts": 1780309398071,
+          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
+        }
+      ]
     },
     {
       "id": 9041,
@@ -736,7 +910,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Fiscal",
       "start": "2026-07-09",
       "end": "2026-07-12",
       "notes": "Transire EAP 1.2.2.2",
@@ -744,7 +918,16 @@
       "endMax": "2026-08-10",
       "pred": "1.2.2.1",
       "predHtmlId": 9040,
-      "eapId": "1.2.2.2"
+      "eapId": "1.2.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Fiscal",
+          "ts": 1780309407155,
+          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
+        }
+      ]
     },
     {
       "id": 9042,
@@ -754,7 +937,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-07-09",
       "end": "2026-07-14",
       "notes": "Transire EAP 1.2.2.3",
@@ -762,7 +945,16 @@
       "endMax": "2026-08-14",
       "pred": "1.2.2.1",
       "predHtmlId": 9040,
-      "eapId": "1.2.2.3"
+      "eapId": "1.2.2.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309412717,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9043,
@@ -790,7 +982,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-07-21",
       "end": "2026-07-28",
       "notes": "Transire EAP 1.2.2.5",
@@ -798,7 +990,16 @@
       "endMax": "2026-09-02",
       "pred": "1.2.2.4",
       "predHtmlId": 9043,
-      "eapId": "1.2.2.5"
+      "eapId": "1.2.2.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309418171,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9045,
@@ -808,7 +1009,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-07-21",
       "end": "2026-07-31",
       "notes": "Transire EAP 1.2.2.6",
@@ -816,7 +1017,16 @@
       "endMax": "2026-09-10",
       "pred": "1.2.2.4",
       "predHtmlId": 9043,
-      "eapId": "1.2.2.6"
+      "eapId": "1.2.2.6",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309448428,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9046,
@@ -826,7 +1036,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-08-03",
       "end": "2026-08-10",
       "notes": "Transire EAP 1.2.2.7",
@@ -834,7 +1044,16 @@
       "endMax": "2026-09-23",
       "pred": "1.2.2.5",
       "predHtmlId": 9044,
-      "eapId": "1.2.2.7"
+      "eapId": "1.2.2.7",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309458223,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9047,
@@ -898,7 +1117,7 @@
       "phase": "TI",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "TI",
+      "owner": "",
       "start": "2026-08-03",
       "end": "2026-09-15",
       "notes": "Transire EAP 1.3",
@@ -906,7 +1125,16 @@
       "endMax": "2027-02-04",
       "pred": "1.2",
       "predHtmlId": 9031,
-      "eapId": "1.3"
+      "eapId": "1.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780309506699,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9051,
@@ -1042,7 +1270,7 @@
       "phase": "TI",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "TI",
+      "owner": "",
       "start": "2026-08-20",
       "end": "2026-09-15",
       "notes": "Transire EAP 1.3.2",
@@ -1050,7 +1278,16 @@
       "endMax": "2027-02-04",
       "pred": "1.2.2",
       "predHtmlId": 9039,
-      "eapId": "1.3.2"
+      "eapId": "1.3.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780309522963,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9059,
@@ -1132,7 +1369,7 @@
       "phase": "TI",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "TI",
+      "owner": "",
       "start": "2026-08-20",
       "end": "2026-08-20",
       "notes": "Transire EAP 1.3.3",
@@ -1140,7 +1377,16 @@
       "endMax": "2026-12-22",
       "pred": "1.2",
       "predHtmlId": 9031,
-      "eapId": "1.3.3"
+      "eapId": "1.3.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780309535103,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9064,
@@ -1204,7 +1450,7 @@
       "phase": "TI",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "TI",
+      "owner": "",
       "start": "2026-08-27",
       "end": "2026-09-15",
       "notes": "Transire EAP 1.3.4",
@@ -1212,7 +1458,16 @@
       "endMax": "2026-12-23",
       "pred": "1.3.1",
       "predHtmlId": 9051,
-      "eapId": "1.3.4"
+      "eapId": "1.3.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780309543395,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9068,
@@ -1330,7 +1585,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "",
       "start": "2026-08-03",
       "end": "2026-09-01",
       "notes": "Transire EAP 1.3.5",
@@ -1338,7 +1593,23 @@
       "endMax": "2027-01-12",
       "pred": "1.2",
       "predHtmlId": 9031,
-      "eapId": "1.3.5"
+      "eapId": "1.3.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Facilities",
+          "newVal": "",
+          "ts": 1780309559487,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        },
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309553327,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9075,
@@ -1348,7 +1619,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-08-03",
       "end": "2026-08-12",
       "notes": "Transire EAP 1.3.5.1",
@@ -1356,7 +1627,16 @@
       "endMax": "2026-10-02",
       "pred": "1.2.1",
       "predHtmlId": 9032,
-      "eapId": "1.3.5.1"
+      "eapId": "1.3.5.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309567139,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9076,
@@ -1366,7 +1646,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-08-20",
       "end": "2026-08-20",
       "notes": "Transire EAP 1.3.5.2",
@@ -1374,7 +1654,16 @@
       "endMax": "2026-12-18",
       "pred": "1.2.2",
       "predHtmlId": 9039,
-      "eapId": "1.3.5.2"
+      "eapId": "1.3.5.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309572395,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9077,
@@ -1384,7 +1673,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-08-20",
       "end": "2026-08-25",
       "notes": "Transire EAP 1.3.5.3",
@@ -1392,7 +1681,16 @@
       "endMax": "2027-01-06",
       "pred": "1.2.2",
       "predHtmlId": 9039,
-      "eapId": "1.3.5.3"
+      "eapId": "1.3.5.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309579037,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9078,
@@ -1402,7 +1700,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-08-12",
       "end": "2026-08-20",
       "notes": "Transire EAP 1.3.5.4",
@@ -1410,7 +1708,16 @@
       "endMax": "2026-10-16",
       "pred": "1.3.5.1",
       "predHtmlId": 9075,
-      "eapId": "1.3.5.4"
+      "eapId": "1.3.5.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309583999,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9079,
@@ -1420,7 +1727,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-09-03",
       "end": "2026-09-01",
       "notes": "Transire EAP 1.3.5.5",
@@ -1428,7 +1735,16 @@
       "endMax": "2027-01-12",
       "pred": "1.3.5.2",
       "predHtmlId": 9076,
-      "eapId": "1.3.5.5"
+      "eapId": "1.3.5.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309589735,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9080,
@@ -1438,7 +1754,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "LOG",
+      "owner": "",
       "start": "2026-09-01",
       "end": "2026-09-30",
       "notes": "Transire EAP 1.4",
@@ -1446,7 +1762,16 @@
       "endMax": "2027-01-05",
       "pred": "1.2.2",
       "predHtmlId": 9039,
-      "eapId": "1.4"
+      "eapId": "1.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "",
+          "ts": 1780309593347,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9081,
@@ -1456,7 +1781,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "",
       "start": "2026-09-01",
       "end": "2026-09-15",
       "notes": "Transire EAP 1.4.1",
@@ -1464,7 +1789,16 @@
       "endMax": "2026-12-11",
       "pred": "1.2.2",
       "predHtmlId": 9039,
-      "eapId": "1.4.1"
+      "eapId": "1.4.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "",
+          "ts": 1780309596799,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9082,
@@ -1474,7 +1808,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-01",
       "end": "2026-09-05",
       "notes": "Transire EAP 1.4.1.1",
@@ -1482,7 +1816,16 @@
       "endMax": "2026-11-25",
       "pred": "1.2.2",
       "predHtmlId": 9039,
-      "eapId": "1.4.1.1"
+      "eapId": "1.4.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309608763,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9083,
@@ -1492,7 +1835,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-07",
       "end": "2026-09-12",
       "notes": "Transire EAP 1.4.1.2",
@@ -1500,7 +1843,16 @@
       "endMax": "2026-12-04",
       "pred": "1.4.1.1",
       "predHtmlId": 9082,
-      "eapId": "1.4.1.2"
+      "eapId": "1.4.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309613175,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9084,
@@ -1510,7 +1862,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-14",
       "end": "2026-09-15",
       "notes": "Transire EAP 1.4.1.3",
@@ -1518,7 +1870,16 @@
       "endMax": "2026-12-11",
       "pred": "1.4.1.2",
       "predHtmlId": 9083,
-      "eapId": "1.4.1.3"
+      "eapId": "1.4.1.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309617103,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9085,
@@ -1528,7 +1889,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "",
       "start": "2026-09-01",
       "end": "2026-09-15",
       "notes": "Transire EAP 1.4.2",
@@ -1536,7 +1897,16 @@
       "endMax": "2026-12-11",
       "pred": "1.2.2",
       "predHtmlId": 9039,
-      "eapId": "1.4.2"
+      "eapId": "1.4.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "",
+          "ts": 1780309621554,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9086,
@@ -1546,7 +1916,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-01",
       "end": "2026-09-05",
       "notes": "Transire EAP 1.4.2.1",
@@ -1554,7 +1924,16 @@
       "endMax": "2026-11-25",
       "pred": "1.2.2",
       "predHtmlId": 9039,
-      "eapId": "1.4.2.1"
+      "eapId": "1.4.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309628118,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9087,
@@ -1564,7 +1943,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-07",
       "end": "2026-09-12",
       "notes": "Transire EAP 1.4.2.2",
@@ -1572,7 +1951,16 @@
       "endMax": "2026-12-04",
       "pred": "1.4.2.1",
       "predHtmlId": 9086,
-      "eapId": "1.4.2.2"
+      "eapId": "1.4.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309632876,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9088,
@@ -1582,7 +1970,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-14",
       "end": "2026-09-15",
       "notes": "Transire EAP 1.4.2.3",
@@ -1590,7 +1978,16 @@
       "endMax": "2026-12-11",
       "pred": "1.4.2.2",
       "predHtmlId": 9087,
-      "eapId": "1.4.2.3"
+      "eapId": "1.4.2.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309638011,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9089,
@@ -1600,7 +1997,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "",
       "start": "2026-09-15",
       "end": "2026-09-30",
       "notes": "Transire EAP 1.4.3",
@@ -1608,7 +2005,16 @@
       "endMax": "2027-01-05",
       "pred": "1.4.1",
       "predHtmlId": 9081,
-      "eapId": "1.4.3"
+      "eapId": "1.4.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "",
+          "ts": 1780309642864,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9090,
@@ -1618,7 +2024,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-15",
       "end": "2026-09-20",
       "notes": "Transire EAP 1.4.3.1",
@@ -1626,7 +2032,16 @@
       "endMax": "2026-12-18",
       "pred": "1.4.1",
       "predHtmlId": 9081,
-      "eapId": "1.4.3.1"
+      "eapId": "1.4.3.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309649818,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9091,
@@ -1636,7 +2051,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-21",
       "end": "2026-09-24",
       "notes": "Transire EAP 1.4.3.2",
@@ -1644,7 +2059,16 @@
       "endMax": "2026-12-28",
       "pred": "1.4.3.1",
       "predHtmlId": 9090,
-      "eapId": "1.4.3.2"
+      "eapId": "1.4.3.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309653303,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9092,
@@ -1654,7 +2078,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-21",
       "end": "2026-09-24",
       "notes": "Transire EAP 1.4.3.3",
@@ -1662,7 +2086,16 @@
       "endMax": "2026-12-28",
       "pred": "1.4.3.1",
       "predHtmlId": 9090,
-      "eapId": "1.4.3.3"
+      "eapId": "1.4.3.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309656130,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9093,
@@ -1672,7 +2105,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-25",
       "end": "2026-09-28",
       "notes": "Transire EAP 1.4.3.4",
@@ -1680,7 +2113,16 @@
       "endMax": "2027-01-05",
       "pred": "1.4.3.2",
       "predHtmlId": 9091,
-      "eapId": "1.4.3.4"
+      "eapId": "1.4.3.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309660447,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9094,
@@ -1690,7 +2132,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-09-25",
       "end": "2026-09-30",
       "notes": "Transire EAP 1.4.3.5",
@@ -1698,7 +2140,16 @@
       "endMax": "2027-01-05",
       "pred": "1.4.3.2",
       "predHtmlId": 9091,
-      "eapId": "1.4.3.5"
+      "eapId": "1.4.3.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309663946,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9095,
@@ -1708,7 +2159,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-09-01",
       "end": "2026-10-31",
       "notes": "Transire EAP 1.5",
@@ -1716,7 +2167,16 @@
       "endMax": "2026-11-27",
       "pred": "1.1.5",
       "predHtmlId": 9020,
-      "eapId": "1.5"
+      "eapId": "1.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780309667375,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9096,
@@ -1726,7 +2186,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-09-01",
       "end": "2026-09-30",
       "notes": "Transire EAP 1.5.1",
@@ -1734,7 +2194,16 @@
       "endMax": "2026-10-23",
       "pred": "1.1.5",
       "predHtmlId": 9020,
-      "eapId": "1.5.1"
+      "eapId": "1.5.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780309672647,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9097,
@@ -1816,7 +2285,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-10-01",
       "end": "2026-10-15",
       "notes": "Transire EAP 1.5.2",
@@ -1824,7 +2293,16 @@
       "endMax": "2026-11-11",
       "pred": "1.5.1",
       "predHtmlId": 9096,
-      "eapId": "1.5.2"
+      "eapId": "1.5.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780309677238,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9102,
@@ -1924,7 +2402,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-10-01",
       "end": "2026-10-31",
       "notes": "Transire EAP 1.5.3",
@@ -1932,7 +2410,16 @@
       "endMax": "2026-11-27",
       "pred": "1.5.1",
       "predHtmlId": 9096,
-      "eapId": "1.5.3"
+      "eapId": "1.5.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780309683022,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9108,
@@ -2014,7 +2501,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-07-10",
       "end": "2026-08-31",
       "notes": "Transire EAP 1.6",
@@ -2022,7 +2509,16 @@
       "endMax": "2026-11-25",
       "pred": "1.1.4",
       "predHtmlId": 9016,
-      "eapId": "1.6"
+      "eapId": "1.6",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780309688802,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9113,
@@ -2032,7 +2528,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-07-10",
       "end": "2026-07-10",
       "notes": "Transire EAP 1.6.1",
@@ -2040,7 +2536,16 @@
       "endMax": "2026-08-24",
       "pred": "1.1.4",
       "predHtmlId": 9016,
-      "eapId": "1.6.1"
+      "eapId": "1.6.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780309692142,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9114,
@@ -2086,7 +2591,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-07-21",
       "end": "2026-07-31",
       "notes": "Transire EAP 1.6.2",
@@ -2094,7 +2599,16 @@
       "endMax": "2026-09-25",
       "pred": "1.6.1",
       "predHtmlId": 9113,
-      "eapId": "1.6.2"
+      "eapId": "1.6.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780309696887,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9117,
@@ -2140,7 +2654,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-08-07",
       "end": "2026-08-15",
       "notes": "Transire EAP 1.6.3",
@@ -2148,7 +2662,16 @@
       "endMax": "2026-10-21",
       "pred": "1.6.2",
       "predHtmlId": 9116,
-      "eapId": "1.6.3"
+      "eapId": "1.6.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780309700106,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9120,
@@ -2194,7 +2717,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-08-19",
       "end": "2026-08-31",
       "notes": "Transire EAP 1.6.4",
@@ -2202,7 +2725,16 @@
       "endMax": "2026-11-25",
       "pred": "1.6.3",
       "predHtmlId": 9119,
-      "eapId": "1.6.4"
+      "eapId": "1.6.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780309704306,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9123,
@@ -2248,7 +2780,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "OPS",
+      "owner": "",
       "start": "2026-10-01",
       "end": "2026-11-30",
       "notes": "Transire EAP 1.7",
@@ -2256,7 +2788,16 @@
       "endMax": "2027-03-23",
       "pred": "1.4",
       "predHtmlId": 9080,
-      "eapId": "1.7"
+      "eapId": "1.7",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "OPS",
+          "newVal": "",
+          "ts": 1780309708895,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9126,
@@ -2266,7 +2807,7 @@
       "phase": "TI",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "TI",
+      "owner": "",
       "start": "2026-10-01",
       "end": "2026-10-20",
       "notes": "Transire EAP 1.7.1",
@@ -2274,7 +2815,16 @@
       "endMax": "2027-01-28",
       "pred": "1.4",
       "predHtmlId": 9080,
-      "eapId": "1.7.1"
+      "eapId": "1.7.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780309712386,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9127,
@@ -2338,7 +2888,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "",
       "start": "2026-10-20",
       "end": "2026-10-31",
       "notes": "Transire EAP 1.7.2",
@@ -2346,7 +2896,16 @@
       "endMax": "2027-02-12",
       "pred": "1.7.1",
       "predHtmlId": 9126,
-      "eapId": "1.7.2"
+      "eapId": "1.7.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "",
+          "ts": 1780309717050,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9131,
@@ -2356,7 +2915,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-10-20",
       "end": "2026-10-25",
       "notes": "Transire EAP 1.7.2.1",
@@ -2364,7 +2923,16 @@
       "endMax": "2027-02-02",
       "pred": "1.7.1",
       "predHtmlId": 9126,
-      "eapId": "1.7.2.1"
+      "eapId": "1.7.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309730042,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9132,
@@ -2374,7 +2942,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-10-26",
       "end": "2026-10-31",
       "notes": "Transire EAP 1.7.2.2",
@@ -2382,7 +2950,16 @@
       "endMax": "2027-02-12",
       "pred": "1.7.2.1",
       "predHtmlId": 9131,
-      "eapId": "1.7.2.2"
+      "eapId": "1.7.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309733198,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9133,
@@ -2392,7 +2969,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "OPS",
+      "owner": "",
       "start": "2026-11-03",
       "end": "2026-11-30",
       "notes": "Transire EAP 1.7.3",
@@ -2400,7 +2977,16 @@
       "endMax": "2027-03-23",
       "pred": "1.7.2",
       "predHtmlId": 9130,
-      "eapId": "1.7.3"
+      "eapId": "1.7.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "OPS",
+          "newVal": "",
+          "ts": 1780309721798,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9134,
@@ -2410,7 +2996,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-11-03",
       "end": "2026-11-05",
       "notes": "Transire EAP 1.7.3.1",
@@ -2418,7 +3004,16 @@
       "endMax": "2027-02-17",
       "pred": "1.7.2",
       "predHtmlId": 9130,
-      "eapId": "1.7.3.1"
+      "eapId": "1.7.3.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309739166,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9135,
@@ -2428,7 +3023,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "OPS",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-11-06",
       "end": "2026-11-30",
       "notes": "Transire EAP 1.7.3.2",
@@ -2436,7 +3031,16 @@
       "endMax": "2027-03-23",
       "pred": "1.7.3.1",
       "predHtmlId": 9134,
-      "eapId": "1.7.3.2"
+      "eapId": "1.7.3.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "OPS",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309743461,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9136,
@@ -2446,13 +3050,22 @@
       "phase": "Gest\u00e3o",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "DIR",
+      "owner": "",
       "start": "2026-06-01",
-      "end": "2027-07-31",
+      "end": "2026-11-30",
       "notes": "Transire EAP 2",
-      "endMin": "2027-07-09",
-      "endMax": "2028-02-11",
-      "eapId": "2"
+      "endMin": "2026-12-07",
+      "endMax": "2027-06-23",
+      "eapId": "2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "DIR",
+          "newVal": "",
+          "ts": 1780309831790,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9137,
@@ -2462,13 +3075,22 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-06-01",
       "end": "2026-08-31",
       "notes": "Transire EAP 2.1",
       "endMin": "2026-09-02",
       "endMax": "2026-12-08",
-      "eapId": "2.1"
+      "eapId": "2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309833905,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9138,
@@ -2478,13 +3100,22 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-06-01",
       "end": "2026-06-12",
       "notes": "Transire EAP 2.1.1",
       "endMin": "2026-06-10",
       "endMax": "2026-06-26",
-      "eapId": "2.1.1"
+      "eapId": "2.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309838214,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9139,
@@ -2494,13 +3125,22 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-06-01",
       "end": "2026-06-04",
       "notes": "Transire EAP 2.1.1.1",
       "endMin": "2026-06-04",
       "endMax": "2026-06-08",
-      "eapId": "2.1.1.1"
+      "eapId": "2.1.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310439195,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9140,
@@ -2510,13 +3150,22 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-06-01",
       "end": "2026-06-07",
       "notes": "Transire EAP 2.1.1.2",
       "endMin": "2026-06-05",
       "endMax": "2026-06-11",
-      "eapId": "2.1.1.2"
+      "eapId": "2.1.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310441343,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9141,
@@ -2526,7 +3175,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-06-04",
       "end": "2026-06-12",
       "notes": "Transire EAP 2.1.1.3",
@@ -2534,7 +3183,16 @@
       "endMax": "2026-06-26",
       "pred": "2.1.1.1",
       "predHtmlId": 9139,
-      "eapId": "2.1.1.3"
+      "eapId": "2.1.1.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310443523,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9142,
@@ -2544,7 +3202,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-06-04",
       "end": "2026-06-10",
       "notes": "Transire EAP 2.1.1.4",
@@ -2552,7 +3210,16 @@
       "endMax": "2026-06-18",
       "pred": "2.1.1.1",
       "predHtmlId": 9139,
-      "eapId": "2.1.1.4"
+      "eapId": "2.1.1.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310445923,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9143,
@@ -2562,7 +3229,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-06-12",
       "end": "2026-07-01",
       "notes": "Transire EAP 2.1.2",
@@ -2570,7 +3237,30 @@
       "endMax": "2026-07-29",
       "pred": "2.1.1",
       "predHtmlId": 9138,
-      "eapId": "2.1.2"
+      "eapId": "2.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "",
+          "newVal": "",
+          "ts": 1780310392799,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        },
+        {
+          "field": "owner",
+          "oldVal": "",
+          "newVal": "",
+          "ts": 1780310264096,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        },
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309841385,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9144,
@@ -2580,7 +3270,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-06-12",
       "end": "2026-06-21",
       "notes": "Transire EAP 2.1.2.1",
@@ -2588,7 +3278,16 @@
       "endMax": "2026-07-09",
       "pred": "2.1.1",
       "predHtmlId": 9138,
-      "eapId": "2.1.2.1"
+      "eapId": "2.1.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310448903,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9145,
@@ -2598,7 +3297,7 @@
       "phase": "Gest\u00e3o",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "DIR",
+      "owner": "Diretoria",
       "start": "2026-06-23",
       "end": "2026-06-25",
       "notes": "Transire EAP 2.1.2.2",
@@ -2606,7 +3305,16 @@
       "endMax": "2026-07-17",
       "pred": "2.1.2.1",
       "predHtmlId": 9144,
-      "eapId": "2.1.2.2"
+      "eapId": "2.1.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "DIR",
+          "newVal": "Diretoria",
+          "ts": 1780310451899,
+          "text": "Respons\u00e1vel: <strong>Diretoria</strong>"
+        }
+      ]
     },
     {
       "id": 9146,
@@ -2616,7 +3324,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-06-23",
       "end": "2026-06-28",
       "notes": "Transire EAP 2.1.2.3",
@@ -2624,7 +3332,16 @@
       "endMax": "2026-07-21",
       "pred": "2.1.2.1",
       "predHtmlId": 9144,
-      "eapId": "2.1.2.3"
+      "eapId": "2.1.2.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310453887,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9147,
@@ -2634,7 +3351,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-06-26",
       "end": "2026-07-01",
       "notes": "Transire EAP 2.1.2.4",
@@ -2642,7 +3359,16 @@
       "endMax": "2026-07-29",
       "pred": "2.1.2.2",
       "predHtmlId": 9145,
-      "eapId": "2.1.2.4"
+      "eapId": "2.1.2.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310455635,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9148,
@@ -2652,7 +3378,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-07-01",
       "end": "2026-07-15",
       "notes": "Transire EAP 2.1.3",
@@ -2660,7 +3386,16 @@
       "endMax": "2026-08-12",
       "pred": "2.1.2",
       "predHtmlId": 9143,
-      "eapId": "2.1.3"
+      "eapId": "2.1.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309845957,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9149,
@@ -2670,7 +3405,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-07-01",
       "end": "2026-07-07",
       "notes": "Transire EAP 2.1.3.1",
@@ -2678,7 +3413,16 @@
       "endMax": "2026-07-31",
       "pred": "2.1.2",
       "predHtmlId": 9143,
-      "eapId": "2.1.3.1"
+      "eapId": "2.1.3.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310465102,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9150,
@@ -2688,7 +3432,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-07-07",
       "end": "2026-07-15",
       "notes": "Transire EAP 2.1.3.2",
@@ -2696,7 +3440,16 @@
       "endMax": "2026-08-12",
       "pred": "2.1.3.1",
       "predHtmlId": 9149,
-      "eapId": "2.1.3.2"
+      "eapId": "2.1.3.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310466756,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9151,
@@ -2706,7 +3459,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-07-15",
       "end": "2026-07-25",
       "notes": "Transire EAP 2.1.4",
@@ -2714,7 +3467,16 @@
       "endMax": "2026-09-08",
       "pred": "2.1.3",
       "predHtmlId": 9148,
-      "eapId": "2.1.4"
+      "eapId": "2.1.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309849710,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9152,
@@ -2724,7 +3486,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-07-15",
       "end": "2026-07-20",
       "notes": "Transire EAP 2.1.4.1",
@@ -2732,7 +3494,16 @@
       "endMax": "2026-08-25",
       "pred": "2.1.3",
       "predHtmlId": 9148,
-      "eapId": "2.1.4.1"
+      "eapId": "2.1.4.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310469490,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9153,
@@ -2750,7 +3521,16 @@
       "endMax": "2026-09-08",
       "pred": "2.1.4.1",
       "predHtmlId": 9152,
-      "eapId": "2.1.4.2"
+      "eapId": "2.1.4.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310472135,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9154,
@@ -2760,7 +3540,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-07-27",
       "end": "2026-08-15",
       "notes": "Transire EAP 2.1.5",
@@ -2768,7 +3548,16 @@
       "endMax": "2026-10-23",
       "pred": "2.1.4",
       "predHtmlId": 9151,
-      "eapId": "2.1.5"
+      "eapId": "2.1.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780309852809,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9155,
@@ -2786,7 +3575,16 @@
       "endMax": "2026-09-17",
       "pred": "2.1.4",
       "predHtmlId": 9151,
-      "eapId": "2.1.5.1"
+      "eapId": "2.1.5.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310475775,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9156,
@@ -2804,7 +3602,16 @@
       "endMax": "2026-10-01",
       "pred": "2.1.5.1",
       "predHtmlId": 9155,
-      "eapId": "2.1.5.2"
+      "eapId": "2.1.5.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310478479,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9157,
@@ -2814,7 +3621,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-08-07",
       "end": "2026-08-15",
       "notes": "Transire EAP 2.1.5.3",
@@ -2822,7 +3629,16 @@
       "endMax": "2026-10-23",
       "pred": "2.1.5.2",
       "predHtmlId": 9156,
-      "eapId": "2.1.5.3"
+      "eapId": "2.1.5.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310480802,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9158,
@@ -2832,7 +3648,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-08-17",
       "end": "2026-08-31",
       "notes": "Transire EAP 2.1.6",
@@ -2840,7 +3656,16 @@
       "endMax": "2026-11-26",
       "pred": "2.1.5",
       "predHtmlId": 9154,
-      "eapId": "2.1.6"
+      "eapId": "2.1.6",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780309857007,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9159,
@@ -2850,7 +3675,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "Financeiro",
       "start": "2026-08-17",
       "end": "2026-08-22",
       "notes": "Transire EAP 2.1.6.1",
@@ -2858,7 +3683,16 @@
       "endMax": "2026-11-03",
       "pred": "2.1.5",
       "predHtmlId": 9154,
-      "eapId": "2.1.6.1"
+      "eapId": "2.1.6.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "Financeiro",
+          "ts": 1780310432484,
+          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
+        }
+      ]
     },
     {
       "id": 9160,
@@ -2868,7 +3702,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "Financeiro",
       "start": "2026-08-24",
       "end": "2026-08-28",
       "notes": "Transire EAP 2.1.6.2",
@@ -2876,7 +3710,16 @@
       "endMax": "2026-11-18",
       "pred": "2.1.6.1",
       "predHtmlId": 9159,
-      "eapId": "2.1.6.2"
+      "eapId": "2.1.6.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "Financeiro",
+          "ts": 1780310484519,
+          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
+        }
+      ]
     },
     {
       "id": 9161,
@@ -2894,7 +3737,16 @@
       "endMax": "2026-11-26",
       "pred": "2.1.6.2",
       "predHtmlId": 9160,
-      "eapId": "2.1.6.3"
+      "eapId": "2.1.6.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310488751,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9162,
@@ -2904,7 +3756,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "",
       "start": "2026-08-17",
       "end": "2026-08-31",
       "notes": "Transire EAP 2.1.7",
@@ -2912,7 +3764,16 @@
       "endMax": "2026-12-08",
       "pred": "2.1.5",
       "predHtmlId": 9154,
-      "eapId": "2.1.7"
+      "eapId": "2.1.7",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "",
+          "ts": 1780309861362,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9163,
@@ -2922,7 +3783,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-08-17",
       "end": "2026-08-22",
       "notes": "Transire EAP 2.1.7.1",
@@ -2930,7 +3791,16 @@
       "endMax": "2026-10-28",
       "pred": "2.1.5",
       "predHtmlId": 9154,
-      "eapId": "2.1.7.1"
+      "eapId": "2.1.7.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310491031,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9164,
@@ -2940,7 +3810,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-08-17",
       "end": "2026-08-22",
       "notes": "Transire EAP 2.1.7.2",
@@ -2948,7 +3818,16 @@
       "endMax": "2026-10-28",
       "pred": "2.1.5",
       "predHtmlId": 9154,
-      "eapId": "2.1.7.2"
+      "eapId": "2.1.7.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310493067,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9165,
@@ -2958,7 +3837,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Jur\u00eddico",
       "start": "2026-08-24",
       "end": "2026-08-31",
       "notes": "Transire EAP 2.1.7.3",
@@ -2966,7 +3845,16 @@
       "endMax": "2026-12-08",
       "pred": "2.1.7.1",
       "predHtmlId": 9163,
-      "eapId": "2.1.7.3"
+      "eapId": "2.1.7.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310495022,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
     },
     {
       "id": 9166,
@@ -2976,7 +3864,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "INF",
+      "owner": "",
       "start": "2026-08-03",
       "end": "2026-09-30",
       "notes": "Transire EAP 2.2",
@@ -2984,7 +3872,16 @@
       "endMax": "2027-02-04",
       "pred": "2.1.3",
       "predHtmlId": 9148,
-      "eapId": "2.2"
+      "eapId": "2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "",
+          "ts": 1780309864873,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9167,
@@ -2994,7 +3891,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "",
       "start": "2026-08-03",
       "end": "2026-08-31",
       "notes": "Transire EAP 2.2.1",
@@ -3002,7 +3899,16 @@
       "endMax": "2026-10-29",
       "pred": "2.1.3",
       "predHtmlId": 9148,
-      "eapId": "2.2.1"
+      "eapId": "2.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "",
+          "ts": 1780309866571,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9168,
@@ -3012,7 +3918,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-08-03",
       "end": "2026-08-07",
       "notes": "Transire EAP 2.2.1.1",
@@ -3020,7 +3926,16 @@
       "endMax": "2026-08-27",
       "pred": "2.1.3",
       "predHtmlId": 9148,
-      "eapId": "2.2.1.1"
+      "eapId": "2.2.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309878162,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9169,
@@ -3030,7 +3945,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Diretoria",
       "start": "2026-08-07",
       "end": "2026-08-17",
       "notes": "Transire EAP 2.2.1.2",
@@ -3038,7 +3953,16 @@
       "endMax": "2026-09-23",
       "pred": "2.2.1.1",
       "predHtmlId": 9168,
-      "eapId": "2.2.1.2"
+      "eapId": "2.2.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Diretoria",
+          "ts": 1780309883076,
+          "text": "Respons\u00e1vel: <strong>Diretoria</strong>"
+        }
+      ]
     },
     {
       "id": 9170,
@@ -3048,7 +3972,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Diretoria",
       "start": "2026-08-17",
       "end": "2026-08-22",
       "notes": "Transire EAP 2.2.1.3",
@@ -3056,7 +3980,16 @@
       "endMax": "2026-10-05",
       "pred": "2.2.1.2",
       "predHtmlId": 9169,
-      "eapId": "2.2.1.3"
+      "eapId": "2.2.1.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Diretoria",
+          "ts": 1780309888473,
+          "text": "Respons\u00e1vel: <strong>Diretoria</strong>"
+        }
+      ]
     },
     {
       "id": 9171,
@@ -3066,7 +3999,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-08-24",
       "end": "2026-08-31",
       "notes": "Transire EAP 2.2.1.4",
@@ -3074,7 +4007,16 @@
       "endMax": "2026-10-29",
       "pred": "2.2.1.3",
       "predHtmlId": 9170,
-      "eapId": "2.2.1.4"
+      "eapId": "2.2.1.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309893125,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9172,
@@ -3084,7 +4026,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "",
       "start": "2026-08-03",
       "end": "2026-09-30",
       "notes": "Transire EAP 2.2.2",
@@ -3092,7 +4034,16 @@
       "endMax": "2027-02-04",
       "pred": "2.1.3",
       "predHtmlId": 9148,
-      "eapId": "2.2.2"
+      "eapId": "2.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "",
+          "ts": 1780309897101,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9173,
@@ -3102,7 +4053,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Fiscal",
       "start": "2026-08-03",
       "end": "2026-08-10",
       "notes": "Transire EAP 2.2.2.1",
@@ -3110,7 +4061,16 @@
       "endMax": "2026-09-04",
       "pred": "2.1.3",
       "predHtmlId": 9148,
-      "eapId": "2.2.2.1"
+      "eapId": "2.2.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Fiscal",
+          "ts": 1780309903166,
+          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
+        }
+      ]
     },
     {
       "id": 9174,
@@ -3120,7 +4080,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Fiscal",
       "start": "2026-08-11",
       "end": "2026-08-17",
       "notes": "Transire EAP 2.2.2.2",
@@ -3128,7 +4088,16 @@
       "endMax": "2026-09-17",
       "pred": "2.2.2.1",
       "predHtmlId": 9173,
-      "eapId": "2.2.2.2"
+      "eapId": "2.2.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Fiscal",
+          "ts": 1780309912586,
+          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
+        }
+      ]
     },
     {
       "id": 9175,
@@ -3138,7 +4107,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Diretoria",
       "start": "2026-08-17",
       "end": "2026-08-24",
       "notes": "Transire EAP 2.2.2.3",
@@ -3146,7 +4115,16 @@
       "endMax": "2026-09-29",
       "pred": "2.2.2.2",
       "predHtmlId": 9174,
-      "eapId": "2.2.2.3"
+      "eapId": "2.2.2.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Diretoria",
+          "ts": 1780309918689,
+          "text": "Respons\u00e1vel: <strong>Diretoria</strong>"
+        }
+      ]
     },
     {
       "id": 9176,
@@ -3156,7 +4134,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-08-24",
       "end": "2026-09-07",
       "notes": "Transire EAP 2.2.2.4",
@@ -3164,7 +4142,16 @@
       "endMax": "2026-10-30",
       "pred": "2.2.2.3",
       "predHtmlId": 9175,
-      "eapId": "2.2.2.4"
+      "eapId": "2.2.2.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309924981,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9177,
@@ -3174,7 +4161,7 @@
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "INF",
+      "owner": "Facilities",
       "start": "2026-09-07",
       "end": "2026-09-21",
       "notes": "Transire EAP 2.2.2.5",
@@ -3182,7 +4169,16 @@
       "endMax": "2026-12-03",
       "pred": "2.2.2.4",
       "predHtmlId": 9176,
-      "eapId": "2.2.2.5"
+      "eapId": "2.2.2.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "INF",
+          "newVal": "Facilities",
+          "ts": 1780309930789,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9178,
@@ -3192,7 +4188,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Fiscal",
       "start": "2026-08-21",
       "end": "2026-09-10",
       "notes": "Transire EAP 2.2.2.6",
@@ -3200,7 +4196,16 @@
       "endMax": "2026-12-29",
       "pred": "2.2.2.3",
       "predHtmlId": 9175,
-      "eapId": "2.2.2.6"
+      "eapId": "2.2.2.6",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Fiscal",
+          "ts": 1780309938101,
+          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
+        }
+      ]
     },
     {
       "id": 9179,
@@ -3210,7 +4215,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Facilities",
       "start": "2026-09-18",
       "end": "2026-09-25",
       "notes": "Transire EAP 2.2.2.7",
@@ -3218,7 +4223,16 @@
       "endMax": "2027-01-25",
       "pred": "2.2.2.5",
       "predHtmlId": 9177,
-      "eapId": "2.2.2.7"
+      "eapId": "2.2.2.7",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Facilities",
+          "ts": 1780309942909,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9180,
@@ -3228,7 +4242,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "JUR",
+      "owner": "Facilities",
       "start": "2026-08-24",
       "end": "2026-09-30",
       "notes": "Transire EAP 2.2.2.8",
@@ -3236,7 +4250,16 @@
       "endMax": "2027-02-04",
       "pred": "2.2.2.3",
       "predHtmlId": 9175,
-      "eapId": "2.2.2.8"
+      "eapId": "2.2.2.8",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Facilities",
+          "ts": 1780309948694,
+          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
+        }
+      ]
     },
     {
       "id": 9181,
@@ -3246,7 +4269,7 @@
       "phase": "TI",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "TI",
+      "owner": "",
       "start": "2026-09-01",
       "end": "2026-10-31",
       "notes": "Transire EAP 2.3",
@@ -3254,7 +4277,16 @@
       "endMax": "2027-06-23",
       "pred": "2.2",
       "predHtmlId": 9166,
-      "eapId": "2.3"
+      "eapId": "2.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780309953458,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9182,
@@ -3264,7 +4296,7 @@
       "phase": "TI",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "TI",
+      "owner": "",
       "start": "2026-09-01",
       "end": "2026-10-15",
       "notes": "Transire EAP 2.3.1",
@@ -3272,7 +4304,16 @@
       "endMax": "2027-01-25",
       "pred": "2.2",
       "predHtmlId": 9166,
-      "eapId": "2.3.1"
+      "eapId": "2.3.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780309956047,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9183,
@@ -3290,7 +4331,16 @@
       "endMax": "2026-11-11",
       "pred": "2.2.1",
       "predHtmlId": 9167,
-      "eapId": "2.3.1.1"
+      "eapId": "2.3.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310503262,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9184,
@@ -3308,7 +4358,16 @@
       "endMax": "2027-01-25",
       "pred": "2.2.2",
       "predHtmlId": 9172,
-      "eapId": "2.3.1.2"
+      "eapId": "2.3.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310505394,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9185,
@@ -3326,7 +4385,16 @@
       "endMax": "2026-12-15",
       "pred": "2.3.1.1",
       "predHtmlId": 9183,
-      "eapId": "2.3.1.3"
+      "eapId": "2.3.1.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310507670,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9186,
@@ -3344,7 +4412,16 @@
       "endMax": "2027-01-13",
       "pred": "2.3.1.3",
       "predHtmlId": 9185,
-      "eapId": "2.3.1.4"
+      "eapId": "2.3.1.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310509771,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9187,
@@ -3354,7 +4431,7 @@
       "phase": "TI",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "TI",
+      "owner": "",
       "start": "2026-09-14",
       "end": "2026-09-20",
       "notes": "Transire EAP 2.3.2",
@@ -3362,7 +4439,16 @@
       "endMax": "2027-02-08",
       "pred": "2.2",
       "predHtmlId": 9166,
-      "eapId": "2.3.2"
+      "eapId": "2.3.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780309963425,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9188,
@@ -3380,7 +4466,16 @@
       "endMax": "2027-01-14",
       "pred": "2.2",
       "predHtmlId": 9166,
-      "eapId": "2.3.2.1"
+      "eapId": "2.3.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310513262,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9189,
@@ -3398,7 +4493,16 @@
       "endMax": "2027-01-19",
       "pred": "2.2",
       "predHtmlId": 9166,
-      "eapId": "2.3.2.2"
+      "eapId": "2.3.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310515038,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9190,
@@ -3416,7 +4520,16 @@
       "endMax": "2027-02-08",
       "pred": "2.3.2.1",
       "predHtmlId": 9188,
-      "eapId": "2.3.2.3"
+      "eapId": "2.3.2.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310516802,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9191,
@@ -3426,7 +4539,7 @@
       "phase": "TI",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "TI",
+      "owner": "",
       "start": "2026-10-21",
       "end": "2026-10-31",
       "notes": "Transire EAP 2.3.3",
@@ -3434,7 +4547,16 @@
       "endMax": "2027-06-23",
       "pred": "2.3.1",
       "predHtmlId": 9182,
-      "eapId": "2.3.3"
+      "eapId": "2.3.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780309966830,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9192,
@@ -3452,7 +4574,16 @@
       "endMax": "2027-04-29",
       "pred": "2.3.1",
       "predHtmlId": 9182,
-      "eapId": "2.3.3.1"
+      "eapId": "2.3.3.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310519254,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9193,
@@ -3470,7 +4601,23 @@
       "endMax": "2027-06-01",
       "pred": "2.3.3.1",
       "predHtmlId": 9192,
-      "eapId": "2.3.3.2"
+      "eapId": "2.3.3.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310526158,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        },
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310524186,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9194,
@@ -3488,7 +4635,16 @@
       "endMax": "2027-06-15",
       "pred": "2.3.3.2",
       "predHtmlId": 9193,
-      "eapId": "2.3.3.3"
+      "eapId": "2.3.3.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310528243,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9195,
@@ -3506,7 +4662,16 @@
       "endMax": "2027-06-23",
       "pred": "2.3.3.3",
       "predHtmlId": 9194,
-      "eapId": "2.3.3.4"
+      "eapId": "2.3.3.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310530114,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
     },
     {
       "id": 9196,
@@ -3516,7 +4681,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "LOG",
+      "owner": "",
       "start": "2026-10-01",
       "end": "2026-10-31",
       "notes": "Transire EAP 2.4",
@@ -3524,7 +4689,16 @@
       "endMax": "2027-02-25",
       "pred": "2.2.2",
       "predHtmlId": 9172,
-      "eapId": "2.4"
+      "eapId": "2.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "",
+          "ts": 1780309971777,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9197,
@@ -3534,7 +4708,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "",
       "start": "2026-10-01",
       "end": "2026-10-15",
       "notes": "Transire EAP 2.4.1",
@@ -3542,7 +4716,16 @@
       "endMax": "2027-01-18",
       "pred": "2.2.2",
       "predHtmlId": 9172,
-      "eapId": "2.4.1"
+      "eapId": "2.4.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "",
+          "ts": 1780309973814,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9198,
@@ -3552,7 +4735,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-10-01",
       "end": "2026-10-07",
       "notes": "Transire EAP 2.4.1.1",
@@ -3560,7 +4743,16 @@
       "endMax": "2027-01-04",
       "pred": "2.2.2",
       "predHtmlId": 9172,
-      "eapId": "2.4.1.1"
+      "eapId": "2.4.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309980205,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9199,
@@ -3570,7 +4762,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-10-07",
       "end": "2026-10-15",
       "notes": "Transire EAP 2.4.1.2",
@@ -3578,7 +4770,16 @@
       "endMax": "2027-01-18",
       "pred": "2.4.1.1",
       "predHtmlId": 9198,
-      "eapId": "2.4.1.2"
+      "eapId": "2.4.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309983001,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9200,
@@ -3588,7 +4789,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "",
       "start": "2026-10-15",
       "end": "2026-10-31",
       "notes": "Transire EAP 2.4.2",
@@ -3596,7 +4797,16 @@
       "endMax": "2027-02-25",
       "pred": "2.4.1",
       "predHtmlId": 9197,
-      "eapId": "2.4.2"
+      "eapId": "2.4.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "",
+          "ts": 1780309984829,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9201,
@@ -3606,7 +4816,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-10-15",
       "end": "2026-10-20",
       "notes": "Transire EAP 2.4.2.1",
@@ -3614,7 +4824,16 @@
       "endMax": "2027-01-29",
       "pred": "2.4.1",
       "predHtmlId": 9197,
-      "eapId": "2.4.2.1"
+      "eapId": "2.4.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309989241,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9202,
@@ -3624,7 +4843,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-10-21",
       "end": "2026-10-25",
       "notes": "Transire EAP 2.4.2.2",
@@ -3632,7 +4851,16 @@
       "endMax": "2027-02-11",
       "pred": "2.4.2.1",
       "predHtmlId": 9201,
-      "eapId": "2.4.2.2"
+      "eapId": "2.4.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309991789,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9203,
@@ -3642,7 +4870,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "LOG",
+      "owner": "Opera\u00e7\u00f5es",
       "start": "2026-10-27",
       "end": "2026-10-31",
       "notes": "Transire EAP 2.4.2.3",
@@ -3650,7 +4878,16 @@
       "endMax": "2027-02-25",
       "pred": "2.4.2.2",
       "predHtmlId": 9202,
-      "eapId": "2.4.2.3"
+      "eapId": "2.4.2.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780309996797,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
     },
     {
       "id": 9204,
@@ -3660,7 +4897,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-10-01",
       "end": "2026-11-30",
       "notes": "Transire EAP 2.5",
@@ -3668,7 +4905,16 @@
       "endMax": "2027-02-09",
       "pred": "2.1.5",
       "predHtmlId": 9154,
-      "eapId": "2.5"
+      "eapId": "2.5",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780309998945,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9205,
@@ -3678,7 +4924,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-10-01",
       "end": "2026-10-31",
       "notes": "Transire EAP 2.5.1",
@@ -3686,7 +4932,16 @@
       "endMax": "2026-12-17",
       "pred": "2.1.5",
       "predHtmlId": 9154,
-      "eapId": "2.5.1"
+      "eapId": "2.5.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780310001265,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9206,
@@ -3704,7 +4959,16 @@
       "endMax": "2026-10-27",
       "pred": "2.1.5",
       "predHtmlId": 9154,
-      "eapId": "2.5.1.1"
+      "eapId": "2.5.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310535114,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9207,
@@ -3722,7 +4986,16 @@
       "endMax": "2026-11-23",
       "pred": "2.5.1.1",
       "predHtmlId": 9206,
-      "eapId": "2.5.1.2"
+      "eapId": "2.5.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310537535,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9208,
@@ -3740,7 +5013,16 @@
       "endMax": "2026-12-17",
       "pred": "2.5.1.2",
       "predHtmlId": 9207,
-      "eapId": "2.5.1.3"
+      "eapId": "2.5.1.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310540142,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9209,
@@ -3750,7 +5032,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-11-02",
       "end": "2026-11-15",
       "notes": "Transire EAP 2.5.2",
@@ -3758,7 +5040,16 @@
       "endMax": "2027-01-14",
       "pred": "2.5.1",
       "predHtmlId": 9205,
-      "eapId": "2.5.2"
+      "eapId": "2.5.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780310004389,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9210,
@@ -3776,7 +5067,16 @@
       "endMax": "2026-12-21",
       "pred": "2.5.1",
       "predHtmlId": 9205,
-      "eapId": "2.5.2.1"
+      "eapId": "2.5.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310543934,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9211,
@@ -3794,7 +5094,16 @@
       "endMax": "2027-01-06",
       "pred": "2.5.2.1",
       "predHtmlId": 9210,
-      "eapId": "2.5.2.2"
+      "eapId": "2.5.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310546994,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9212,
@@ -3830,7 +5139,16 @@
       "endMax": "2027-01-14",
       "pred": "2.5.2.2",
       "predHtmlId": 9211,
-      "eapId": "2.5.2.4"
+      "eapId": "2.5.2.4",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310549632,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9214,
@@ -3840,7 +5158,7 @@
       "phase": "RH",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "RH",
+      "owner": "",
       "start": "2026-11-17",
       "end": "2026-11-30",
       "notes": "Transire EAP 2.5.3",
@@ -3848,7 +5166,16 @@
       "endMax": "2027-02-09",
       "pred": "2.5.2",
       "predHtmlId": 9209,
-      "eapId": "2.5.3"
+      "eapId": "2.5.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "",
+          "ts": 1780310008661,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9215,
@@ -3866,7 +5193,16 @@
       "endMax": "2027-01-14",
       "pred": "2.5.2",
       "predHtmlId": 9209,
-      "eapId": "2.5.3.1"
+      "eapId": "2.5.3.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310552850,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9216,
@@ -3902,7 +5238,16 @@
       "endMax": "2027-02-09",
       "pred": "2.5.3.2",
       "predHtmlId": 9216,
-      "eapId": "2.5.3.3"
+      "eapId": "2.5.3.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "RH",
+          "newVal": "RH",
+          "ts": 1780310556006,
+          "text": "Respons\u00e1vel: <strong>RH</strong>"
+        }
+      ]
     },
     {
       "id": 9218,
@@ -3912,7 +5257,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-07-24",
       "end": "2026-08-31",
       "notes": "Transire EAP 2.6",
@@ -3920,7 +5265,16 @@
       "endMax": "2027-01-08",
       "pred": "2.1.4",
       "predHtmlId": 9151,
-      "eapId": "2.6"
+      "eapId": "2.6",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780310012081,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9219,
@@ -3930,7 +5284,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-07-24",
       "end": "2026-07-31",
       "notes": "Transire EAP 2.6.1",
@@ -3938,7 +5292,16 @@
       "endMax": "2026-11-11",
       "pred": "2.1.4",
       "predHtmlId": 9151,
-      "eapId": "2.6.1"
+      "eapId": "2.6.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780310014049,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9220,
@@ -3948,7 +5311,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "Financeiro",
       "start": "2026-07-24",
       "end": "2026-07-07",
       "notes": "Transire EAP 2.6.1.1",
@@ -3956,7 +5319,16 @@
       "endMax": "2026-09-15",
       "pred": "2.1.4",
       "predHtmlId": 9151,
-      "eapId": "2.6.1.1"
+      "eapId": "2.6.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "Financeiro",
+          "ts": 1780310558822,
+          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
+        }
+      ]
     },
     {
       "id": 9221,
@@ -3966,7 +5338,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "Financeiro",
       "start": "2026-07-30",
       "end": "2026-07-14",
       "notes": "Transire EAP 2.6.1.2",
@@ -3974,7 +5346,16 @@
       "endMax": "2026-10-02",
       "pred": "2.6.1.1",
       "predHtmlId": 9220,
-      "eapId": "2.6.1.2"
+      "eapId": "2.6.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "Financeiro",
+          "ts": 1780310560539,
+          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
+        }
+      ]
     },
     {
       "id": 9222,
@@ -3984,7 +5365,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "Financeiro",
       "start": "2026-08-05",
       "end": "2026-07-31",
       "notes": "Transire EAP 2.6.1.3",
@@ -3992,7 +5373,16 @@
       "endMax": "2026-11-11",
       "pred": "2.6.1.2",
       "predHtmlId": 9221,
-      "eapId": "2.6.1.3"
+      "eapId": "2.6.1.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "Financeiro",
+          "ts": 1780310562702,
+          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
+        }
+      ]
     },
     {
       "id": 9223,
@@ -4002,7 +5392,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "",
       "start": "2026-08-18",
       "end": "2026-08-31",
       "notes": "Transire EAP 2.6.2",
@@ -4010,7 +5400,16 @@
       "endMax": "2027-01-08",
       "pred": "2.6.1",
       "predHtmlId": 9219,
-      "eapId": "2.6.2"
+      "eapId": "2.6.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "",
+          "ts": 1780310017608,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9224,
@@ -4020,7 +5419,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "Financeiro",
       "start": "2026-08-18",
       "end": "2026-08-15",
       "notes": "Transire EAP 2.6.2.1",
@@ -4028,7 +5427,16 @@
       "endMax": "2026-12-10",
       "pred": "2.6.1",
       "predHtmlId": 9219,
-      "eapId": "2.6.2.1"
+      "eapId": "2.6.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "Financeiro",
+          "ts": 1780310565762,
+          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
+        }
+      ]
     },
     {
       "id": 9225,
@@ -4038,7 +5446,7 @@
       "phase": "Financeiro",
       "status": "A fazer",
       "priority": "M\u00e9dia",
-      "owner": "FIN",
+      "owner": "Financeiro",
       "start": "2026-08-28",
       "end": "2026-08-31",
       "notes": "Transire EAP 2.6.2.2",
@@ -4046,187 +5454,16 @@
       "endMax": "2027-01-08",
       "pred": "2.6.2.1",
       "predHtmlId": 9224,
-      "eapId": "2.6.2.2"
-    },
-    {
-      "id": 9226,
-      "parentId": 9136,
-      "country": "mexico",
-      "name": "GO-LIVE E ENTRADA EM OPERACAO",
-      "phase": "Opera\u00e7\u00f5es",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "OPS",
-      "start": "2026-12-01",
-      "end": "2027-07-31",
-      "notes": "Transire EAP 2.7",
-      "endMin": "2027-07-09",
-      "endMax": "2028-02-11",
-      "pred": "2.5",
-      "predHtmlId": 9204,
-      "eapId": "2.7"
-    },
-    {
-      "id": 9227,
-      "parentId": 9226,
-      "country": "mexico",
-      "name": "Testes integrados (TI + Logistica + CFDI)",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-12-01",
-      "end": "2026-12-20",
-      "notes": "Transire EAP 2.7.1",
-      "endMin": "2026-12-21",
-      "endMax": "2027-03-18",
-      "pred": "2.5",
-      "predHtmlId": 9204,
-      "eapId": "2.7.1"
-    },
-    {
-      "id": 9228,
-      "parentId": 9227,
-      "country": "mexico",
-      "name": "Simulacao fiscal CFDI entrada e saida",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-12-01",
-      "end": "2026-12-10",
-      "notes": "Transire EAP 2.7.1.1",
-      "endMin": "2026-12-10",
-      "endMax": "2027-02-23",
-      "pred": "2.5",
-      "predHtmlId": 9204,
-      "eapId": "2.7.1.1"
-    },
-    {
-      "id": 9229,
-      "parentId": 9227,
-      "country": "mexico",
-      "name": "Teste WMS + expedicao via carrier",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-12-10",
-      "end": "2026-12-20",
-      "notes": "Transire EAP 2.7.1.2",
-      "endMin": "2026-12-21",
-      "endMax": "2027-03-18",
-      "pred": "2.7.1.1",
-      "predHtmlId": 9228,
-      "eapId": "2.7.1.2"
-    },
-    {
-      "id": 9230,
-      "parentId": 9226,
-      "country": "mexico",
-      "name": "Inventario e carga piloto",
-      "phase": "Opera\u00e7\u00f5es",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "LOG",
-      "start": "2026-12-21",
-      "end": "2027-01-15",
-      "notes": "Transire EAP 2.7.2",
-      "endMin": "2027-01-14",
-      "endMax": "2027-04-22",
-      "pred": "2.7.1",
-      "predHtmlId": 9227,
-      "eapId": "2.7.2"
-    },
-    {
-      "id": 9231,
-      "parentId": 9230,
-      "country": "mexico",
-      "name": "Recebimento lote piloto + registro WMS",
-      "phase": "Opera\u00e7\u00f5es",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "LOG",
-      "start": "2026-12-21",
-      "end": "2026-12-31",
-      "notes": "Transire EAP 2.7.2.1",
-      "endMin": "2026-12-31",
-      "endMax": "2027-03-29",
-      "pred": "2.7.1",
-      "predHtmlId": 9227,
-      "eapId": "2.7.2.1"
-    },
-    {
-      "id": 9232,
-      "parentId": 9230,
-      "country": "mexico",
-      "name": "Inventario fisico e auditoria inicial",
-      "phase": "Opera\u00e7\u00f5es",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "LOG",
-      "start": "2026-12-31",
-      "end": "2027-01-15",
-      "notes": "Transire EAP 2.7.2.2",
-      "endMin": "2027-01-14",
-      "endMax": "2027-04-22",
-      "pred": "2.7.2.1",
-      "predHtmlId": 9231,
-      "eapId": "2.7.2.2"
-    },
-    {
-      "id": 9233,
-      "parentId": 9226,
-      "country": "mexico",
-      "name": "Go-live oficial e ramp-up operacional",
-      "phase": "Opera\u00e7\u00f5es",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "OPS",
-      "start": "2027-01-15",
-      "end": "2027-07-31",
-      "notes": "Transire EAP 2.7.3",
-      "endMin": "2027-07-09",
-      "endMax": "2028-02-11",
-      "pred": "2.7.2",
-      "predHtmlId": 9230,
-      "eapId": "2.7.3"
-    },
-    {
-      "id": 9234,
-      "parentId": 9233,
-      "country": "mexico",
-      "name": "Comunicado SAT \u2014 inicio de operacoes",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "JUR",
-      "start": "2027-01-15",
-      "end": "2027-01-20",
-      "notes": "Transire EAP 2.7.3.1",
-      "endMin": "2027-01-21",
-      "endMax": "2027-04-30",
-      "pred": "2.7.2",
-      "predHtmlId": 9230,
-      "eapId": "2.7.3.1"
-    },
-    {
-      "id": 9235,
-      "parentId": 9233,
-      "country": "mexico",
-      "name": "Primeiro ciclo operacional cliente real",
-      "phase": "Opera\u00e7\u00f5es",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "OPS",
-      "start": "2027-01-21",
-      "end": "2027-07-31",
-      "notes": "Transire EAP 2.7.3.2",
-      "endMin": "2027-07-09",
-      "endMax": "2028-02-11",
-      "pred": "2.7.3.1",
-      "predHtmlId": 9234,
-      "eapId": "2.7.3.2"
+      "eapId": "2.6.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "FIN",
+          "newVal": "Financeiro",
+          "ts": 1780310567650,
+          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
+        }
+      ]
     },
     {
       "id": 9236,
