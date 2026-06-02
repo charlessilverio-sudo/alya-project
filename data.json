@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T14:01:46.458Z",
+  "savedAt": "2026-06-02T14:01:51.699Z",
   "tasks": [
     {
       "id": 9000,
@@ -17928,7 +17928,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "GOV",
+      "owner": "",
       "start": "2026-06-18",
       "end": "2026-07-08",
       "endMin": "2026-07-01",
@@ -17938,7 +17938,16 @@
       "eapId": "7.1.3",
       "notes": "Transire EAP 7.1.3",
       "subtasks": [],
-      "predHtmlId": 9703
+      "predHtmlId": 9703,
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "GOV",
+          "newVal": "",
+          "ts": 1780408911695,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9709,
