@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T19:19:22.312Z",
+  "savedAt": "2026-06-02T19:19:29.718Z",
   "tasks": [
     {
       "id": 9000,
@@ -1137,6 +1137,13 @@
       "predHtmlId": 9012,
       "eapId": "1.2.2.1",
       "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Fiscal",
+          "newVal": "Fiscal",
+          "ts": 1780427969708,
+          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
+        },
         {
           "field": "owner",
           "oldVal": "Fiscal",
