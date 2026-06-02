@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T12:18:02.624Z",
+  "savedAt": "2026-06-02T12:18:22.817Z",
   "tasks": [
     {
       "id": 9000,
@@ -3052,10 +3052,10 @@
       "priority": "Alta",
       "owner": "",
       "start": "2026-06-01",
-      "end": "2026-11-30",
+      "end": "2027-07-31",
       "notes": "Transire EAP 2",
-      "endMin": "2026-12-07",
-      "endMax": "2027-06-23",
+      "endMin": "2027-07-09",
+      "endMax": "2028-02-11",
       "eapId": "2",
       "activityLog": [
         {
@@ -5462,6 +5462,276 @@
           "newVal": "Financeiro",
           "ts": 1780310567650,
           "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9226,
+      "parentId": 9136,
+      "country": "mexico",
+      "name": "GO-LIVE E ENTRADA EM OPERACAO",
+      "phase": "Opera\u00e7\u00f5es",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "2026-12-01",
+      "end": "2027-07-31",
+      "notes": "Transire EAP 2.7",
+      "endMin": "2027-07-09",
+      "endMax": "2028-02-11",
+      "pred": "2.5",
+      "predHtmlId": 9204,
+      "eapId": "2.7",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "OPS",
+          "newVal": "",
+          "ts": 1780310020628,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9227,
+      "parentId": 9226,
+      "country": "mexico",
+      "name": "Testes integrados (TI + Logistica + CFDI)",
+      "phase": "TI",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "",
+      "start": "2026-12-01",
+      "end": "2026-12-20",
+      "notes": "Transire EAP 2.7.1",
+      "endMin": "2026-12-21",
+      "endMax": "2027-03-18",
+      "pred": "2.5",
+      "predHtmlId": 9204,
+      "eapId": "2.7.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "",
+          "ts": 1780310022516,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9228,
+      "parentId": 9227,
+      "country": "mexico",
+      "name": "Simulacao fiscal CFDI entrada e saida",
+      "phase": "TI",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "TI",
+      "start": "2026-12-01",
+      "end": "2026-12-10",
+      "notes": "Transire EAP 2.7.1.1",
+      "endMin": "2026-12-10",
+      "endMax": "2027-02-23",
+      "pred": "2.5",
+      "predHtmlId": 9204,
+      "eapId": "2.7.1.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310570582,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9229,
+      "parentId": 9227,
+      "country": "mexico",
+      "name": "Teste WMS + expedicao via carrier",
+      "phase": "TI",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "TI",
+      "start": "2026-12-10",
+      "end": "2026-12-20",
+      "notes": "Transire EAP 2.7.1.2",
+      "endMin": "2026-12-21",
+      "endMax": "2027-03-18",
+      "pred": "2.7.1.1",
+      "predHtmlId": 9228,
+      "eapId": "2.7.1.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "TI",
+          "newVal": "TI",
+          "ts": 1780310572906,
+          "text": "Respons\u00e1vel: <strong>TI</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9230,
+      "parentId": 9226,
+      "country": "mexico",
+      "name": "Inventario e carga piloto",
+      "phase": "Opera\u00e7\u00f5es",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "",
+      "start": "2026-12-21",
+      "end": "2027-01-15",
+      "notes": "Transire EAP 2.7.2",
+      "endMin": "2027-01-14",
+      "endMax": "2027-04-22",
+      "pred": "2.7.1",
+      "predHtmlId": 9227,
+      "eapId": "2.7.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "",
+          "ts": 1780310026393,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9231,
+      "parentId": 9230,
+      "country": "mexico",
+      "name": "Recebimento lote piloto + registro WMS",
+      "phase": "Opera\u00e7\u00f5es",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "Opera\u00e7\u00f5es",
+      "start": "2026-12-21",
+      "end": "2026-12-31",
+      "notes": "Transire EAP 2.7.2.1",
+      "endMin": "2026-12-31",
+      "endMax": "2027-03-29",
+      "pred": "2.7.1",
+      "predHtmlId": 9227,
+      "eapId": "2.7.2.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780310109836,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9232,
+      "parentId": 9230,
+      "country": "mexico",
+      "name": "Inventario fisico e auditoria inicial",
+      "phase": "Opera\u00e7\u00f5es",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "Opera\u00e7\u00f5es",
+      "start": "2026-12-31",
+      "end": "2027-01-15",
+      "notes": "Transire EAP 2.7.2.2",
+      "endMin": "2027-01-14",
+      "endMax": "2027-04-22",
+      "pred": "2.7.2.1",
+      "predHtmlId": 9231,
+      "eapId": "2.7.2.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "LOG",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780310111904,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9233,
+      "parentId": 9226,
+      "country": "mexico",
+      "name": "Go-live oficial e ramp-up operacional",
+      "phase": "Opera\u00e7\u00f5es",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "",
+      "start": "2027-01-15",
+      "end": "2027-07-31",
+      "notes": "Transire EAP 2.7.3",
+      "endMin": "2027-07-09",
+      "endMax": "2028-02-11",
+      "pred": "2.7.2",
+      "predHtmlId": 9230,
+      "eapId": "2.7.3",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "OPS",
+          "newVal": "",
+          "ts": 1780310028629,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9234,
+      "parentId": 9233,
+      "country": "mexico",
+      "name": "Comunicado SAT \u2014 inicio de operacoes",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "Jur\u00eddico",
+      "start": "2027-01-15",
+      "end": "2027-01-20",
+      "notes": "Transire EAP 2.7.3.1",
+      "endMin": "2027-01-21",
+      "endMax": "2027-04-30",
+      "pred": "2.7.2",
+      "predHtmlId": 9230,
+      "eapId": "2.7.3.1",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "JUR",
+          "newVal": "Jur\u00eddico",
+          "ts": 1780310578658,
+          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
+        }
+      ]
+    },
+    {
+      "id": 9235,
+      "parentId": 9233,
+      "country": "mexico",
+      "name": "Primeiro ciclo operacional cliente real",
+      "phase": "Opera\u00e7\u00f5es",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "Opera\u00e7\u00f5es",
+      "start": "2027-01-21",
+      "end": "2027-07-31",
+      "notes": "Transire EAP 2.7.3.2",
+      "endMin": "2027-07-09",
+      "endMax": "2028-02-11",
+      "pred": "2.7.3.1",
+      "predHtmlId": 9234,
+      "eapId": "2.7.3.2",
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "OPS",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780310104792,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
         }
       ]
     },
