@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T14:00:07.872Z",
+  "savedAt": "2026-06-02T14:00:12.711Z",
   "tasks": [
     {
       "id": 9000,
@@ -17528,7 +17528,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "GOV",
+      "owner": "Fiscal",
       "start": "2026-10-06",
       "end": "2026-10-14",
       "endMin": "2026-10-08",
@@ -17538,7 +17538,16 @@
       "eapId": "6.7.3.1",
       "notes": "Transire EAP 6.7.3.1",
       "subtasks": [],
-      "predHtmlId": 9690
+      "predHtmlId": 9690,
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "GOV",
+          "newVal": "Fiscal",
+          "ts": 1780408812705,
+          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
+        }
+      ]
     },
     {
       "id": 9695,
