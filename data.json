@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T14:05:40.749Z",
+  "savedAt": "2026-06-02T14:05:44.391Z",
   "tasks": [
     {
       "id": 9000,
@@ -19990,7 +19990,7 @@
       "phase": "Opera\u00e7\u00f5es",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "OPE",
+      "owner": "",
       "start": "2026-08-18",
       "end": "2026-09-04",
       "endMin": "2026-09-02",
@@ -20000,7 +20000,16 @@
       "eapId": "7.4.3",
       "notes": "Transire EAP 7.4.3",
       "subtasks": [],
-      "predHtmlId": 9777
+      "predHtmlId": 9777,
+      "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "OPE",
+          "newVal": "",
+          "ts": 1780409144386,
+          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
+        }
+      ]
     },
     {
       "id": 9786,
