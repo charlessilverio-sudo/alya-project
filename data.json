@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-02T13:31:19.595Z",
+  "savedAt": "2026-06-02T13:31:26.821Z",
   "tasks": [
     {
       "id": 9000,
@@ -906,6 +906,13 @@
       "predHtmlId": 9012,
       "eapId": "1.2.1.1",
       "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "Opera\u00e7\u00f5es",
+          "newVal": "Opera\u00e7\u00f5es",
+          "ts": 1780407086816,
+          "text": "Respons\u00e1vel: <strong>Opera\u00e7\u00f5es</strong>"
+        },
         {
           "field": "owner",
           "oldVal": "INF",
