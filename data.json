@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-03T10:53:44.806Z",
+  "savedAt": "2026-06-03T10:53:55.279Z",
   "tasks": [
     {
       "id": 4,
@@ -3469,20 +3469,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-06-01",
       "end": "2026-06-15",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434527352,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8247,
@@ -3492,20 +3483,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-06-15",
       "end": "2026-07-06",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434556391,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8248,
@@ -3515,20 +3497,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-06-15",
       "end": "2026-07-06",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434561847,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8249,
@@ -3538,20 +3511,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-07-06",
       "end": "2026-07-20",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434567647,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8250,
@@ -3561,20 +3525,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-07-20",
       "end": "2026-08-10",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434572702,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8251,
@@ -3584,20 +3539,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-07-20",
       "end": "2026-08-17",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434578887,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8252,
@@ -3607,20 +3553,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-07-20",
       "end": "2026-08-10",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434584214,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8253,
@@ -3630,20 +3567,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-07-20",
       "end": "2026-08-10",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434588490,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8254,
@@ -3653,20 +3581,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-08-17",
       "end": "2026-08-31",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434593924,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8255,
@@ -3676,20 +3595,11 @@
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "Fiscal",
+      "owner": "",
       "start": "2026-08-31",
       "end": "2026-09-14",
       "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "",
-          "newVal": "Fiscal",
-          "ts": 1780434598295,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
-        }
-      ]
+      "subtasks": []
     },
     {
       "id": 8269,
