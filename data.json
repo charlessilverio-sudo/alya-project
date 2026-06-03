@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-03T17:32:08.072Z",
+  "savedAt": "2026-06-03T17:33:17.710Z",
   "tasks": [
     {
       "id": 9000,
@@ -49137,7 +49137,7 @@
       "id": 10301,
       "parentId": 10300,
       "country": "brasil",
-      "name": "Nova sub-tarefa",
+      "name": "Diretor Responsavel pela Estrutura",
       "phase": "",
       "status": "A fazer",
       "priority": "Alta",
@@ -49146,8 +49146,31 @@
       "end": "",
       "endMin": "2026-07-03",
       "endMax": "2026-07-13",
-      "notes": "",
-      "subtasks": []
+      "notes": "Saida de Gilberto Novaes, e entrada do Valdeni Novaes",
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "notes",
+          "oldVal": "",
+          "newVal": "Saida de Gilberto Novaes, e entrada do Valdeni Novaes",
+          "ts": 1780507997621,
+          "text": "Notas atualizado"
+        },
+        {
+          "field": "name",
+          "oldVal": "Mudan",
+          "newVal": "Diretor Responsavel pela Estrutura",
+          "ts": 1780507975788,
+          "text": "Tarefa renomeada"
+        },
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Mudan",
+          "ts": 1780507951069,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
