@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:34:32.375Z",
+  "savedAt": "2026-06-11T21:34:37.491Z",
   "tasks": [
     {
       "id": 9000,
@@ -29558,26 +29558,6 @@
       "predHtmlId": 9138,
       "eapId": "2.1.9",
       "notes": "Transire EAP 2.1.9",
-      "subtasks": []
-    },
-    {
-      "id": 10248,
-      "parentId": 9137,
-      "country": "mexico",
-      "name": "Procuracoes internacionais e Apostila de Haia",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "JUR",
-      "start": "2026-06-01",
-      "end": "2026-06-16",
-      "endMin": "2026-06-09",
-      "endMax": "2026-06-16",
-      "dur": "7d",
-      "pred": "2.1.1",
-      "predHtmlId": 9138,
-      "eapId": "2.1.10",
-      "notes": "Transire EAP 2.1.10",
       "subtasks": []
     },
     {
