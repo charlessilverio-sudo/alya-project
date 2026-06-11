@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:56:46.636Z",
+  "savedAt": "2026-06-11T21:56:50.826Z",
   "tasks": [
     {
       "id": 9000,
@@ -3901,10 +3901,10 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-08-03",
+      "start": "2026-08-24",
       "end": "2026-09-30",
       "notes": "Transire EAP 2.2",
-      "endMin": "2026-09-28",
+      "endMin": "2026-09-15",
       "endMax": "2027-02-04",
       "pred": "2.1.3",
       "predHtmlId": 9148,
@@ -30154,31 +30154,6 @@
           "oldVal": "Nova sub-tarefa",
           "newVal": "Emisi\u00f3n de los correspondientes certificados de acciones o participaciones.",
           "ts": 1781213585205,
-          "text": "Tarefa renomeada"
-        }
-      ]
-    },
-    {
-      "id": 10306,
-      "parentId": 9166,
-      "country": "mexico",
-      "name": "Arrendar temporalmente y proporcionar a NewCo un Domicilio Fiscal temporal.",
-      "phase": "Infraestrutura",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "",
-      "start": "2026-08-03",
-      "end": "2026-09-30",
-      "endMin": "2026-09-28",
-      "endMax": "2027-02-04",
-      "notes": "",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "name",
-          "oldVal": "Nova sub-tarefa",
-          "newVal": "Arrendar temporalmente y proporcionar a NewCo un Domicilio Fiscal temporal.",
-          "ts": 1781214941271,
           "text": "Tarefa renomeada"
         }
       ]
