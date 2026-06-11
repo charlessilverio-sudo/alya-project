@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:56:04.864Z",
+  "savedAt": "2026-06-11T21:56:08.629Z",
   "tasks": [
     {
       "id": 9000,
@@ -3964,33 +3964,6 @@
           "newVal": "",
           "ts": 1780309866571,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9171,
-      "parentId": 9167,
-      "country": "mexico",
-      "name": "Reforma, layout e instalacao de mobiliario",
-      "phase": "Infraestrutura",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Facilities",
-      "start": "2026-08-24",
-      "end": "2026-08-31",
-      "notes": "Transire EAP 2.2.1.4",
-      "endMin": "2026-09-01",
-      "endMax": "2026-10-29",
-      "pred": "2.2.1.3",
-      "predHtmlId": 9170,
-      "eapId": "2.2.1.4",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "INF",
-          "newVal": "Facilities",
-          "ts": 1780309893125,
-          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
         }
       ]
     },
