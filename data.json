@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:28:56.577Z",
+  "savedAt": "2026-06-11T21:29:25.545Z",
   "tasks": [
     {
       "id": 9000,
@@ -3517,7 +3517,7 @@
       "id": 9139,
       "parentId": 9138,
       "country": "mexico",
-      "name": "Definicao: SA de CV ou SAS (Ley General Sociedades Mercantiles)",
+      "name": "Solicitud de la informaci\u00f3n requerida para la constituci\u00f3n de NewCo, incluyendo la informaci\u00f3n y documentaci\u00f3n de los accionistas.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3529,6 +3529,13 @@
       "endMax": "2026-06-08",
       "eapId": "2.1.1.1",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Definicao: SA de CV ou SAS (Ley General Sociedades Mercantiles)",
+          "newVal": "Solicitud de la informaci\u00f3n requerida para la constituci\u00f3n de NewCo, incluyendo la informaci\u00f3n y documentaci\u00f3n de los accionistas.",
+          "ts": 1781213365445,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
