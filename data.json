@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:31:16.929Z",
+  "savedAt": "2026-06-11T21:31:32.836Z",
   "tasks": [
     {
       "id": 9000,
@@ -3649,7 +3649,7 @@
       "id": 9143,
       "parentId": 9137,
       "country": "mexico",
-      "name": "Elaboracao e protocolo do Acta Constitutiva",
+      "name": "Fase II: Procedimientos Posteriores a la Constituci\u00f3n",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3663,6 +3663,13 @@
       "predHtmlId": 9138,
       "eapId": "2.1.2",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Elaboracao e protocolo do Acta Constitutiva",
+          "newVal": "Fase II: Procedimientos Posteriores a la Constituci\u00f3n",
+          "ts": 1781213492752,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "",
