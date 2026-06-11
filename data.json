@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:40:12.295Z",
+  "savedAt": "2026-06-11T21:44:31.744Z",
   "tasks": [
     {
       "id": 9000,
@@ -3896,7 +3896,7 @@
       "id": 9166,
       "parentId": 9136,
       "country": "mexico",
-      "name": "INFRAESTRUTURA IMOBILIARIA",
+      "name": "Representaci\u00f3n Legal y Domicilio Fiscal",
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "Alta",
@@ -3910,6 +3910,13 @@
       "predHtmlId": 9148,
       "eapId": "2.2",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "INFRAESTRUTURA IMOBILIARIA",
+          "newVal": "Representaci\u00f3n Legal y Domicilio Fiscal",
+          "ts": 1781214271621,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "INF",
