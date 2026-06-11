@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:31:47.737Z",
+  "savedAt": "2026-06-11T21:32:05.752Z",
   "tasks": [
     {
       "id": 9000,
@@ -3731,7 +3731,7 @@
       "id": 9145,
       "parentId": 9143,
       "country": "mexico",
-      "name": "Revisao pela diretoria e socios brasileiros",
+      "name": "Apoyo en la obtenci\u00f3n del Registro Federal de Contribuyentes (RFC) de NewCo ante el Servicio de Administraci\u00f3n Tributaria (SAT), as\u00ed como obtenci\u00f3n de la firma electr\u00f3nica fiscal para NewCo (necesaria para la presentaci\u00f3n de declaraciones y otros tr\u00e1mites fiscales).",
       "phase": "Gest\u00e3o",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3745,6 +3745,13 @@
       "predHtmlId": 9144,
       "eapId": "2.1.2.2",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Revisao pela diretoria e socios brasileiros",
+          "newVal": "Apoyo en la obtenci\u00f3n del Registro Federal de Contribuyentes (RFC) de NewCo ante el Servicio de Administraci\u00f3n Tributaria (SAT), as\u00ed como obtenci\u00f3n de la firma electr\u00f3nica fiscal para NewCo (necesaria para la presentaci\u00f3n de declaraciones y otros tr\u00e1mites fiscales).",
+          "ts": 1781213525668,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "DIR",
