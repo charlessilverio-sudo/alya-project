@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:55:36.611Z",
+  "savedAt": "2026-06-11T21:55:41.370Z",
   "tasks": [
     {
       "id": 9000,
@@ -30486,7 +30486,7 @@
       "id": 10306,
       "parentId": 9166,
       "country": "mexico",
-      "name": "Nova sub-tarefa",
+      "name": "Arrendar temporalmente y proporcionar a NewCo un Domicilio Fiscal temporal.",
       "phase": "Infraestrutura",
       "status": "A fazer",
       "priority": "Alta",
@@ -30496,7 +30496,16 @@
       "endMin": "2026-09-28",
       "endMax": "2027-02-04",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Arrendar temporalmente y proporcionar a NewCo un Domicilio Fiscal temporal.",
+          "ts": 1781214941271,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
