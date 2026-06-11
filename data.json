@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:37:18.677Z",
+  "savedAt": "2026-06-11T21:37:53.230Z",
   "tasks": [
     {
       "id": 9000,
@@ -30352,7 +30352,7 @@
       "id": 10304,
       "parentId": 9138,
       "country": "mexico",
-      "name": "Aceptaci\u00f3n y formalizaci\u00f3n de los poderes necesarios que deban otorgarse a miembros de Andersen para actuar en nombre de Transire ante cualquier autoridad correspondiente en M\u00e9xico, exclusivamente para tr\u00e1mites postconstituci\u00f3n y operaciones iniciales.",
+      "name": "Formaliza\u00e7\u00e3o de poderes para representa\u00e7\u00e3o da Transire junto \u00e0s autoridades mexicanas.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -30361,9 +30361,23 @@
       "end": "2026-06-12",
       "endMin": "2026-06-10",
       "endMax": "2026-06-26",
-      "notes": "",
+      "notes": "Aceptaci\u00f3n y formalizaci\u00f3n de los poderes necesarios que deban otorgarse a miembros de Andersen para actuar en nombre de Transire ante cualquier autoridad correspondiente en M\u00e9xico, exclusivamente para tr\u00e1mites postconstituci\u00f3n y operaciones iniciales.",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "notes",
+          "oldVal": "",
+          "newVal": "Aceptaci\u00f3n y formalizaci\u00f3n de los poderes necesarios que deban otorgarse a miembros de Andersen para actuar en nombre de Transire ante cualquier autoridad correspondiente en M\u00e9xico, exclusivamente para tr\u00e1mites postconstituci\u00f3n y operaciones iniciales.",
+          "ts": 1781213873163,
+          "text": "Notas atualizado"
+        },
+        {
+          "field": "name",
+          "oldVal": "Aceptaci\u00f3n y formalizaci\u00f3n de los poderes necesarios que deban otorgarse a miembros de Andersen para actuar en nombre de Transire ante cualquier autoridad correspondiente en M\u00e9xico, exclusivamente para tr\u00e1mites postconstituci\u00f3n y operaciones iniciales.",
+          "newVal": "Formaliza\u00e7\u00e3o de poderes para representa\u00e7\u00e3o da Transire junto \u00e0s autoridades mexicanas.",
+          "ts": 1781213871215,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "name",
           "oldVal": "Nova sub-tarefa",
