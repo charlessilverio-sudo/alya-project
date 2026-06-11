@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:32:38.022Z",
+  "savedAt": "2026-06-11T21:33:00.925Z",
   "tasks": [
     {
       "id": 9000,
@@ -30964,6 +30964,22 @@
           "text": "Tarefa renomeada"
         }
       ]
+    },
+    {
+      "id": 10305,
+      "parentId": 9143,
+      "country": "mexico",
+      "name": "Nova sub-tarefa",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "M\u00e9dia",
+      "owner": "",
+      "start": "2026-06-12",
+      "end": "2026-07-01",
+      "endMin": "2026-07-02",
+      "endMax": "2026-07-29",
+      "notes": "",
+      "subtasks": []
     }
   ]
 }
