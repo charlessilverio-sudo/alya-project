@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:28:38.465Z",
+  "savedAt": "2026-06-11T21:28:56.577Z",
   "tasks": [
     {
       "id": 9000,
@@ -3485,7 +3485,7 @@
       "id": 9138,
       "parentId": 9137,
       "country": "mexico",
-      "name": "Planejamento juridico e tipo societario",
+      "name": "Fase I: Procedimientos Preparatorios y de Constituci\u00f3n",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3497,6 +3497,13 @@
       "endMax": "2026-06-26",
       "eapId": "2.1.1",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Planejamento juridico e tipo societario",
+          "newVal": "Fase I: Procedimientos Preparatorios y de Constituci\u00f3n",
+          "ts": 1781213336477,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
