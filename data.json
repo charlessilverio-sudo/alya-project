@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:56:28.446Z",
+  "savedAt": "2026-06-11T21:56:32.498Z",
   "tasks": [
     {
       "id": 9000,
@@ -3991,33 +3991,6 @@
           "newVal": "",
           "ts": 1780309897101,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9177,
-      "parentId": 9172,
-      "country": "mexico",
-      "name": "Instalacao docas e piso industrial",
-      "phase": "Infraestrutura",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Facilities",
-      "start": "2026-09-07",
-      "end": "2026-09-21",
-      "notes": "Transire EAP 2.2.2.5",
-      "endMin": "2026-09-18",
-      "endMax": "2026-12-03",
-      "pred": "2.2.2.4",
-      "predHtmlId": 9176,
-      "eapId": "2.2.2.5",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "INF",
-          "newVal": "Facilities",
-          "ts": 1780309930789,
-          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
         }
       ]
     },
