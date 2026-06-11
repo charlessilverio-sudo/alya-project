@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:56:50.826Z",
+  "savedAt": "2026-06-11T21:57:10.642Z",
   "tasks": [
     {
       "id": 9000,
@@ -3998,7 +3998,7 @@
       "id": 9181,
       "parentId": 9136,
       "country": "mexico",
-      "name": "INFRAESTRUTURA DE TI E ATIVOS",
+      "name": "Laboral & Seguridad Social",
       "phase": "TI",
       "status": "A fazer",
       "priority": "Alta",
@@ -4012,6 +4012,13 @@
       "predHtmlId": 9166,
       "eapId": "2.3",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "INFRAESTRUTURA DE TI E ATIVOS",
+          "newVal": "Laboral & Seguridad Social",
+          "ts": 1781215030558,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "TI",
