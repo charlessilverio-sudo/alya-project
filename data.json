@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:57:50.949Z",
+  "savedAt": "2026-06-11T21:57:55.547Z",
   "tasks": [
     {
       "id": 9000,
@@ -4037,11 +4037,11 @@
       "status": "A fazer",
       "priority": "M\u00e9dia",
       "owner": "",
-      "start": "2026-09-14",
+      "start": "2026-09-15",
       "end": "2026-10-15",
       "notes": "Transire EAP 2.3.1",
       "endMin": "2026-10-13",
-      "endMax": "2027-01-25",
+      "endMax": "2027-01-13",
       "pred": "2.2",
       "predHtmlId": 9166,
       "eapId": "2.3.1",
@@ -4059,33 +4059,6 @@
           "newVal": "",
           "ts": 1780309956047,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9184,
-      "parentId": 9182,
-      "country": "mexico",
-      "name": "Coletores RFID e impressoras termicas para galpao",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-09-14",
-      "end": "2026-09-20",
-      "notes": "Transire EAP 2.3.1.2",
-      "endMin": "2026-09-29",
-      "endMax": "2027-01-25",
-      "pred": "2.2.2",
-      "predHtmlId": 9172,
-      "eapId": "2.3.1.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310505394,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
         }
       ]
     },
