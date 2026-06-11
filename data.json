@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:58:07.543Z",
+  "savedAt": "2026-06-11T21:58:14.257Z",
   "tasks": [
     {
       "id": 9000,
@@ -4004,10 +4004,10 @@
       "priority": "Alta",
       "owner": "",
       "start": "2026-10-01",
-      "end": "2026-10-31",
+      "end": "2026-10-15",
       "notes": "Transire EAP 2.3",
-      "endMin": "2026-12-03",
-      "endMax": "2027-06-23",
+      "endMin": "2026-10-13",
+      "endMax": "2027-01-13",
       "pred": "2.2",
       "predHtmlId": 9166,
       "eapId": "2.3",
@@ -4059,148 +4059,6 @@
           "newVal": "",
           "ts": 1780309956047,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9191,
-      "parentId": 9181,
-      "country": "mexico",
-      "name": "Software ERP, WMS e CFDI 4.0",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-10-21",
-      "end": "2026-10-31",
-      "notes": "Transire EAP 2.3.3",
-      "endMin": "2026-12-03",
-      "endMax": "2027-06-23",
-      "pred": "2.3.1",
-      "predHtmlId": 9182,
-      "eapId": "2.3.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "",
-          "ts": 1780309966830,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9192,
-      "parentId": 9191,
-      "country": "mexico",
-      "name": "Implantacao ERP modulo fiscal MX (SAP B1/CONTPAQi)",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-10-21",
-      "end": "2026-10-05",
-      "notes": "Transire EAP 2.3.3.1",
-      "endMin": "2026-11-09",
-      "endMax": "2027-04-29",
-      "pred": "2.3.1",
-      "predHtmlId": 9182,
-      "eapId": "2.3.3.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310519254,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9193,
-      "parentId": 9191,
-      "country": "mexico",
-      "name": "Implantacao WMS e integracao com galpao",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-11-09",
-      "end": "2026-10-20",
-      "notes": "Transire EAP 2.3.3.2",
-      "endMin": "2026-11-24",
-      "endMax": "2027-06-01",
-      "pred": "2.3.3.1",
-      "predHtmlId": 9192,
-      "eapId": "2.3.3.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310526158,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
-        },
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310524186,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9194,
-      "parentId": 9191,
-      "country": "mexico",
-      "name": "Certificacao PAC (Proveedor Autorizado Certificacion) CFDI",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-11-24",
-      "end": "2026-10-28",
-      "notes": "Transire EAP 2.3.3.3",
-      "endMin": "2026-11-30",
-      "endMax": "2027-06-15",
-      "pred": "2.3.3.2",
-      "predHtmlId": 9193,
-      "eapId": "2.3.3.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310528243,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9195,
-      "parentId": 9191,
-      "country": "mexico",
-      "name": "Testes CFDI emissao e cancelamento",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-11-30",
-      "end": "2026-10-31",
-      "notes": "Transire EAP 2.3.3.4",
-      "endMin": "2026-12-03",
-      "endMax": "2027-06-23",
-      "pred": "2.3.3.3",
-      "predHtmlId": 9194,
-      "eapId": "2.3.3.4",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310530114,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
         }
       ]
     },
