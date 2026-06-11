@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:34:57.638Z",
+  "savedAt": "2026-06-11T21:35:01.444Z",
   "tasks": [
     {
       "id": 9000,
@@ -3826,87 +3826,6 @@
           "newVal": "Jur\u00eddico",
           "ts": 1780310455635,
           "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9151,
-      "parentId": 9137,
-      "country": "mexico",
-      "name": "Obtencao do RFC (Registro Federal de Contribuyentes) \u2014 SAT",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-07-15",
-      "end": "2026-07-25",
-      "notes": "Transire EAP 2.1.4",
-      "endMin": "2026-07-27",
-      "endMax": "2026-09-08",
-      "pred": "2.1.3",
-      "predHtmlId": 9148,
-      "eapId": "2.1.4",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "",
-          "ts": 1780309849710,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9152,
-      "parentId": 9151,
-      "country": "mexico",
-      "name": "Tramite RFC via portal SAT com e.firma",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-15",
-      "end": "2026-07-20",
-      "notes": "Transire EAP 2.1.4.1",
-      "endMin": "2026-07-21",
-      "endMax": "2026-08-25",
-      "pred": "2.1.3",
-      "predHtmlId": 9148,
-      "eapId": "2.1.4.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780310469490,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9153,
-      "parentId": 9151,
-      "country": "mexico",
-      "name": "Ativacao da e.firma (FIEL) e certificado digital SAT",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-07-21",
-      "end": "2026-07-25",
-      "notes": "Transire EAP 2.1.4.2",
-      "endMin": "2026-07-27",
-      "endMax": "2026-09-08",
-      "pred": "2.1.4.1",
-      "predHtmlId": 9152,
-      "eapId": "2.1.4.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310472135,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
         }
       ]
     },
