@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:34:41.804Z",
+  "savedAt": "2026-06-11T21:34:46.085Z",
   "tasks": [
     {
       "id": 9000,
@@ -29539,26 +29539,6 @@
           "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
         }
       ]
-    },
-    {
-      "id": 10247,
-      "parentId": 9137,
-      "country": "mexico",
-      "name": "Definicao do endereco fiscal e sede (domicilio fiscal SAT \u2014 CDMX)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "JUR",
-      "start": "2026-06-01",
-      "end": "2026-06-05",
-      "endMin": "2026-06-03",
-      "endMax": "2026-06-05",
-      "dur": "3d",
-      "pred": "2.1.1",
-      "predHtmlId": 9138,
-      "eapId": "2.1.9",
-      "notes": "Transire EAP 2.1.9",
-      "subtasks": []
     },
     {
       "id": 10252,
