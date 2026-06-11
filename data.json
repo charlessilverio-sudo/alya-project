@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:32:05.752Z",
+  "savedAt": "2026-06-11T21:32:22.721Z",
   "tasks": [
     {
       "id": 9000,
@@ -3765,7 +3765,7 @@
       "id": 9146,
       "parentId": 9143,
       "country": "mexico",
-      "name": "Apostila dos documentos estrangeiros dos socios (Haia)",
+      "name": "Apoyo en la inscripci\u00f3n de NewCo en el Registro Nacional de Inversiones Extranjeras ante la Secretar\u00eda de Econom\u00eda.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3779,6 +3779,13 @@
       "predHtmlId": 9144,
       "eapId": "2.1.2.3",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Apostila dos documentos estrangeiros dos socios (Haia)",
+          "newVal": "Apoyo en la inscripci\u00f3n de NewCo en el Registro Nacional de Inversiones Extranjeras ante la Secretar\u00eda de Econom\u00eda.",
+          "ts": 1781213542622,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
