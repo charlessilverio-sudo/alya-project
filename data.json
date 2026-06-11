@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:30:26.129Z",
+  "savedAt": "2026-06-11T21:30:30.333Z",
   "tasks": [
     {
       "id": 9000,
@@ -30859,7 +30859,7 @@
       "id": 10302,
       "parentId": 9138,
       "country": "mexico",
-      "name": "Nova sub-tarefa",
+      "name": "Redacci\u00f3n del Acta Constitutiva de NewCo, incluyendo sus Estatutos Sociales y Cl\u00e1usulas Transitorias (versiones preliminares y finales).",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -30869,7 +30869,16 @@
       "endMin": "2026-06-10",
       "endMax": "2026-06-26",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Redacci\u00f3n del Acta Constitutiva de NewCo, incluyendo sus Estatutos Sociales y Cl\u00e1usulas Transitorias (versiones preliminares y finales).",
+          "ts": 1781213430217,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
