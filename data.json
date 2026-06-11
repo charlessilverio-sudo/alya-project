@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:58:03.051Z",
+  "savedAt": "2026-06-11T21:58:07.543Z",
   "tasks": [
     {
       "id": 9000,
@@ -4003,7 +4003,7 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-09-14",
+      "start": "2026-10-01",
       "end": "2026-10-31",
       "notes": "Transire EAP 2.3",
       "endMin": "2026-12-03",
@@ -4059,114 +4059,6 @@
           "newVal": "",
           "ts": 1780309956047,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9187,
-      "parentId": 9181,
-      "country": "mexico",
-      "name": "Links Internet \u2014 Primario e Failover",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-09-14",
-      "end": "2026-09-20",
-      "notes": "Transire EAP 2.3.2",
-      "endMin": "2026-10-05",
-      "endMax": "2027-02-08",
-      "pred": "2.2",
-      "predHtmlId": 9166,
-      "eapId": "2.3.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "",
-          "ts": 1780309963425,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9188,
-      "parentId": 9187,
-      "country": "mexico",
-      "name": "Contratacao Telmex/Megacable fibra 200Mbps dedicado",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-09-14",
-      "end": "2026-09-12",
-      "notes": "Transire EAP 2.3.2.1",
-      "endMin": "2026-09-24",
-      "endMax": "2027-01-14",
-      "pred": "2.2",
-      "predHtmlId": 9166,
-      "eapId": "2.3.2.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310513262,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9189,
-      "parentId": 9187,
-      "country": "mexico",
-      "name": "Failover 5G (AT&T MX ou Telcel Empresarial)",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-09-14",
-      "end": "2026-09-15",
-      "notes": "Transire EAP 2.3.2.2",
-      "endMin": "2026-09-25",
-      "endMax": "2027-01-19",
-      "pred": "2.2",
-      "predHtmlId": 9166,
-      "eapId": "2.3.2.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310515038,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9190,
-      "parentId": 9187,
-      "country": "mexico",
-      "name": "Configuracao redundancia e VPN corporativa",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-09-24",
-      "end": "2026-09-20",
-      "notes": "Transire EAP 2.3.2.3",
-      "endMin": "2026-10-05",
-      "endMax": "2027-02-08",
-      "pred": "2.3.2.1",
-      "predHtmlId": 9188,
-      "eapId": "2.3.2.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310516802,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
         }
       ]
     },
