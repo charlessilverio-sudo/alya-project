@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:29:49.803Z",
+  "savedAt": "2026-06-11T21:30:02.624Z",
   "tasks": [
     {
       "id": 9000,
@@ -3615,7 +3615,7 @@
       "id": 9142,
       "parentId": 9138,
       "country": "mexico",
-      "name": "Definicao objeto social e SCIAN (codigo de atividade economica)",
+      "name": "Coordinaci\u00f3n de la legalizaci\u00f3n o apostilla de documentos extranjeros de los accionistas de NewCo, as\u00ed como la coordinaci\u00f3n de su traducci\u00f3n certificada para que tengan validez en M\u00e9xico.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3629,6 +3629,13 @@
       "predHtmlId": 9139,
       "eapId": "2.1.1.4",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Definicao objeto social e SCIAN (codigo de atividade economica)",
+          "newVal": "Coordinaci\u00f3n de la legalizaci\u00f3n o apostilla de documentos extranjeros de los accionistas de NewCo, as\u00ed como la coordinaci\u00f3n de su traducci\u00f3n certificada para que tengan validez en M\u00e9xico.",
+          "ts": 1781213402525,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
