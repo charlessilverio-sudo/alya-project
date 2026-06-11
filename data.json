@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:56:19.082Z",
+  "savedAt": "2026-06-11T21:56:23.832Z",
   "tasks": [
     {
       "id": 9000,
@@ -3976,7 +3976,7 @@
       "status": "A fazer",
       "priority": "M\u00e9dia",
       "owner": "",
-      "start": "2026-08-17",
+      "start": "2026-08-21",
       "end": "2026-09-30",
       "notes": "Transire EAP 2.2.2",
       "endMin": "2026-09-28",
@@ -3991,33 +3991,6 @@
           "newVal": "",
           "ts": 1780309897101,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9175,
-      "parentId": 9172,
-      "country": "mexico",
-      "name": "Assinatura contrato arrendamiento industrial",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Diretoria",
-      "start": "2026-08-17",
-      "end": "2026-08-24",
-      "notes": "Transire EAP 2.2.2.3",
-      "endMin": "2026-08-21",
-      "endMax": "2026-09-29",
-      "pred": "2.2.2.2",
-      "predHtmlId": 9174,
-      "eapId": "2.2.2.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Diretoria",
-          "ts": 1780309918689,
-          "text": "Respons\u00e1vel: <strong>Diretoria</strong>"
         }
       ]
     },
