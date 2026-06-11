@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:56:36.280Z",
+  "savedAt": "2026-06-11T21:56:40.515Z",
   "tasks": [
     {
       "id": 9000,
@@ -3979,7 +3979,7 @@
       "start": "2026-08-24",
       "end": "2026-09-30",
       "notes": "Transire EAP 2.2.2",
-      "endMin": "2026-09-28",
+      "endMin": "2026-09-15",
       "endMax": "2027-02-04",
       "pred": "2.1.3",
       "predHtmlId": 9148,
@@ -3991,33 +3991,6 @@
           "newVal": "",
           "ts": 1780309897101,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9179,
-      "parentId": 9172,
-      "country": "mexico",
-      "name": "Visto bueno Proteccion Civil (equiv. bombeiros)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Facilities",
-      "start": "2026-09-18",
-      "end": "2026-09-25",
-      "notes": "Transire EAP 2.2.2.7",
-      "endMin": "2026-09-28",
-      "endMax": "2027-01-25",
-      "pred": "2.2.2.5",
-      "predHtmlId": 9177,
-      "eapId": "2.2.2.7",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Facilities",
-          "ts": 1780309942909,
-          "text": "Respons\u00e1vel: <strong>Facilities</strong>"
         }
       ]
     },
