@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:29:25.545Z",
+  "savedAt": "2026-06-11T21:29:37.753Z",
   "tasks": [
     {
       "id": 9000,
@@ -3549,7 +3549,7 @@
       "id": 9140,
       "parentId": 9138,
       "country": "mexico",
-      "name": "Contratacao de despacho juridico local (CDMX ou Monterrey)",
+      "name": "Apoyo para obtener el permiso de denominaci\u00f3n social de NewCo ante la Secretar\u00eda de Econom\u00eda.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3561,6 +3561,13 @@
       "endMax": "2026-06-11",
       "eapId": "2.1.1.2",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Contratacao de despacho juridico local (CDMX ou Monterrey)",
+          "newVal": "Apoyo para obtener el permiso de denominaci\u00f3n social de NewCo ante la Secretar\u00eda de Econom\u00eda.",
+          "ts": 1781213377668,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
