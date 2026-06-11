@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:57:10.642Z",
+  "savedAt": "2026-06-11T21:57:31.295Z",
   "tasks": [
     {
       "id": 9000,
@@ -4032,7 +4032,7 @@
       "id": 9182,
       "parentId": 9181,
       "country": "mexico",
-      "name": "Hardware \u2014 Escritorio e Galpao",
+      "name": "Apoyo en el registro de NewCo ante el Instituto Mexicano del Seguro Social (IMSS).",
       "phase": "TI",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -4046,6 +4046,13 @@
       "predHtmlId": 9166,
       "eapId": "2.3.1",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Hardware \u2014 Escritorio e Galpao",
+          "newVal": "Apoyo en el registro de NewCo ante el Instituto Mexicano del Seguro Social (IMSS).",
+          "ts": 1781215051195,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "TI",
