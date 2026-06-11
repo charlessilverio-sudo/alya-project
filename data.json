@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:39:29.510Z",
+  "savedAt": "2026-06-11T21:40:12.295Z",
   "tasks": [
     {
       "id": 9000,
@@ -3732,20 +3732,34 @@
       "id": 9144,
       "parentId": 9143,
       "country": "mexico",
-      "name": "Apoyo en la inscripci\u00f3n de NewCo ante el Registro P\u00fablico de la Propiedad (RPC) que corresponda de acuerdo con el domicilio social de NewCo.",
+      "name": "Inscri\u00e7\u00e3o societ\u00e1ria da NewCo no Registro P\u00fablico de Com\u00e9rcio.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
       "owner": "Jur\u00eddico",
       "start": "2026-06-12",
       "end": "2026-06-21",
-      "notes": "Transire EAP 2.1.2.1",
+      "notes": "Transire EAP 2.1.2.1\nApoyo en la inscripci\u00f3n de NewCo ante el Registro P\u00fablico de la Propiedad (RPC) que corresponda de acuerdo con el domicilio social de NewCo.",
       "endMin": "2026-06-23",
       "endMax": "2026-07-09",
       "pred": "2.1.1",
       "predHtmlId": 9138,
       "eapId": "2.1.2.1",
       "activityLog": [
+        {
+          "field": "notes",
+          "oldVal": "Transire EAP 2.1.2.1",
+          "newVal": "Transire EAP 2.1.2.1\nApoyo en la inscripci\u00f3n de NewCo ante el Registro P\u00fablico de la Propiedad (RPC) que corresponda de acuerdo con el domicilio social de NewCo.",
+          "ts": 1781214012210,
+          "text": "Notas atualizado"
+        },
+        {
+          "field": "name",
+          "oldVal": "Apoyo en la inscripci\u00f3n de NewCo ante el Registro P\u00fablico de la Propiedad (RPC) que corresponda de acuerdo con el domicilio social de NewCo.",
+          "newVal": "Inscri\u00e7\u00e3o societ\u00e1ria da NewCo no Registro P\u00fablico de Com\u00e9rcio.",
+          "ts": 1781214008374,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "name",
           "oldVal": "Rascunho do Acta pelo notario publico (fedatario)",
