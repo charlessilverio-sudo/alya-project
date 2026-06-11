@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:34:22.108Z",
+  "savedAt": "2026-06-11T21:34:26.894Z",
   "tasks": [
     {
       "id": 9000,
@@ -3459,10 +3459,10 @@
       "priority": "Alta",
       "owner": "",
       "start": "2026-06-01",
-      "end": "2026-08-31",
+      "end": "2026-08-15",
       "notes": "Transire EAP 2.1",
-      "endMin": "2026-08-31",
-      "endMax": "2026-12-08",
+      "endMin": "2026-08-18",
+      "endMax": "2026-10-23",
       "eapId": "2.1",
       "activityLog": [
         {
@@ -4095,114 +4095,6 @@
           "oldVal": "JUR",
           "newVal": "Jur\u00eddico",
           "ts": 1780310480802,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9162,
-      "parentId": 9137,
-      "country": "mexico",
-      "name": "Compliance LFPDPPP (Lei Federal Protecao de Dados)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-08-17",
-      "end": "2026-08-31",
-      "notes": "Transire EAP 2.1.7",
-      "endMin": "2026-08-31",
-      "endMax": "2026-12-08",
-      "pred": "2.1.5",
-      "predHtmlId": 9154,
-      "eapId": "2.1.7",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "",
-          "ts": 1780309861362,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9163,
-      "parentId": 9162,
-      "country": "mexico",
-      "name": "Elaboracao do Aviso de Privacidad",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-08-17",
-      "end": "2026-08-22",
-      "notes": "Transire EAP 2.1.7.1",
-      "endMin": "2026-08-21",
-      "endMax": "2026-10-28",
-      "pred": "2.1.5",
-      "predHtmlId": 9154,
-      "eapId": "2.1.7.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780310491031,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9164,
-      "parentId": 9162,
-      "country": "mexico",
-      "name": "Codigo de Etica e Contrato de Confidencialidade",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-08-17",
-      "end": "2026-08-22",
-      "notes": "Transire EAP 2.1.7.2",
-      "endMin": "2026-08-21",
-      "endMax": "2026-10-28",
-      "pred": "2.1.5",
-      "predHtmlId": 9154,
-      "eapId": "2.1.7.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780310493067,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9165,
-      "parentId": 9162,
-      "country": "mexico",
-      "name": "Registro no INAI (Instituto Nac. de Transparencia)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-08-24",
-      "end": "2026-08-31",
-      "notes": "Transire EAP 2.1.7.3",
-      "endMin": "2026-08-31",
-      "endMax": "2026-12-08",
-      "pred": "2.1.7.1",
-      "predHtmlId": 9163,
-      "eapId": "2.1.7.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780310495022,
           "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
         }
       ]
