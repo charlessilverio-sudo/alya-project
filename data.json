@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:31:32.836Z",
+  "savedAt": "2026-06-11T21:31:47.737Z",
   "tasks": [
     {
       "id": 9000,
@@ -3697,7 +3697,7 @@
       "id": 9144,
       "parentId": 9143,
       "country": "mexico",
-      "name": "Rascunho do Acta pelo notario publico (fedatario)",
+      "name": "Apoyo en la inscripci\u00f3n de NewCo ante el Registro P\u00fablico de la Propiedad (RPC) que corresponda de acuerdo con el domicilio social de NewCo.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3711,6 +3711,13 @@
       "predHtmlId": 9138,
       "eapId": "2.1.2.1",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Rascunho do Acta pelo notario publico (fedatario)",
+          "newVal": "Apoyo en la inscripci\u00f3n de NewCo ante el Registro P\u00fablico de la Propiedad (RPC) que corresponda de acuerdo con el domicilio social de NewCo.",
+          "ts": 1781213507668,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
