@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:58:30.057Z",
+  "savedAt": "2026-06-11T21:58:34.658Z",
   "tasks": [
     {
       "id": 9000,
@@ -29818,7 +29818,7 @@
       "id": 10306,
       "parentId": 9181,
       "country": "mexico",
-      "name": "Nova sub-tarefa",
+      "name": "Apoyo en el registro de NewCo ante el Instituto del Fondo Nacional de la Vivienda para los Trabajadores (INFONAVIT).",
       "phase": "TI",
       "status": "A fazer",
       "priority": "Alta",
@@ -29828,7 +29828,16 @@
       "endMin": "2026-10-13",
       "endMax": "2027-01-13",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Apoyo en el registro de NewCo ante el Instituto del Fondo Nacional de la Vivienda para los Trabajadores (INFONAVIT).",
+          "ts": 1781215114555,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
