@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:56:32.498Z",
+  "savedAt": "2026-06-11T21:56:36.280Z",
   "tasks": [
     {
       "id": 9000,
@@ -3976,7 +3976,7 @@
       "status": "A fazer",
       "priority": "M\u00e9dia",
       "owner": "",
-      "start": "2026-08-21",
+      "start": "2026-08-24",
       "end": "2026-09-30",
       "notes": "Transire EAP 2.2.2",
       "endMin": "2026-09-28",
@@ -3991,33 +3991,6 @@
           "newVal": "",
           "ts": 1780309897101,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9178,
-      "parentId": 9172,
-      "country": "mexico",
-      "name": "Licenca de funcionamento \u2014 Municipio / Alcaldia",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Fiscal",
-      "start": "2026-08-21",
-      "end": "2026-09-10",
-      "notes": "Transire EAP 2.2.2.6",
-      "endMin": "2026-09-08",
-      "endMax": "2026-12-29",
-      "pred": "2.2.2.3",
-      "predHtmlId": 9175,
-      "eapId": "2.2.2.6",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Fiscal",
-          "ts": 1780309938101,
-          "text": "Respons\u00e1vel: <strong>Fiscal</strong>"
         }
       ]
     },
