@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:31:12.401Z",
+  "savedAt": "2026-06-11T21:31:16.929Z",
   "tasks": [
     {
       "id": 9000,
@@ -30909,7 +30909,7 @@
       "id": 10304,
       "parentId": 9138,
       "country": "mexico",
-      "name": "Nova sub-tarefa",
+      "name": "Aceptaci\u00f3n y formalizaci\u00f3n de los poderes necesarios que deban otorgarse a miembros de Andersen para actuar en nombre de Transire ante cualquier autoridad correspondiente en M\u00e9xico, exclusivamente para tr\u00e1mites postconstituci\u00f3n y operaciones iniciales.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -30919,7 +30919,16 @@
       "endMin": "2026-06-10",
       "endMax": "2026-06-26",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Aceptaci\u00f3n y formalizaci\u00f3n de los poderes necesarios que deban otorgarse a miembros de Andersen para actuar en nombre de Transire ante cualquier autoridad correspondiente en M\u00e9xico, exclusivamente para tr\u00e1mites postconstituci\u00f3n y operaciones iniciales.",
+          "ts": 1781213476828,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
