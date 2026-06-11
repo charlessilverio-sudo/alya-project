@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:45:41.397Z",
+  "savedAt": "2026-06-11T21:55:36.611Z",
   "tasks": [
     {
       "id": 9000,
@@ -30481,6 +30481,22 @@
           "text": "Tarefa renomeada"
         }
       ]
+    },
+    {
+      "id": 10306,
+      "parentId": 9166,
+      "country": "mexico",
+      "name": "Nova sub-tarefa",
+      "phase": "Infraestrutura",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "2026-08-03",
+      "end": "2026-09-30",
+      "endMin": "2026-09-28",
+      "endMax": "2027-02-04",
+      "notes": "",
+      "subtasks": []
     }
   ]
 }
