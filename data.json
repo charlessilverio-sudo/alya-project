@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:58:14.257Z",
+  "savedAt": "2026-06-11T21:58:30.057Z",
   "tasks": [
     {
       "id": 9000,
@@ -29813,6 +29813,22 @@
           "text": "Tarefa renomeada"
         }
       ]
+    },
+    {
+      "id": 10306,
+      "parentId": 9181,
+      "country": "mexico",
+      "name": "Nova sub-tarefa",
+      "phase": "TI",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "2026-10-01",
+      "end": "2026-10-15",
+      "endMin": "2026-10-13",
+      "endMax": "2027-01-13",
+      "notes": "",
+      "subtasks": []
     }
   ]
 }
