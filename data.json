@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:32:22.721Z",
+  "savedAt": "2026-06-11T21:32:38.022Z",
   "tasks": [
     {
       "id": 9000,
@@ -3799,7 +3799,7 @@
       "id": 9147,
       "parentId": 9143,
       "country": "mexico",
-      "name": "Assinatura e protocolo ante notario",
+      "name": "Solicitud y emisi\u00f3n de los libros corporativos de NewCo y transcripci\u00f3n de los respectivos asientos iniciales.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3813,6 +3813,13 @@
       "predHtmlId": 9145,
       "eapId": "2.1.2.4",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Assinatura e protocolo ante notario",
+          "newVal": "Solicitud y emisi\u00f3n de los libros corporativos de NewCo y transcripci\u00f3n de los respectivos asientos iniciales.",
+          "ts": 1781213557920,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
