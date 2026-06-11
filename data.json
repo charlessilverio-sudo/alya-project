@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:35:01.444Z",
+  "savedAt": "2026-06-11T21:35:06.833Z",
   "tasks": [
     {
       "id": 9000,
@@ -3459,10 +3459,10 @@
       "priority": "Alta",
       "owner": "",
       "start": "2026-06-01",
-      "end": "2026-08-15",
+      "end": "2026-07-01",
       "notes": "Transire EAP 2.1",
-      "endMin": "2026-08-18",
-      "endMax": "2026-10-23",
+      "endMin": "2026-07-02",
+      "endMax": "2026-07-29",
       "eapId": "2.1",
       "activityLog": [
         {
@@ -3825,114 +3825,6 @@
           "oldVal": "JUR",
           "newVal": "Jur\u00eddico",
           "ts": 1780310455635,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9154,
-      "parentId": 9137,
-      "country": "mexico",
-      "name": "REPSE e registro patronal no IMSS",
-      "phase": "RH",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-07-27",
-      "end": "2026-08-15",
-      "notes": "Transire EAP 2.1.5",
-      "endMin": "2026-08-18",
-      "endMax": "2026-10-23",
-      "pred": "2.1.4",
-      "predHtmlId": 9151,
-      "eapId": "2.1.5",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "RH",
-          "newVal": "",
-          "ts": 1780309852809,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9155,
-      "parentId": 9154,
-      "country": "mexico",
-      "name": "Registro patronal no IMSS",
-      "phase": "RH",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "RH",
-      "start": "2026-07-27",
-      "end": "2026-08-01",
-      "notes": "Transire EAP 2.1.5.1",
-      "endMin": "2026-07-31",
-      "endMax": "2026-09-17",
-      "pred": "2.1.4",
-      "predHtmlId": 9151,
-      "eapId": "2.1.5.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "RH",
-          "newVal": "RH",
-          "ts": 1780310475775,
-          "text": "Respons\u00e1vel: <strong>RH</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9156,
-      "parentId": 9154,
-      "country": "mexico",
-      "name": "Registro no INFONAVIT",
-      "phase": "RH",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "RH",
-      "start": "2026-08-03",
-      "end": "2026-08-07",
-      "notes": "Transire EAP 2.1.5.2",
-      "endMin": "2026-08-07",
-      "endMax": "2026-10-01",
-      "pred": "2.1.5.1",
-      "predHtmlId": 9155,
-      "eapId": "2.1.5.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "RH",
-          "newVal": "RH",
-          "ts": 1780310478479,
-          "text": "Respons\u00e1vel: <strong>RH</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9157,
-      "parentId": 9154,
-      "country": "mexico",
-      "name": "Obtencao do REPSE (prestadoras de servicos \u2014 outsourcing)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-08-07",
-      "end": "2026-08-15",
-      "notes": "Transire EAP 2.1.5.3",
-      "endMin": "2026-08-18",
-      "endMax": "2026-10-23",
-      "pred": "2.1.5.2",
-      "predHtmlId": 9156,
-      "eapId": "2.1.5.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780310480802,
           "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
         }
       ]
