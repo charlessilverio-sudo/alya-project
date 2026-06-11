@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:34:26.894Z",
+  "savedAt": "2026-06-11T21:34:32.375Z",
   "tasks": [
     {
       "id": 9000,
@@ -29539,26 +29539,6 @@
           "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
         }
       ]
-    },
-    {
-      "id": 10246,
-      "parentId": 9137,
-      "country": "mexico",
-      "name": "Reserva do nome empresarial (SE Mexico)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "JUR",
-      "start": "2026-06-01",
-      "end": "2026-06-09",
-      "endMin": "2026-06-03",
-      "endMax": "2026-06-09",
-      "dur": "3d",
-      "pred": "2.1.1",
-      "predHtmlId": 9138,
-      "eapId": "2.1.8",
-      "notes": "Transire EAP 2.1.8",
-      "subtasks": []
     },
     {
       "id": 10247,
