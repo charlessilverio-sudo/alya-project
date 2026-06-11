@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:33:05.304Z",
+  "savedAt": "2026-06-11T21:34:22.108Z",
   "tasks": [
     {
       "id": 9000,
@@ -3459,9 +3459,9 @@
       "priority": "Alta",
       "owner": "",
       "start": "2026-06-01",
-      "end": "2026-09-01",
+      "end": "2026-08-31",
       "notes": "Transire EAP 2.1",
-      "endMin": "2026-09-02",
+      "endMin": "2026-08-31",
       "endMax": "2026-12-08",
       "eapId": "2.1",
       "activityLog": [
@@ -4096,114 +4096,6 @@
           "newVal": "Jur\u00eddico",
           "ts": 1780310480802,
           "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9158,
-      "parentId": 9137,
-      "country": "mexico",
-      "name": "Enquadramento fiscal (ISR 30%, IVA 16%, CFDI 4.0)",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-08-17",
-      "end": "2026-09-01",
-      "notes": "Transire EAP 2.1.6",
-      "endMin": "2026-09-02",
-      "endMax": "2026-11-26",
-      "pred": "2.1.5",
-      "predHtmlId": 9154,
-      "eapId": "2.1.6",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "",
-          "ts": 1780309857007,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9159,
-      "parentId": 9158,
-      "country": "mexico",
-      "name": "Avaliacao regime: geral, simplificado confianza, IMMEX",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Financeiro",
-      "start": "2026-08-17",
-      "end": "2026-08-22",
-      "notes": "Transire EAP 2.1.6.1",
-      "endMin": "2026-08-21",
-      "endMax": "2026-11-03",
-      "pred": "2.1.5",
-      "predHtmlId": 9154,
-      "eapId": "2.1.6.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "Financeiro",
-          "ts": 1780310432484,
-          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9160,
-      "parentId": 9158,
-      "country": "mexico",
-      "name": "Parametrizacao ISR e IVA no ERP",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Financeiro",
-      "start": "2026-08-24",
-      "end": "2026-08-28",
-      "notes": "Transire EAP 2.1.6.2",
-      "endMin": "2026-08-28",
-      "endMax": "2026-11-18",
-      "pred": "2.1.6.1",
-      "predHtmlId": 9159,
-      "eapId": "2.1.6.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "Financeiro",
-          "ts": 1780310484519,
-          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9161,
-      "parentId": 9158,
-      "country": "mexico",
-      "name": "Habilitacao CFDI 4.0 (Comprobante Fiscal Digital \u2014 SAT)",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-08-28",
-      "end": "2026-08-31",
-      "notes": "Transire EAP 2.1.6.3",
-      "endMin": "2026-09-02",
-      "endMax": "2026-11-26",
-      "pred": "2.1.6.2",
-      "predHtmlId": 9160,
-      "eapId": "2.1.6.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310488751,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
         }
       ]
     },
@@ -29834,46 +29726,6 @@
       "predHtmlId": 9148,
       "eapId": "2.1.11",
       "notes": "Transire EAP 2.1.11",
-      "subtasks": []
-    },
-    {
-      "id": 10250,
-      "parentId": 9158,
-      "country": "mexico",
-      "name": "Pre-validacao bancaria \u2014 triagem informal KYC",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "FIN",
-      "start": "2026-08-17",
-      "end": "2026-09-01",
-      "endMin": "2026-08-21",
-      "endMax": "2026-09-01",
-      "dur": "5d",
-      "pred": "2.1.6.1",
-      "predHtmlId": 9159,
-      "eapId": "2.1.6.8",
-      "notes": "Transire EAP 2.1.6.8",
-      "subtasks": []
-    },
-    {
-      "id": 10251,
-      "parentId": 9158,
-      "country": "mexico",
-      "name": "Definicao e integralizacao do capital social",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "FIN",
-      "start": "2026-08-17",
-      "end": "2026-08-27",
-      "endMin": "2026-08-21",
-      "endMax": "2026-08-27",
-      "dur": "5d",
-      "pred": "2.1.6.8",
-      "predHtmlId": 10250,
-      "eapId": "2.1.6.9",
-      "notes": "Transire EAP 2.1.6.9",
       "subtasks": []
     },
     {
