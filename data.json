@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:29:37.753Z",
+  "savedAt": "2026-06-11T21:29:49.803Z",
   "tasks": [
     {
       "id": 9000,
@@ -3581,7 +3581,7 @@
       "id": 9141,
       "parentId": 9138,
       "country": "mexico",
-      "name": "Avaliacao REPSE (reforma trabalhista 2021 \u2014 outsourcing logistico)",
+      "name": "Elaboraci\u00f3n de los poderes necesarios que permitan a los accionistas de NewCo constituir la Sociedad en M\u00e9xico, as\u00ed como de otros documentos legales requeridos",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "M\u00e9dia",
@@ -3595,6 +3595,13 @@
       "predHtmlId": 9139,
       "eapId": "2.1.1.3",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Avaliacao REPSE (reforma trabalhista 2021 \u2014 outsourcing logistico)",
+          "newVal": "Elaboraci\u00f3n de los poderes necesarios que permitan a los accionistas de NewCo constituir la Sociedad en M\u00e9xico, as\u00ed como de otros documentos legales requeridos",
+          "ts": 1781213389685,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
