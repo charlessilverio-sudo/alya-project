@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:59:03.917Z",
+  "savedAt": "2026-06-11T21:59:08.662Z",
   "tasks": [
     {
       "id": 9000,
@@ -29868,7 +29868,7 @@
       "id": 10308,
       "parentId": 9181,
       "country": "mexico",
-      "name": "Nova sub-tarefa",
+      "name": "Apoyo en el Registro de Prestadora de Servicios Especializados u Obras Especializadas (REPSE)",
       "phase": "TI",
       "status": "A fazer",
       "priority": "Alta",
@@ -29878,7 +29878,16 @@
       "endMin": "2026-10-13",
       "endMax": "2027-01-13",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Apoyo en el Registro de Prestadora de Servicios Especializados u Obras Especializadas (REPSE)",
+          "ts": 1781215148573,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
