@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:57:59.485Z",
+  "savedAt": "2026-06-11T21:58:03.051Z",
   "tasks": [
     {
       "id": 9000,
@@ -4059,33 +4059,6 @@
           "newVal": "",
           "ts": 1780309956047,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9186,
-      "parentId": 9182,
-      "country": "mexico",
-      "name": "CCTV (12 cameras) e controle acesso biometrico",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-10-01",
-      "end": "2026-10-15",
-      "notes": "Transire EAP 2.3.1.4",
-      "endMin": "2026-10-13",
-      "endMax": "2027-01-13",
-      "pred": "2.3.1.3",
-      "predHtmlId": 9185,
-      "eapId": "2.3.1.4",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780310509771,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
         }
       ]
     },
