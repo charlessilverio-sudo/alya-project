@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:35:15.434Z",
+  "savedAt": "2026-06-11T21:37:18.677Z",
   "tasks": [
     {
       "id": 9000,
@@ -3731,20 +3731,34 @@
       "id": 9145,
       "parentId": 9143,
       "country": "mexico",
-      "name": "Apoyo en la obtenci\u00f3n del Registro Federal de Contribuyentes (RFC) de NewCo ante el Servicio de Administraci\u00f3n Tributaria (SAT), as\u00ed como obtenci\u00f3n de la firma electr\u00f3nica fiscal para NewCo (necesaria para la presentaci\u00f3n de declaraciones y otros tr\u00e1mites fiscales).",
+      "name": "Registro fiscal da NewCo no SAT (RFC e assinatura eletr\u00f4nica fiscal).",
       "phase": "Gest\u00e3o",
       "status": "A fazer",
       "priority": "M\u00e9dia",
       "owner": "Diretoria",
       "start": "2026-06-23",
       "end": "2026-06-25",
-      "notes": "Transire EAP 2.1.2.2",
+      "notes": "Transire EAP 2.1.2.2\nApoyo en la obtenci\u00f3n del Registro Federal de Contribuyentes (RFC) de NewCo ante el Servicio de Administraci\u00f3n Tributaria (SAT), as\u00ed como obtenci\u00f3n de la firma electr\u00f3nica fiscal para NewCo (necesaria para la presentaci\u00f3n de declaraciones y otros tr\u00e1mites fiscales).",
       "endMin": "2026-06-26",
       "endMax": "2026-07-17",
       "pred": "2.1.2.1",
       "predHtmlId": 9144,
       "eapId": "2.1.2.2",
       "activityLog": [
+        {
+          "field": "notes",
+          "oldVal": "Transire EAP 2.1.2.2",
+          "newVal": "Transire EAP 2.1.2.2\nApoyo en la obtenci\u00f3n del Registro Federal de Contribuyentes (RFC) de NewCo ante el Servicio de Administraci\u00f3n Tributaria (SAT), as\u00ed como obtenci\u00f3n de la firma electr\u00f3nica fiscal para NewCo (necesaria para la presentaci\u00f3n de declaraciones y otros tr\u00e1mites fiscales).",
+          "ts": 1781213838555,
+          "text": "Notas atualizado"
+        },
+        {
+          "field": "name",
+          "oldVal": "Apoyo en la obtenci\u00f3n del Registro Federal de Contribuyentes (RFC) de NewCo ante el Servicio de Administraci\u00f3n Tributaria (SAT), as\u00ed como obtenci\u00f3n de la firma electr\u00f3nica fiscal para NewCo (necesaria para la presentaci\u00f3n de declaraciones y otros tr\u00e1mites fiscales).",
+          "newVal": "Registro fiscal da NewCo no SAT (RFC e assinatura eletr\u00f4nica fiscal).",
+          "ts": 1781213834911,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "name",
           "oldVal": "Revisao pela diretoria e socios brasileiros",
