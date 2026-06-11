@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T20:47:18.854Z",
+  "savedAt": "2026-06-11T21:28:38.465Z",
   "tasks": [
     {
       "id": 9000,
@@ -3453,7 +3453,7 @@
       "id": 9137,
       "parentId": 9136,
       "country": "mexico",
-      "name": "CONSTITUICAO JURIDICA E FISCAL (SAT/IMSS/INFONAVIT)",
+      "name": "Constituci\u00f3n y establecimiento de la Sociedad (NewCo) en M\u00e9xico",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -3465,6 +3465,13 @@
       "endMax": "2026-12-08",
       "eapId": "2.1",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "CONSTITUICAO JURIDICA E FISCAL (SAT/IMSS/INFONAVIT)",
+          "newVal": "Constituci\u00f3n y establecimiento de la Sociedad (NewCo) en M\u00e9xico",
+          "ts": 1781213318381,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
