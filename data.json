@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-11T21:58:47.342Z",
+  "savedAt": "2026-06-11T21:58:52.297Z",
   "tasks": [
     {
       "id": 9000,
@@ -29843,7 +29843,7 @@
       "id": 10307,
       "parentId": 9181,
       "country": "mexico",
-      "name": "Nova sub-tarefa",
+      "name": "Apoyo en el registro de NewCo en el Impuesto Sobre N\u00f3mina (ISN) estatal.",
       "phase": "TI",
       "status": "A fazer",
       "priority": "Alta",
@@ -29853,7 +29853,16 @@
       "endMin": "2026-10-13",
       "endMax": "2027-01-13",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Apoyo en el registro de NewCo en el Impuesto Sobre N\u00f3mina (ISN) estatal.",
+          "ts": 1781215132199,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
