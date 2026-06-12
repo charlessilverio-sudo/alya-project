@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:30:39.179Z",
+  "savedAt": "2026-06-12T10:30:41.959Z",
   "tasks": [
     {
       "id": 4,
@@ -4129,87 +4129,6 @@
           "newVal": "",
           "ts": 1780309103037,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9020,
-      "parentId": 9001,
-      "country": "uruguai",
-      "name": "Inscricao no BPS (Banco de Prevision Social)",
-      "phase": "RH",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-07-14",
-      "end": "2026-07-20",
-      "notes": "Transire EAP 1.1.5",
-      "endMin": "2026-07-22",
-      "endMax": "2026-08-14",
-      "pred": "1.1.4",
-      "predHtmlId": 9016,
-      "eapId": "1.1.5",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "RH",
-          "newVal": "",
-          "ts": 1780309146956,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9021,
-      "parentId": 9020,
-      "country": "uruguai",
-      "name": "Formulario 2/009 \u2014 inscricao patronal no BPS",
-      "phase": "RH",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "RH",
-      "start": "2026-07-14",
-      "end": "2026-07-17",
-      "notes": "Transire EAP 1.1.5.1",
-      "endMin": "2026-07-17",
-      "endMax": "2026-08-07",
-      "pred": "1.1.4",
-      "predHtmlId": 9016,
-      "eapId": "1.1.5.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "RH",
-          "newVal": "RH",
-          "ts": 1780407054152,
-          "text": "Respons\u00e1vel: <strong>RH</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9022,
-      "parentId": 9020,
-      "country": "uruguai",
-      "name": "Habilitacao da planilha de salarios BPS",
-      "phase": "RH",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "RH",
-      "start": "2026-07-17",
-      "end": "2026-07-20",
-      "notes": "Transire EAP 1.1.5.2",
-      "endMin": "2026-07-22",
-      "endMax": "2026-08-14",
-      "pred": "1.1.5.1",
-      "predHtmlId": 9021,
-      "eapId": "1.1.5.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "RH",
-          "newVal": "RH",
-          "ts": 1780407057668,
-          "text": "Respons\u00e1vel: <strong>RH</strong>"
         }
       ]
     },
