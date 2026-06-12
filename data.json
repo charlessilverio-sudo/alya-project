@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:32:50.825Z",
+  "savedAt": "2026-06-12T10:32:55.741Z",
   "tasks": [
     {
       "id": 4,
@@ -34004,7 +34004,7 @@
       "id": 10311,
       "parentId": 10309,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Apoyo para obtener el permiso de denominaci\u00f3n social de NewCo ante la Secretar\u00eda de Econom\u00eda.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -34014,7 +34014,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Apoyo para obtener el permiso de denominaci\u00f3n social de NewCo ante la Secretar\u00eda de Econom\u00eda.",
+          "ts": 1781260375625,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
