@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:30:48.002Z",
+  "savedAt": "2026-06-12T10:30:51.061Z",
   "tasks": [
     {
       "id": 4,
@@ -32619,26 +32619,6 @@
       "notes": "Transire EAP 10.7.3.2",
       "subtasks": [],
       "predHtmlId": 10238
-    },
-    {
-      "id": 10240,
-      "parentId": 9001,
-      "country": "uruguai",
-      "name": "Reserva do nome empresarial (DNC)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "JUR",
-      "start": "2026-06-01",
-      "end": "2026-06-05",
-      "endMin": "2026-06-03",
-      "endMax": "2026-06-05",
-      "dur": "3d",
-      "pred": "1.1.1",
-      "predHtmlId": 9002,
-      "eapId": "1.1.8",
-      "notes": "Transire EAP 1.1.8",
-      "subtasks": []
     },
     {
       "id": 10241,
