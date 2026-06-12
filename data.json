@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:30:41.959Z",
+  "savedAt": "2026-06-12T10:30:44.745Z",
   "tasks": [
     {
       "id": 4,
@@ -4117,9 +4117,9 @@
       "priority": "Alta",
       "owner": "",
       "start": "2026-06-01",
-      "end": "2026-08-03",
+      "end": "2026-07-31",
       "notes": "Transire EAP 1.1",
-      "endMin": "2026-08-03",
+      "endMin": "2026-07-30",
       "endMax": "2026-09-14",
       "eapId": "1.1",
       "activityLog": [
@@ -4129,114 +4129,6 @@
           "newVal": "",
           "ts": 1780309103037,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9023,
-      "parentId": 9001,
-      "country": "uruguai",
-      "name": "Enquadramento fiscal e regime tributario",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-07-21",
-      "end": "2026-08-03",
-      "notes": "Transire EAP 1.1.6",
-      "endMin": "2026-08-03",
-      "endMax": "2026-09-07",
-      "pred": "1.1.5",
-      "predHtmlId": 9020,
-      "eapId": "1.1.6",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "",
-          "ts": 1780309153389,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9024,
-      "parentId": 9023,
-      "country": "uruguai",
-      "name": "Avaliacao ZFM x Regime Geral",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Financeiro",
-      "start": "2026-07-21",
-      "end": "2026-07-24",
-      "notes": "Transire EAP 1.1.6.1",
-      "endMin": "2026-07-24",
-      "endMax": "2026-08-21",
-      "pred": "1.1.5",
-      "predHtmlId": 9020,
-      "eapId": "1.1.6.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "Financeiro",
-          "ts": 1780407061256,
-          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9025,
-      "parentId": 9023,
-      "country": "uruguai",
-      "name": "Selecao e habilitacao no regime IRAE (Impuesto a la Renta)",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Financeiro",
-      "start": "2026-07-24",
-      "end": "2026-07-27",
-      "notes": "Transire EAP 1.1.6.2",
-      "endMin": "2026-07-29",
-      "endMax": "2026-08-28",
-      "pred": "1.1.6.1",
-      "predHtmlId": 9024,
-      "eapId": "1.1.6.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "Financeiro",
-          "ts": 1780407064372,
-          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9026,
-      "parentId": 9023,
-      "country": "uruguai",
-      "name": "Adesao ao IVA (22%) e parametrizacao no ERP",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Financeiro",
-      "start": "2026-07-29",
-      "end": "2026-07-31",
-      "notes": "Transire EAP 1.1.6.3",
-      "endMin": "2026-08-03",
-      "endMax": "2026-09-07",
-      "pred": "1.1.6.2",
-      "predHtmlId": 9025,
-      "eapId": "1.1.6.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "Financeiro",
-          "ts": 1780407068152,
-          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
         }
       ]
     },
@@ -32915,64 +32807,6 @@
       "eapId": "1.1.11",
       "notes": "Transire EAP 1.1.11",
       "subtasks": []
-    },
-    {
-      "id": 10244,
-      "parentId": 9023,
-      "country": "uruguai",
-      "name": "Pre-validacao bancaria \u2014 triagem informal KYC",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-07-21",
-      "end": "2026-08-03",
-      "endMin": "2026-07-27",
-      "endMax": "2026-08-03",
-      "dur": "5d",
-      "pred": "1.1.6.1",
-      "predHtmlId": 9024,
-      "eapId": "1.1.6.8",
-      "notes": "Transire EAP 1.1.6.8",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "Financeiro",
-          "ts": 1780429641521,
-          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
-        }
-      ]
-    },
-    {
-      "id": 10245,
-      "parentId": 9023,
-      "country": "uruguai",
-      "name": "Definicao e integralizacao do capital social",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "Financeiro",
-      "start": "2026-07-21",
-      "end": "2026-07-29",
-      "endMin": "2026-07-27",
-      "endMax": "2026-07-29",
-      "dur": "5d",
-      "pred": "1.1.6.8",
-      "predHtmlId": 10244,
-      "eapId": "1.1.6.9",
-      "notes": "Transire EAP 1.1.6.9",
-      "subtasks": [],
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "Financeiro",
-          "ts": 1780429644228,
-          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
-        }
-      ]
     },
     {
       "id": 10246,
