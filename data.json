@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T17:29:13.959Z",
+  "savedAt": "2026-06-12T17:29:44.124Z",
   "tasks": [
     {
       "id": 4,
@@ -4119,8 +4119,8 @@
       "start": "2026-07-01",
       "end": "2026-07-30",
       "notes": "Transire EAP 1.1",
-      "endMin": "2026-08-14",
-      "endMax": "2026-08-21",
+      "endMin": "2026-08-05",
+      "endMax": "2026-08-15",
       "eapId": "1.1",
       "activityLog": [
         {
@@ -34505,8 +34505,8 @@
       "owner": "",
       "start": "2026-07-04",
       "end": "2026-07-30",
-      "endMin": "2026-08-14",
-      "endMax": "2026-08-21",
+      "endMin": "2026-08-05",
+      "endMax": "2026-08-15",
       "notes": "",
       "subtasks": [],
       "activityLog": [
@@ -34704,13 +34704,69 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-08-04",
+      "start": "2026-07-30",
       "end": "2026-07-30",
-      "endMin": "2026-08-14",
-      "endMax": "2026-08-21",
+      "endMin": "2026-08-05",
+      "endMax": "2026-08-15",
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "endMax",
+          "oldVal": "2026-08-01",
+          "newVal": "2026-08-15",
+          "ts": 1781285383029,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-08-21",
+          "newVal": "2026-08-01",
+          "ts": 1781285382574,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "",
+          "newVal": "2026-08-05",
+          "ts": 1781285379499,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-08-14",
+          "newVal": "",
+          "ts": 1781285379136,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "",
+          "newVal": "2026-07-30",
+          "ts": 1781285374213,
+          "text": "In\u00edcio atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "2026-08-30",
+          "newVal": "",
+          "ts": 1781285373748,
+          "text": "In\u00edcio atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "2026-08-03",
+          "newVal": "2026-08-30",
+          "ts": 1781285373072,
+          "text": "In\u00edcio atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "2026-08-04",
+          "newVal": "2026-08-03",
+          "ts": 1781285372956,
+          "text": "In\u00edcio atualizado"
+        },
         {
           "field": "endMax",
           "oldVal": "",
