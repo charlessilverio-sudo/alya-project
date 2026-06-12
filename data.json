@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T17:26:52.342Z",
+  "savedAt": "2026-06-12T17:26:57.591Z",
   "tasks": [
     {
       "id": 4,
@@ -34531,10 +34531,24 @@
       "start": "2026-07-25",
       "end": "2026-07-30",
       "endMin": "2026-07-30",
-      "endMax": "2026-07-01",
+      "endMax": "2026-07-04",
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "endMax",
+          "oldVal": "",
+          "newVal": "2026-07-04",
+          "ts": 1781285214611,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-01",
+          "newVal": "",
+          "ts": 1781285214136,
+          "text": "endMax atualizado"
+        },
         {
           "field": "endMax",
           "oldVal": "",
