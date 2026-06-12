@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:33:21.598Z",
+  "savedAt": "2026-06-12T10:33:26.488Z",
   "tasks": [
     {
       "id": 4,
@@ -34054,7 +34054,7 @@
       "id": 10313,
       "parentId": 10309,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Coordinaci\u00f3n de la legalizaci\u00f3n o apostilla de documentos extranjeros de los accionistas de NewCo, as\u00ed como la coordinaci\u00f3n de su traducci\u00f3n certificada para que tengan validez en M\u00e9xico.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -34064,7 +34064,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Coordinaci\u00f3n de la legalizaci\u00f3n o apostilla de documentos extranjeros de los accionistas de NewCo, as\u00ed como la coordinaci\u00f3n de su traducci\u00f3n certificada para que tengan validez en M\u00e9xico.",
+          "ts": 1781260406342,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
