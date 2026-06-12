@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:35:04.218Z",
+  "savedAt": "2026-06-12T10:35:09.481Z",
   "tasks": [
     {
       "id": 4,
@@ -34179,7 +34179,7 @@
       "id": 10318,
       "parentId": 10317,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Apoyo en la inscripci\u00f3n de NewCo ante el Registro P\u00fablico de la Propiedad (RPC) que corresponda de acuerdo con el domicilio social de NewCo.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -34189,7 +34189,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Apoyo en la inscripci\u00f3n de NewCo ante el Registro P\u00fablico de la Propiedad (RPC) que corresponda de acuerdo con el domicilio social de NewCo.",
+          "ts": 1781260509375,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
