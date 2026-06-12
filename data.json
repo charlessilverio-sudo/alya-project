@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:30:35.996Z",
+  "savedAt": "2026-06-12T10:30:39.179Z",
   "tasks": [
     {
       "id": 4,
@@ -4129,114 +4129,6 @@
           "newVal": "",
           "ts": 1780309103037,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9016,
-      "parentId": 9001,
-      "country": "uruguai",
-      "name": "Obtencao do RUT (Registro Unico Tributario) \u2014 DGI",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-07-06",
-      "end": "2026-07-13",
-      "notes": "Transire EAP 1.1.4",
-      "endMin": "2026-07-14",
-      "endMax": "2026-08-05",
-      "pred": "1.1.3",
-      "predHtmlId": 9012,
-      "eapId": "1.1.4",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "",
-          "ts": 1780309140637,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9017,
-      "parentId": 9016,
-      "country": "uruguai",
-      "name": "Formulario 6351 via portal DGI",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-06",
-      "end": "2026-07-08",
-      "notes": "Transire EAP 1.1.4.1",
-      "endMin": "2026-07-08",
-      "endMax": "2026-07-24",
-      "pred": "1.1.3",
-      "predHtmlId": 9012,
-      "eapId": "1.1.4.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780407041316,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9018,
-      "parentId": 9016,
-      "country": "uruguai",
-      "name": "Nomeacao do contador local (certidao de inscricao)",
-      "phase": "Financeiro",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Financeiro",
-      "start": "2026-07-06",
-      "end": "2026-07-10",
-      "notes": "Transire EAP 1.1.4.2",
-      "endMin": "2026-07-09",
-      "endMax": "2026-07-30",
-      "pred": "1.1.3",
-      "predHtmlId": 9012,
-      "eapId": "1.1.4.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "FIN",
-          "newVal": "Financeiro",
-          "ts": 1780407045781,
-          "text": "Respons\u00e1vel: <strong>Financeiro</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9019,
-      "parentId": 9016,
-      "country": "uruguai",
-      "name": "Ativacao do certificado digital DGI",
-      "phase": "TI",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "TI",
-      "start": "2026-07-08",
-      "end": "2026-07-13",
-      "notes": "Transire EAP 1.1.4.3",
-      "endMin": "2026-07-14",
-      "endMax": "2026-08-05",
-      "pred": "1.1.4.1",
-      "predHtmlId": 9017,
-      "eapId": "1.1.4.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "TI",
-          "newVal": "TI",
-          "ts": 1780407049321,
-          "text": "Respons\u00e1vel: <strong>TI</strong>"
         }
       ]
     },
