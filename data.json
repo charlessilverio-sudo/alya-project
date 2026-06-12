@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:35:41.938Z",
+  "savedAt": "2026-06-12T10:35:47.386Z",
   "tasks": [
     {
       "id": 4,
@@ -34229,7 +34229,7 @@
       "id": 10320,
       "parentId": 10317,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Apoyo en la inscripci\u00f3n de NewCo en el Registro Nacional de Inversiones Extranjeras ante la Secretar\u00eda de Econom\u00eda.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -34239,7 +34239,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Apoyo en la inscripci\u00f3n de NewCo en el Registro Nacional de Inversiones Extranjeras ante la Secretar\u00eda de Econom\u00eda.",
+          "ts": 1781260547267,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
