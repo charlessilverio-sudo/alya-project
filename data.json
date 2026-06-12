@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:30:51.061Z",
+  "savedAt": "2026-06-12T10:30:53.929Z",
   "tasks": [
     {
       "id": 4,
@@ -32619,26 +32619,6 @@
       "notes": "Transire EAP 10.7.3.2",
       "subtasks": [],
       "predHtmlId": 10238
-    },
-    {
-      "id": 10241,
-      "parentId": 9001,
-      "country": "uruguai",
-      "name": "Definicao do endereco fiscal e sede (domicilio fiscal DGI \u2014 Montevideu)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "JUR",
-      "start": "2026-06-01",
-      "end": "2026-06-04",
-      "endMin": "2026-06-03",
-      "endMax": "2026-06-04",
-      "dur": "3d",
-      "pred": "1.1.1",
-      "predHtmlId": 9002,
-      "eapId": "1.1.9",
-      "notes": "Transire EAP 1.1.9",
-      "subtasks": []
     },
     {
       "id": 10242,
