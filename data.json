@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:35:56.844Z",
+  "savedAt": "2026-06-12T10:36:02.238Z",
   "tasks": [
     {
       "id": 4,
@@ -34254,7 +34254,7 @@
       "id": 10321,
       "parentId": 10317,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Solicitud y emisi\u00f3n de los libros corporativos de NewCo y transcripci\u00f3n de los respectivos asientos iniciales.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -34264,7 +34264,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Solicitud y emisi\u00f3n de los libros corporativos de NewCo y transcripci\u00f3n de los respectivos asientos iniciales.",
+          "ts": 1781260562135,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
