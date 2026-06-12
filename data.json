@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:30:44.745Z",
+  "savedAt": "2026-06-12T10:30:48.002Z",
   "tasks": [
     {
       "id": 4,
@@ -4117,10 +4117,10 @@
       "priority": "Alta",
       "owner": "",
       "start": "2026-06-01",
-      "end": "2026-07-31",
+      "end": "2026-06-30",
       "notes": "Transire EAP 1.1",
-      "endMin": "2026-07-30",
-      "endMax": "2026-09-14",
+      "endMin": "2026-06-26",
+      "endMax": "2026-06-30",
       "eapId": "1.1",
       "activityLog": [
         {
@@ -4129,114 +4129,6 @@
           "newVal": "",
           "ts": 1780309103037,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9027,
-      "parentId": 9001,
-      "country": "uruguai",
-      "name": "Compliance Lei 18.331 (Dados Pessoais / URCDP)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-07-21",
-      "end": "2026-07-31",
-      "notes": "Transire EAP 1.1.7",
-      "endMin": "2026-07-30",
-      "endMax": "2026-09-14",
-      "pred": "1.1.5",
-      "predHtmlId": 9020,
-      "eapId": "1.1.7",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "",
-          "ts": 1780309159657,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9028,
-      "parentId": 9027,
-      "country": "uruguai",
-      "name": "Politica de protecao de dados pessoais",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-21",
-      "end": "2026-07-26",
-      "notes": "Transire EAP 1.1.7.1",
-      "endMin": "2026-07-27",
-      "endMax": "2026-08-24",
-      "pred": "1.1.5",
-      "predHtmlId": 9020,
-      "eapId": "1.1.7.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780407072393,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9029,
-      "parentId": 9027,
-      "country": "uruguai",
-      "name": "Codigo de conduta e termos de confidencialidade",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-21",
-      "end": "2026-07-28",
-      "notes": "Transire EAP 1.1.7.2",
-      "endMin": "2026-07-27",
-      "endMax": "2026-08-24",
-      "pred": "1.1.5",
-      "predHtmlId": 9020,
-      "eapId": "1.1.7.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780407075844,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9030,
-      "parentId": 9027,
-      "country": "uruguai",
-      "name": "Registro no RNBD (Registro Nac. de Bases de Datos)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-27",
-      "end": "2026-07-31",
-      "notes": "Transire EAP 1.1.7.3",
-      "endMin": "2026-07-30",
-      "endMax": "2026-09-14",
-      "pred": "1.1.7.1",
-      "predHtmlId": 9028,
-      "eapId": "1.1.7.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780407079592,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
         }
       ]
     },
