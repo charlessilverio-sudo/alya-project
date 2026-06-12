@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T17:04:21.978Z",
+  "savedAt": "2026-06-12T17:04:57.913Z",
   "tasks": [
     {
       "id": 4,
@@ -34101,13 +34101,55 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-07-22",
+      "start": "2026-07-01",
       "end": "2026-07-30",
-      "endMin": "2026-07-26",
-      "endMax": "2026-07-30",
+      "endMin": "2026-07-10",
+      "endMax": "2026-07-15",
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-01",
+          "newVal": "2026-07-15",
+          "ts": 1781283895559,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-30",
+          "newVal": "2026-07-01",
+          "ts": 1781283895220,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-01",
+          "newVal": "2026-07-10",
+          "ts": 1781283890858,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-26",
+          "newVal": "2026-07-01",
+          "ts": 1781283890696,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "",
+          "newVal": "2026-07-01",
+          "ts": 1781283877711,
+          "text": "In\u00edcio atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "2026-07-22",
+          "newVal": "",
+          "ts": 1781283877446,
+          "text": "In\u00edcio atualizado"
+        },
         {
           "field": "name",
           "oldVal": "Nova sub-tarefa",
