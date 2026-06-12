@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:33:55.708Z",
+  "savedAt": "2026-06-12T10:33:59.932Z",
   "tasks": [
     {
       "id": 4,
@@ -34104,7 +34104,7 @@
       "id": 10315,
       "parentId": 10309,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Formalizaci\u00f3n de la constituci\u00f3n de NewCo ante Fedatario P\u00fablico (Notario P\u00fablico o Corredor P\u00fablico).",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -34114,7 +34114,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Formalizaci\u00f3n de la constituci\u00f3n de NewCo ante Fedatario P\u00fablico (Notario P\u00fablico o Corredor P\u00fablico).",
+          "ts": 1781260439831,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
