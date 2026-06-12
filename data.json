@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:35:22.833Z",
+  "savedAt": "2026-06-12T10:35:27.951Z",
   "tasks": [
     {
       "id": 4,
@@ -34204,7 +34204,7 @@
       "id": 10319,
       "parentId": 10317,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Apoyo en la obtenci\u00f3n del Registro Federal de Contribuyentes (RFC) de NewCo ante el Servicio de Administraci\u00f3n Tributaria (SAT), as\u00ed como obtenci\u00f3n de la firma electr\u00f3nica fiscal para NewCo (necesaria para la presentaci\u00f3n de declaraciones y otros tr\u00e1mites fiscales).",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -34214,7 +34214,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Apoyo en la obtenci\u00f3n del Registro Federal de Contribuyentes (RFC) de NewCo ante el Servicio de Administraci\u00f3n Tributaria (SAT), as\u00ed como obtenci\u00f3n de la firma electr\u00f3nica fiscal para NewCo (necesaria para la presentaci\u00f3n de declaraciones y otros tr\u00e1mites fiscales).",
+          "ts": 1781260527847,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
