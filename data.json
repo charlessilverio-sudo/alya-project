@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:32:37.903Z",
+  "savedAt": "2026-06-12T10:32:40.818Z",
   "tasks": [
     {
       "id": 4,
@@ -33979,7 +33979,7 @@
       "id": 10310,
       "parentId": 10309,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Solicitud de la informaci\u00f3n requerida para la constituci\u00f3n de NewCo, incluyendo la informaci\u00f3n y documentaci\u00f3n de los accionistas.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -33989,7 +33989,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Solicitud de la informaci\u00f3n requerida para la constituci\u00f3n de NewCo, incluyendo la informaci\u00f3n y documentaci\u00f3n de los accionistas.",
+          "ts": 1781260360700,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
