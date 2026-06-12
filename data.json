@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:33:08.306Z",
+  "savedAt": "2026-06-12T10:33:13.388Z",
   "tasks": [
     {
       "id": 4,
@@ -34029,7 +34029,7 @@
       "id": 10312,
       "parentId": 10309,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Elaboraci\u00f3n de los poderes necesarios que permitan a los accionistas de NewCo constituir la Sociedad en M\u00e9xico, as\u00ed como de otros documentos legales requeridos",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -34039,7 +34039,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Elaboraci\u00f3n de los poderes necesarios que permitan a los accionistas de NewCo constituir la Sociedad en M\u00e9xico, as\u00ed como de otros documentos legales requeridos",
+          "ts": 1781260393257,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
