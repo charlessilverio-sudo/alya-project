@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:31:29.487Z",
+  "savedAt": "2026-06-12T10:32:10.923Z",
   "tasks": [
     {
       "id": 4,
@@ -4111,7 +4111,7 @@
       "id": 9001,
       "parentId": 9000,
       "country": "uruguai",
-      "name": "CONSTITUICAO JURIDICA E FISCAL (DGI/BPS)",
+      "name": "Constituci\u00f3n y establecimiento de la Sociedad (NewCo) en M\u00e9xico",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -4123,6 +4123,13 @@
       "endMax": "2026-06-30",
       "eapId": "1.1",
       "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "CONSTITUICAO JURIDICA E FISCAL (DGI/BPS)",
+          "newVal": "Constituci\u00f3n y establecimiento de la Sociedad (NewCo) en M\u00e9xico",
+          "ts": 1781260330852,
+          "text": "Tarefa renomeada"
+        },
         {
           "field": "owner",
           "oldVal": "JUR",
