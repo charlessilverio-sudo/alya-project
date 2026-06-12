@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T17:29:44.124Z",
+  "savedAt": "2026-06-12T17:30:25.993Z",
   "tasks": [
     {
       "id": 4,
@@ -34503,7 +34503,7 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-07-04",
+      "start": "2026-07-01",
       "end": "2026-07-30",
       "endMin": "2026-08-05",
       "endMax": "2026-08-15",
@@ -34869,13 +34869,83 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-07-22",
+      "start": "2026-07-01",
       "end": "2026-07-30",
-      "endMin": "2026-07-26",
-      "endMax": "2026-07-30",
+      "endMin": "2026-07-21",
+      "endMax": "2026-07-28",
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-02",
+          "newVal": "2026-07-28",
+          "ts": 1781285423777,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-27",
+          "newVal": "2026-07-02",
+          "ts": 1781285423552,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-02",
+          "newVal": "2026-07-21",
+          "ts": 1781285420620,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-20",
+          "newVal": "2026-07-02",
+          "ts": 1781285420477,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-02",
+          "newVal": "2026-07-27",
+          "ts": 1781285412816,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-30",
+          "newVal": "2026-07-02",
+          "ts": 1781285412616,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-02",
+          "newVal": "2026-07-20",
+          "ts": 1781285408237,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-26",
+          "newVal": "2026-07-02",
+          "ts": 1781285408085,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "",
+          "newVal": "2026-07-01",
+          "ts": 1781285405372,
+          "text": "In\u00edcio atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "2026-07-22",
+          "newVal": "",
+          "ts": 1781285405098,
+          "text": "In\u00edcio atualizado"
+        },
         {
           "field": "name",
           "oldVal": "Nova sub-tarefa",
