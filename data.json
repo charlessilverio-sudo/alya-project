@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:30:53.929Z",
+  "savedAt": "2026-06-12T10:30:56.979Z",
   "tasks": [
     {
       "id": 4,
@@ -4091,7 +4091,7 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-06-01",
+      "start": "2026-06-22",
       "end": "2026-11-30",
       "notes": "Transire EAP 1",
       "endMin": "2026-11-30",
@@ -4116,7 +4116,7 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-06-01",
+      "start": "2026-06-22",
       "end": "2026-06-30",
       "notes": "Transire EAP 1.1",
       "endMin": "2026-06-26",
@@ -32619,26 +32619,6 @@
       "notes": "Transire EAP 10.7.3.2",
       "subtasks": [],
       "predHtmlId": 10238
-    },
-    {
-      "id": 10242,
-      "parentId": 9001,
-      "country": "uruguai",
-      "name": "Procuracoes internacionais e Apostila de Haia",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "Alta",
-      "owner": "JUR",
-      "start": "2026-06-01",
-      "end": "2026-06-12",
-      "endMin": "2026-06-09",
-      "endMax": "2026-06-12",
-      "dur": "7d",
-      "pred": "1.1.1",
-      "predHtmlId": 9002,
-      "eapId": "1.1.10",
-      "notes": "Transire EAP 1.1.10",
-      "subtasks": []
     },
     {
       "id": 10243,
