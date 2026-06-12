@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:30:33.208Z",
+  "savedAt": "2026-06-12T10:30:35.996Z",
   "tasks": [
     {
       "id": 4,
@@ -4129,114 +4129,6 @@
           "newVal": "",
           "ts": 1780309103037,
           "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9012,
-      "parentId": 9001,
-      "country": "uruguai",
-      "name": "Registro na DNRC (Direcao Nacional de Registro de Comercio)",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "",
-      "start": "2026-06-22",
-      "end": "2026-07-05",
-      "notes": "Transire EAP 1.1.3",
-      "endMin": "2026-07-07",
-      "endMax": "2026-07-27",
-      "pred": "1.1.2",
-      "predHtmlId": 9007,
-      "eapId": "1.1.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "",
-          "ts": 1780309133837,
-          "text": "Respons\u00e1vel: <strong>ningu\u00e9m</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9013,
-      "parentId": 9012,
-      "country": "uruguai",
-      "name": "Protocolo eletronico no RNPE",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-22",
-      "end": "2026-06-28",
-      "notes": "Transire EAP 1.1.3.1",
-      "endMin": "2026-06-26",
-      "endMax": "2026-07-13",
-      "pred": "1.1.2",
-      "predHtmlId": 9007,
-      "eapId": "1.1.3.1",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780407030272,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9014,
-      "parentId": 9012,
-      "country": "uruguai",
-      "name": "Publicacao no Diario Oficial",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-06-29",
-      "end": "2026-07-02",
-      "notes": "Transire EAP 1.1.3.2",
-      "endMin": "2026-07-02",
-      "endMax": "2026-07-21",
-      "pred": "1.1.3.1",
-      "predHtmlId": 9013,
-      "eapId": "1.1.3.2",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780407033213,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
-        }
-      ]
-    },
-    {
-      "id": 9015,
-      "parentId": 9012,
-      "country": "uruguai",
-      "name": "Obtencao do certificado de registro definitivo",
-      "phase": "Jur\u00eddico",
-      "status": "A fazer",
-      "priority": "M\u00e9dia",
-      "owner": "Jur\u00eddico",
-      "start": "2026-07-02",
-      "end": "2026-07-05",
-      "notes": "Transire EAP 1.1.3.3",
-      "endMin": "2026-07-07",
-      "endMax": "2026-07-27",
-      "pred": "1.1.3.2",
-      "predHtmlId": 9014,
-      "eapId": "1.1.3.3",
-      "activityLog": [
-        {
-          "field": "owner",
-          "oldVal": "JUR",
-          "newVal": "Jur\u00eddico",
-          "ts": 1780407036568,
-          "text": "Respons\u00e1vel: <strong>Jur\u00eddico</strong>"
         }
       ]
     },
