@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T19:31:36.019Z",
+  "savedAt": "2026-06-12T20:47:14.159Z",
   "tasks": [
     {
       "id": 4,
@@ -34033,7 +34033,7 @@
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
-      "owner": "",
+      "owner": "Diretoria",
       "start": "2026-07-01",
       "end": "2026-07-30",
       "endMin": "2026-07-07",
@@ -34041,6 +34041,13 @@
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "owner",
+          "oldVal": "",
+          "newVal": "Diretoria",
+          "ts": 1781297234151,
+          "text": "Respons\u00e1vel: <strong>Diretoria</strong>"
+        },
         {
           "field": "endMax",
           "oldVal": "2026-07-01",
