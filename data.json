@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:36:13.880Z",
+  "savedAt": "2026-06-12T10:36:16.023Z",
   "tasks": [
     {
       "id": 4,
@@ -34279,7 +34279,7 @@
       "id": 10322,
       "parentId": 10317,
       "country": "uruguai",
-      "name": "Nova sub-tarefa",
+      "name": "Emisi\u00f3n de los correspondientes certificados de acciones o participaciones.",
       "phase": "Jur\u00eddico",
       "status": "A fazer",
       "priority": "Alta",
@@ -34289,7 +34289,16 @@
       "endMin": "2026-06-26",
       "endMax": "2026-06-30",
       "notes": "",
-      "subtasks": []
+      "subtasks": [],
+      "activityLog": [
+        {
+          "field": "name",
+          "oldVal": "Nova sub-tarefa",
+          "newVal": "Emisi\u00f3n de los correspondientes certificados de acciones o participaciones.",
+          "ts": 1781260575892,
+          "text": "Tarefa renomeada"
+        }
+      ]
     }
   ]
 }
