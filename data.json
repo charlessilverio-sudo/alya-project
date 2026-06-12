@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T10:34:15.631Z",
+  "savedAt": "2026-06-12T10:34:25.637Z",
   "tasks": [
     {
       "id": 4,
@@ -34149,6 +34149,22 @@
           "text": "Tarefa renomeada"
         }
       ]
+    },
+    {
+      "id": 10317,
+      "parentId": 9001,
+      "country": "uruguai",
+      "name": "Nova sub-tarefa",
+      "phase": "Jur\u00eddico",
+      "status": "A fazer",
+      "priority": "Alta",
+      "owner": "",
+      "start": "2026-06-22",
+      "end": "2026-06-30",
+      "endMin": "2026-06-26",
+      "endMax": "2026-06-30",
+      "notes": "",
+      "subtasks": []
     }
   ]
 }
