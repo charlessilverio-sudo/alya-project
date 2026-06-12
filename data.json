@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T17:03:00.502Z",
+  "savedAt": "2026-06-12T17:04:21.978Z",
   "tasks": [
     {
       "id": 4,
@@ -4091,7 +4091,7 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-07-22",
+      "start": "2026-07-01",
       "end": "2026-12-30",
       "notes": "Transire EAP 1",
       "endMin": "2026-12-30",
@@ -4116,7 +4116,7 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-07-22",
+      "start": "2026-07-01",
       "end": "2026-07-30",
       "notes": "Transire EAP 1.1",
       "endMin": "2026-07-26",
@@ -34009,7 +34009,7 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-07-22",
+      "start": "2026-07-01",
       "end": "2026-07-30",
       "endMin": "2026-07-26",
       "endMax": "2026-07-30",
@@ -34034,13 +34034,55 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-07-22",
+      "start": "2026-07-01",
       "end": "2026-07-30",
-      "endMin": "2026-07-26",
-      "endMax": "2026-07-30",
+      "endMin": "2026-07-07",
+      "endMax": "2026-07-10",
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-01",
+          "newVal": "2026-07-10",
+          "ts": 1781283840181,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-30",
+          "newVal": "2026-07-01",
+          "ts": 1781283840043,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "",
+          "newVal": "2026-07-07",
+          "ts": 1781283834649,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-26",
+          "newVal": "",
+          "ts": 1781283834381,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "",
+          "newVal": "2026-07-01",
+          "ts": 1781283799258,
+          "text": "In\u00edcio atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "2026-07-22",
+          "newVal": "",
+          "ts": 1781283799157,
+          "text": "In\u00edcio atualizado"
+        },
         {
           "field": "name",
           "oldVal": "Nova sub-tarefa",
