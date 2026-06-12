@@ -1,6 +1,6 @@
 {
   "version": "alya_v7",
-  "savedAt": "2026-06-12T17:28:29.465Z",
+  "savedAt": "2026-06-12T17:29:13.959Z",
   "tasks": [
     {
       "id": 4,
@@ -4119,8 +4119,8 @@
       "start": "2026-07-01",
       "end": "2026-07-30",
       "notes": "Transire EAP 1.1",
-      "endMin": "2026-07-30",
-      "endMax": "2026-08-04",
+      "endMin": "2026-08-14",
+      "endMax": "2026-08-21",
       "eapId": "1.1",
       "activityLog": [
         {
@@ -34505,8 +34505,8 @@
       "owner": "",
       "start": "2026-07-04",
       "end": "2026-07-30",
-      "endMin": "2026-07-30",
-      "endMax": "2026-07-30",
+      "endMin": "2026-08-14",
+      "endMax": "2026-08-21",
       "notes": "",
       "subtasks": [],
       "activityLog": [
@@ -34704,13 +34704,97 @@
       "status": "A fazer",
       "priority": "Alta",
       "owner": "",
-      "start": "2026-07-22",
+      "start": "2026-08-04",
       "end": "2026-07-30",
-      "endMin": "2026-07-26",
-      "endMax": "2026-07-30",
+      "endMin": "2026-08-14",
+      "endMax": "2026-08-21",
       "notes": "",
       "subtasks": [],
       "activityLog": [
+        {
+          "field": "endMax",
+          "oldVal": "",
+          "newVal": "2026-08-21",
+          "ts": 1781285351139,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-21",
+          "newVal": "",
+          "ts": 1781285350865,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-02",
+          "newVal": "2026-07-21",
+          "ts": 1781285350477,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMax",
+          "oldVal": "2026-07-30",
+          "newVal": "2026-07-02",
+          "ts": 1781285350402,
+          "text": "endMax atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "",
+          "newVal": "2026-08-14",
+          "ts": 1781285344188,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-14",
+          "newVal": "",
+          "ts": 1781285343899,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-01",
+          "newVal": "2026-07-14",
+          "ts": 1781285341172,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "endMin",
+          "oldVal": "2026-07-26",
+          "newVal": "2026-07-01",
+          "ts": 1781285340697,
+          "text": "endMin atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "",
+          "newVal": "2026-08-04",
+          "ts": 1781285332463,
+          "text": "In\u00edcio atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "2026-07-04",
+          "newVal": "",
+          "ts": 1781285332199,
+          "text": "In\u00edcio atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "",
+          "newVal": "2026-07-04",
+          "ts": 1781285331251,
+          "text": "In\u00edcio atualizado"
+        },
+        {
+          "field": "start",
+          "oldVal": "2026-07-22",
+          "newVal": "",
+          "ts": 1781285330282,
+          "text": "In\u00edcio atualizado"
+        },
         {
           "field": "name",
           "oldVal": "Nova sub-tarefa",
